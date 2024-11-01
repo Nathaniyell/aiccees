@@ -1,14 +1,16 @@
 "use client"
-import Image from 'next/image'
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react'
-// Import Swiper core and required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 
-// Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
+import { useEffect } from 'react'
+import Image from 'next/image'
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import useEmblaCarousel from 'embla-carousel-react'
 
 // Import all conference images
 import conferencePics from "@/public/images/conference-pics/IMG_1922.jpg"
@@ -27,7 +29,7 @@ import conferencePics12 from "@/public/images/conference-pics/IMG_2107.jpg"
 import conferencePics13 from "@/public/images/conference-pics/IMG_2417.jpg"
 import conferencePics14 from "@/public/images/conference-pics/IMG_2431.jpg"
 
-const PresentConference = () => {
+export default function PresentConference() {
   // Create array of all conference images
   const conferenceImages = [
     { src: conferencePics, alt: "Conference Image 1" },
@@ -47,9 +49,23 @@ const PresentConference = () => {
     { src: conferencePics14, alt: "Conference Image 15" },
   ]
 
+  // Add embla API
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+
+  // Autoplay functionality
+  useEffect(() => {
+    if (emblaApi) {
+      const interval = setInterval(() => {
+        emblaApi.scrollNext()
+      }, 3000) // Changes slide every 3 seconds
+
+      return () => clearInterval(interval)
+    }
+  }, [emblaApi])
+
   return (
     <section className="w-full py-12 md:py-24 bg-green-50">
-      <div className="w-11/12 mx-auto px-4 md:px-6">
+      <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-6 text-green-600">
           This Year&apos;s Conference
         </h2>
@@ -57,54 +73,40 @@ const PresentConference = () => {
           Get a glimpse of the exciting moments from AICCEES 2024 so far.
         </p>
         
-        <div className="mt-8">
-          <Swiper
-            modules={[Autoplay, Pagination, Navigation]}
-            slidesPerView={1}
-            slidesPerGroup={1}
-            spaceBetween={20}
-            loop={true}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
-            navigation={true}
-            breakpoints={{
-              768: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-              }
-            }}
-            className="pb-12 w-11/12 mx-auto !grid !place-items-center !justify-center !items-center"
-            style={{
-              "--swiper-navigation-color": "#16a34a",
-              "--swiper-pagination-color": "#16a34a",
-            } as React.CSSProperties}
-            >
+        <Carousel
+          ref={emblaRef}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <CarouselContent>
             {conferenceImages.map((image, index) => (
-              <SwiperSlide key={index}>
-                <div className="relative md:ml-auto  aspect-[4/3] h-[300px]">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover rounded-lg"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority={index < 2}
-                  />
+              <CarouselItem key={index} className="md:basis-1/2">
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="relative aspect-[4/3] p-0">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill
+                          className="object-cover rounded-lg"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          priority={index < 2}
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
-              </SwiperSlide>
+              </CarouselItem>
             ))}
-          </Swiper>
-        </div>
+          </CarouselContent>
+          <CarouselPrevious className="left-2" />
+          <CarouselNext className="right-2" />
+        </Carousel>
       </div>
     </section>
   )
 }
-
-export default PresentConference

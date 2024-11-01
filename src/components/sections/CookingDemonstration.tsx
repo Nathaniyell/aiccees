@@ -1,9 +1,17 @@
 "use client"
+
+import { useEffect } from 'react'
 import Image from 'next/image'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination';
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import useEmblaCarousel from 'embla-carousel-react'
+
 import cooking from '@/public/images/cooking-demonstration/cooking.jpg'
 import cooking1 from '@/public/images/cooking-demonstration/cooking1.jpg'
 import cooking2 from '@/public/images/cooking-demonstration/cooking2.jpg'
@@ -21,9 +29,26 @@ const CookingDemonstration = () => {
     { src: cooking5, alt: "Cooking Demonstration 6" },
   ];
 
+  // Add embla API
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    align: "start"
+  })
+
+  // Autoplay functionality
+  useEffect(() => {
+    if (emblaApi) {
+      const interval = setInterval(() => {
+        emblaApi.scrollNext()
+      }, 3000) // Changes slide every 3 seconds
+
+      return () => clearInterval(interval)
+    }
+  }, [emblaApi])
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
-      <div className="w-11/12 mx-auto px-4 md:px-6">
+      <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-green-600">
           Cooking Demonstration
         </h2>
@@ -31,51 +56,39 @@ const CookingDemonstration = () => {
           At the AICCEES 2024 conference, we are thrilled to present a cooking demonstration sponsored by <span className="font-bold">Modern Energy Cooking Services (MECS)</span>. This highlighted the power and versatility of modern energy technologies in transforming everyday cooking practices. Attendees witnessed firsthand how innovative energy solutions make cooking more efficient, environmentally friendly, and accessible, aligning with sustainable development goals for cleaner and healthier energy practices across Africa. 
         </p>
         
-        <div className="mt-8">
-          <Swiper
-            modules={[Autoplay, Pagination]}
-            slidesPerView={1}
-            slidesPerGroup={1}
-            spaceBetween={20}
-            loop={true}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
-            // navigation={true}
-            breakpoints={{
-              768: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-              }
-            }}
-            className="pb-12 w-11/12 mx-auto !grid !place-items-center !justify-center !items-center"
-            style={{
-              "--swiper-navigation-color": "#16a34a",
-              "--swiper-pagination-color": "#16a34a",
-            } as React.CSSProperties}
-                    >
+        <Carousel
+          ref={emblaRef}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <CarouselContent>
             {cookingImages.map((image, index) => (
-              <SwiperSlide key={index}>
-                <div className="relative md:ml-auto aspect-[4/3] h-[300px]">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover rounded-lg"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    priority={index < 2}
-                  />
+              <CarouselItem key={index} className="md:basis-1/2">
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="relative aspect-[4/3] p-0">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill
+                          className="object-cover rounded-lg"
+                          sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 400px"
+                          priority={index < 2}
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
-              </SwiperSlide>
+              </CarouselItem>
             ))}
-          </Swiper>
-        </div>
+          </CarouselContent>
+          <CarouselPrevious className="left-2" />
+          <CarouselNext className="right-2" />
+        </Carousel>
       </div>
     </section>
   )
