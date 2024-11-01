@@ -98,7 +98,7 @@ export default function PresentConference() {
           AICCEES 2024
         </h2>
         <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed text-center mb-6">
-          Get a glimpse of the exciting moments from AICCEES 2024 so far.
+          Get a glimpse of the exciting moments from AICCEES 2024
         </p>
         
         <Carousel
