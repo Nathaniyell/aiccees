@@ -86,8 +86,8 @@ const jsonLd = {
   "@type": "Event",
   name: "Africa International Conference on Clean Energy & Energy Storage",
   description: "Empowering Africa's Future Through Clean Energy Innovation and Sustainable Storage Solutions",
-  startDate: "2025-03-18", // Replace with actual date
-  endDate: "2025-03-20", // Replace with actual date
+  startDate: "2024-03-18", // Replace with actual date
+  endDate: "2025-12-25", // Replace with actual date
   location: {
     "@type": "Place",
     name: "Conference Venue Name",
