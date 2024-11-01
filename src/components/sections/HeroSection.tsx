@@ -34,7 +34,7 @@ export function HeroSection() {
           modules={[Autoplay, EffectFade]}
           effect="fade"
           autoplay={{
-            delay: 5000,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           loop={true}
@@ -72,7 +72,7 @@ export function HeroSection() {
                 document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
               }}
               variant="outline" 
-              className="!text-green-700 border-white hover:bg-green hover:!text-white"
+              className="!text-green-700 border-white hover:bg-green-700 hover:!text-white hover:border-green-700"
             >
               Learn More
             </Button>
