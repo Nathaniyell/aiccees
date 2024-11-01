@@ -1,6 +1,6 @@
 "use client"
 import { Card, CardHeader, CardTitle } from '../ui/card'
-import { deets } from '../conferences/itemized'
+import { deets } from '../data_models/conferences'
 import Image from 'next/image'
 
 const ConferenceThemes = () => {

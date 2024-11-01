@@ -9,6 +9,7 @@ import PublishingPapers from '@/components/sections/PublishingPapers'
 import CookingDemonstration from '@/components/sections/CookingDemonstration'
 import PresentConference from '@/components/sections/PresentConference'
 import Sponsors from '@/components/sections/Sponsors'
+import Submissions from '@/components/sections/Submissions'
 
 
 export default function ConferencePage() {
@@ -21,9 +22,10 @@ export default function ConferencePage() {
         <SpeakersSection />
         <ConferenceThemes />
         <PublishingPapers />
+        <Submissions />
         <CookingDemonstration />
         <PresentConference />
-        {/* <Sponsors /> */}
+        <Sponsors />
       </main>
       <Footer />
     </div>
