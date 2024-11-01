@@ -7,12 +7,31 @@ import logo from '@/public/images/aicess/aicess_aicess.png'
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    setIsMenuOpen(false) // Close mobile menu
+
+    // Remove the # from the href
+    const targetId = href.replace('#', '')
+    const element = document.getElementById(targetId)
+    
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+      
+      // Update URL without causing a page reload
+      window.history.pushState({}, '', href)
+    }
+  }
+
   const navLinks = [
     { href: '#about', label: 'About' },
     { href: '#speakers', label: 'Speakers' },
     { href: '#themes', label: 'Themes' },
     { href: '#publish', label: 'Publish Paper' },
-    { href: '#sponsors', label: 'Cooking Demonstration' },
+    { href: '#cooking', label: 'Cooking Demonstration' },
     { href: '#sponsors', label: 'Sponsors' },
   ]
 
@@ -30,6 +49,7 @@ export function Header() {
               key={link.href}
               className="font-medium hover:text-green-600 hover:underline underline-offset-4"
               href={link.href}
+              onClick={(e) => handleScroll(e, link.href)}
             >
               {link.label}
             </Link>
@@ -49,18 +69,16 @@ export function Header() {
         </button>
 
         {/* Mobile Navigation */}
-        <div
-          className={`fixed inset-y-0 right-0 top-20 transform bg-green-700/95 h-screen w-screen  shadow-lg transition-transform duration-300 ease-in-out ${
-            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          } md:hidden`}
-        >
-          <div className="p-6 space-y-4">
+        <div className={`fixed inset-0 bg-green-400/95 backdrop-blur-sm transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        } md:hidden`}>
+          <div className="flex flex-col items-center justify-center h-full space-y-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                className="block font-medium text-white hover:text-green-600"
+                className="block text-xl font-medium text-white hover:text-green-200"
                 href={link.href}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => handleScroll(e, link.href)}
               >
                 {link.label}
               </Link>

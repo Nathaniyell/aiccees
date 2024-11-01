@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 import { aicess } from '../data_models/conferences'
+import AOS from '../layout/AOS'
 
 const AboutUs = () => {
     return (
+      <AOS>
         <section id="about" className="w-full py-12 md:py-24">
             <div className="flex container md:w-11/12 mx-auto flex-col md:flex-row justify-center">
                 <div className="md:w-3/4 px-4 md:px-6 space-y-4">
@@ -29,7 +31,7 @@ const AboutUs = () => {
     </div>
             </div>
         </section>
-
+      </AOS>
     )
 }
 

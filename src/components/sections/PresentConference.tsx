@@ -29,6 +29,7 @@ import conferencePics11 from "@/public/images/conference-pics/IMG_2026.jpg"
 import conferencePics12 from "@/public/images/conference-pics/IMG_2107.jpg"
 import conferencePics13 from "@/public/images/conference-pics/IMG_2417.jpg"
 import conferencePics14 from "@/public/images/conference-pics/IMG_2431.jpg"
+import AOS from '../layout/AOS'
 
 export default function PresentConference() {
   const plugin = useRef(
@@ -90,6 +91,7 @@ export default function PresentConference() {
 
 
   return (
+    <AOS>
     <section className="w-full py-12 md:py-24 bg-green-50">
       <div className="container md:w-11/12 mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-6 text-green-600">
@@ -145,5 +147,6 @@ export default function PresentConference() {
         </div>
       </div>
     </section>
+    </AOS>
   )
 }

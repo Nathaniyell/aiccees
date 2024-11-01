@@ -19,6 +19,7 @@ import cooking3 from '@/public/images/cooking-demonstration/cooking3.jpg'
 import cooking4 from '@/public/images/cooking-demonstration/cooking4.jpg'
 import cooking5 from '@/public/images/cooking-demonstration/cooking5.jpg'
 import Autoplay from "embla-carousel-autoplay"
+import AOS from '../layout/AOS'
 
 
 const CookingDemonstration = () => {
@@ -36,7 +37,8 @@ const CookingDemonstration = () => {
   )
 
   return (
-    <section className="w-full py-12 md:py-24">
+    <AOS>
+    <section id="cooking" className="w-full py-12 md:py-24">
       <div className="container md:w-11/12 mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-green-600">
           Cooking Demonstration
@@ -82,6 +84,7 @@ const CookingDemonstration = () => {
         </Carousel>
       </div>
     </section>
+    </AOS>
   )
 }
 

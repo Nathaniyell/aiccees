@@ -2,9 +2,11 @@
 import { Card, CardHeader, CardTitle } from '../ui/card'
 import { deets } from '../data_models/conferences'
 import Image from 'next/image'
+import AOS from '../layout/AOS'
 
 const ConferenceThemes = () => {
   return (
+    <AOS>
     <section id="themes" className="w-full py-12 md:py-24">
     <div className="container md:w-11/12 mx-auto px-4 md:px-6">
       <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4 text-green-600">2024 AICCEES Conference</h2>
@@ -19,8 +21,9 @@ const ConferenceThemes = () => {
           </Card>
         ))}
       </div>
-    </div>
-  </section>
+        </div>
+        </section>
+    </AOS>
   )
 }
 

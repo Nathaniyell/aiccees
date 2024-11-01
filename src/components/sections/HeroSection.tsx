@@ -15,7 +15,15 @@ export function HeroSection() {
           </div>
           <div className="space-x-4">
             <Button className="bg-red-600 text-white hover:bg-red-700">Register Now</Button>
-            <Button variant="outline" className="!text-green-600 border-white hover:bg-white hover:!text-green-700">Learn More</Button>
+            <Button 
+              onClick={() => {
+                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              variant="outline" 
+              className="!text-green-600 border-white hover:bg-white hover:!text-green-700"
+            >
+              Learn More
+            </Button>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "../ui/button"
 import { Calendar, Download, Circle, MapPin } from "lucide-react"
+import AOS from "../layout/AOS"
 
 const info = [
   {
@@ -79,7 +80,8 @@ const getStatusColor = (status: string) => {
 
 function Submissions() {
   return (
-    <section className="bg-gradient-to-b from-green-900 to-green-800 py-16">
+    <AOS>
+    <section className="w-full bg-gradient-to-b from-green-900 to-green-800 py-16">
       <div className="container md:w-11/12 mx-auto px-4 md:px-6">
         <motion.div
           initial="hidden"
@@ -161,6 +163,7 @@ function Submissions() {
         </motion.div>
       </div>
     </section>
+    </AOS>
   )
 }
 
