@@ -80,7 +80,7 @@ const getStatusColor = (status: string) => {
 function Submissions() {
   return (
     <section className="bg-gradient-to-b from-green-900 to-green-800 py-16">
-      <div className="container px-4 md:px-6">
+      <div className="container md:w-11/12 mx-auto px-4 md:px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"

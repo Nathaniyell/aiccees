@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useCallback } from 'react'
+import { useRef } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import useEmblaCarousel from 'embla-carousel-react'
+
 
 import cooking from '@/public/images/cooking-demonstration/cooking.jpg'
 import cooking1 from '@/public/images/cooking-demonstration/cooking1.jpg'
@@ -18,6 +18,8 @@ import cooking2 from '@/public/images/cooking-demonstration/cooking2.jpg'
 import cooking3 from '@/public/images/cooking-demonstration/cooking3.jpg'
 import cooking4 from '@/public/images/cooking-demonstration/cooking4.jpg'
 import cooking5 from '@/public/images/cooking-demonstration/cooking5.jpg'
+import Autoplay from "embla-carousel-autoplay"
+
 
 const CookingDemonstration = () => {
   const cookingImages = [
@@ -29,44 +31,13 @@ const CookingDemonstration = () => {
     { src: cooking5, alt: "Cooking Demonstration 6" },
   ];
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true,
-    align: "start",
-    dragFree: true
-  })
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
-
-  useEffect(() => {
-    if (!emblaApi) return
-
-    const autoplay = setInterval(scrollNext, 3000)
-
-    const onMouseEnter = () => clearInterval(autoplay)
-    const onMouseLeave = () => {
-      clearInterval(autoplay)
-      const newAutoplay = setInterval(scrollNext, 3000)
-      return () => clearInterval(newAutoplay)
-    }
-
-    const emblaNode = emblaApi.rootNode()
-    emblaNode.addEventListener('mouseenter', onMouseEnter)
-    emblaNode.addEventListener('mouseleave', onMouseLeave)
-
-    return () => {
-      clearInterval(autoplay)
-      if (emblaNode) {
-        emblaNode.removeEventListener('mouseenter', onMouseEnter)
-        emblaNode.removeEventListener('mouseleave', onMouseLeave)
-      }
-    }
-  }, [emblaApi, scrollNext])
+  const plugin = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
 
   return (
     <section className="w-full py-12 md:py-24">
-      <div className="container px-4 md:px-6">
+      <div className="container md:w-11/12 mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-green-600">
           Cooking Demonstration
         </h2>
@@ -75,7 +46,9 @@ const CookingDemonstration = () => {
         </p>
         
         <Carousel
-          ref={emblaRef}
+           plugins={[plugin.current]}
+           onMouseEnter={plugin.current.stop}
+           onMouseLeave={plugin.current.reset}
           opts={{
             align: "start",
             loop: true,

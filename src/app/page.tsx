@@ -10,6 +10,7 @@ import CookingDemonstration from '@/components/sections/CookingDemonstration'
 import PresentConference from '@/components/sections/PresentConference'
 import Sponsors from '@/components/sections/Sponsors'
 import Submissions from '@/components/sections/Submissions'
+import ConferenceStats from '@/components/sections/ConferenceStats'
 
 
 export default function ConferencePage() {
@@ -19,8 +20,9 @@ export default function ConferencePage() {
       <main className="flex-1">
         <HeroSection />
         <AboutUs />
-        <SpeakersSection />
+        <ConferenceStats />
         <ConferenceThemes />
+        <SpeakersSection />
         <PublishingPapers />
         <Submissions />
         <CookingDemonstration />

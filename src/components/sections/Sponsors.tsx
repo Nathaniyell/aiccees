@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useCallback } from 'react'
+import { useRef } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -10,44 +10,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import useEmblaCarousel from 'embla-carousel-react'
 import { sponsors_list } from '../data_models/conferences'
+import Autoplay from "embla-carousel-autoplay"
 
 const Sponsors = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true,
-    align: "start",
-    dragFree: true
-  })
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
-
-  useEffect(() => {
-    if (!emblaApi) return
-
-    const autoplay = setInterval(scrollNext, 3000)
-
-    const onMouseEnter = () => clearInterval(autoplay)
-    const onMouseLeave = () => {
-      clearInterval(autoplay)
-      const newAutoplay = setInterval(scrollNext, 3000)
-      return () => clearInterval(newAutoplay)
-    }
-
-    const emblaNode = emblaApi.rootNode()
-    emblaNode.addEventListener('mouseenter', onMouseEnter)
-    emblaNode.addEventListener('mouseleave', onMouseLeave)
-
-    return () => {
-      clearInterval(autoplay)
-      if (emblaNode) {
-        emblaNode.removeEventListener('mouseenter', onMouseEnter)
-        emblaNode.removeEventListener('mouseleave', onMouseLeave)
-      }
-    }
-  }, [emblaApi, scrollNext])
+  const plugin = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
+ 
 
   return (
     <section id="sponsors" className="w-full py-12 md:py-24">
@@ -57,10 +27,13 @@ const Sponsors = () => {
         </h2>
         
         <Carousel
-          ref={emblaRef}
+          plugins={[plugin.current]}
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
           opts={{
             align: "start",
             loop: true,
+            
           }}
           className="w-full max-w-5xl mx-auto"
         >

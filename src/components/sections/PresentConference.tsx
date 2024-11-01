@@ -1,7 +1,7 @@
 "use client"
-
-import { useEffect } from 'react'
+import { useRef } from 'react'
 import Image from 'next/image'
+import { FileText, BookText, Youtube } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -10,7 +10,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from "embla-carousel-autoplay"
+import { ConferenceMaterials } from './ConferenceMaterials'
 
 // Import all conference images
 import conferencePics from "@/public/images/conference-pics/IMG_1922.jpg"
@@ -30,7 +31,10 @@ import conferencePics13 from "@/public/images/conference-pics/IMG_2417.jpg"
 import conferencePics14 from "@/public/images/conference-pics/IMG_2431.jpg"
 
 export default function PresentConference() {
-  // Create array of all conference images
+  const plugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  )
+  
   const conferenceImages = [
     { src: conferencePics, alt: "Conference Image 1" },
     { src: conferencePics1, alt: "Conference Image 2" },
@@ -48,24 +52,46 @@ export default function PresentConference() {
     { src: conferencePics13, alt: "Conference Image 14" },
     { src: conferencePics14, alt: "Conference Image 15" },
   ]
+  const materials = [
+    {
+      id: 1,
+      header: "YOUTUBE",
+      link: "https://www.youtube.com/@toveroenergy3932/streams",
+      icon: Youtube,
+      description: "Watch conference presentations and highlights",
+      color: "text-white",
+      bgColor: "bg-red-600",
+      iconBgColor: "bg-white",
+      iconColor: "text-red-600"
+    },
+    {
+      id: 2,
+      header: "PROCEEDINGS",
+      link: "https://www.scientific.net/book/africa-international-conference-on-clean-energy-and-energy-storage/978-3-0357-3771-4",
+      icon: BookText,
+      description: "Access published conference proceedings",
+      color: "text-white",
+      bgColor: "bg-blue-700",
+      iconBgColor: "bg-white",
+      iconColor: "text-blue-700"
+    },
+    {
+      id: 3,
+      header: "BOOK OF ABSTRACTS",
+      link: "https://drive.google.com/uc?export=download&id=1lE93VeauJnyykfAe1ogiYFDLHE_V4KDD",
+      icon: FileText,
+      description: "Download conference abstracts",
+      color: "text-white",
+      bgColor: "bg-green-600",
+      iconBgColor: "bg-white",
+      iconColor: "text-green-600"
+    },
+  ]
 
-  // Add embla API
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
-
-  // Autoplay functionality
-  useEffect(() => {
-    if (emblaApi) {
-      const interval = setInterval(() => {
-        emblaApi.scrollNext()
-      }, 3000) // Changes slide every 3 seconds
-
-      return () => clearInterval(interval)
-    }
-  }, [emblaApi])
 
   return (
     <section className="w-full py-12 md:py-24 bg-green-50">
-      <div className="container px-4 md:px-6">
+      <div className="container md:w-11/12 mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-6 text-green-600">
           2024 AICCEES Conference
         </h2>
@@ -74,7 +100,9 @@ export default function PresentConference() {
         </p>
         
         <Carousel
-          ref={emblaRef}
+           plugins={[plugin.current]}
+           onMouseEnter={plugin.current.stop}
+           onMouseLeave={plugin.current.reset}
           opts={{
             align: "start",
             loop: true,
@@ -106,6 +134,15 @@ export default function PresentConference() {
           <CarouselPrevious className="left-2" />
           <CarouselNext className="right-2" />
         </Carousel>
+        <div className='mt-8'>
+        
+        <ConferenceMaterials 
+            year={2024}
+            materials={materials}
+            titleColor="text-black"
+            descColor="text-gray-200"
+          />
+        </div>
       </div>
     </section>
   )

@@ -5,8 +5,8 @@ import { aicess } from '../data_models/conferences'
 const AboutUs = () => {
     return (
         <section id="about" className="w-full py-12 md:py-24">
-            <div className="flex w-11/12 mx-auto flex-col md:flex-row justify-center">
-                <div className="w-11/12 md:w-3/4 px-4 md:px-6 space-y-4">
+            <div className="flex container md:w-11/12 mx-auto flex-col md:flex-row justify-center">
+                <div className="md:w-3/4 px-4 md:px-6 space-y-4">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4 text-green-600">About AICCEES</h2>
                     <p className="text-gray-600 md:text-base/relaxed">
                         More than 600 million people in Sub-Saharan Africa are living without electricity according to World Bank research. While countries in the African continent are committed to achieving SDG7 which is ensuring access to affordable, reliable, sustainable, and modern energy for all by 2030, various studies have shown that the major challenges in the renewable energy sector include the high cost of renewable energy solutions, the lack of knowledge about them, the absence of technologies that are suitable to the local context, low research and development efforts, and technical skills gap in the field of clean energy.
