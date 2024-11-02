@@ -36,7 +36,7 @@ export function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-green-500 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="sticky border-b border-green-500 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="w-11/12 mx-auto flex h-20 items-center">
         <Link href="/" className="flex items-center space-x-2">
           <Image src={logo} alt="AICCEES" className='w-16 h-16' />
@@ -69,7 +69,7 @@ export function Header() {
         </button>
 
         {/* Mobile Navigation */}
-        <div className={`fixed inset-0 bg-green-400/95 backdrop-blur-sm transition-all duration-300 ease-in-out ${
+        <div className={`fixed inset-0 top-20 !z-50 w-screen h-screen bg-green-800 transition-all duration-300 ease-in-out ${
           isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         } md:hidden`}>
           <div className="flex flex-col items-center justify-center h-full space-y-8">
