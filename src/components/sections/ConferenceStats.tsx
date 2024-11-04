@@ -159,7 +159,7 @@ export default function ConferenceStats() {
             className="text-center"
           >
             <p className="text-gray-100 italic">
-              Join us this year as we aim to make an even bigger impact!
+              {/* Join us this year as we aim to make an even bigger impact! */}
             </p>
           </motion.div>
         </motion.div>
