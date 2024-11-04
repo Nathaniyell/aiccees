@@ -69,7 +69,7 @@ export function Header() {
         </button>
 
         {/* Mobile Navigation */}
-        <div className={`fixed inset-0 top-20 z-[999] w-screen h-[calc(100vh-5rem)] bg-green-800 transition-all duration-300 ease-in-out ${
+        <div className={`fixed inset-0 top-20 !z-[100000] w-screen h-[calc(100vh-5rem)] bg-green-800 transition-all duration-300 ease-in-out ${
           isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
         } md:hidden`}>
           <div className="flex flex-col items-center justify-center h-full space-y-8">
