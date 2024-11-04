@@ -43,7 +43,7 @@ const CookingDemonstration = () => {
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-green-600">
           Cooking Demonstration
         </h2>
-        <p className="mx-auto max-w-[700px] text-gray-600 md:text-base/relaxed mb-6 text-center">
+        <p className="mx-auto max-w-[700px] text-gray-600 md:text-base/relaxed mb-6 text-justify">
           At the AICCEES 2024 conference, we are thrilled to present a cooking demonstration sponsored by <span className="font-bold">Modern Energy Cooking Services (MECS)</span>. This highlighted the power and versatility of modern energy technologies in transforming everyday cooking practices. Attendees witnessed firsthand how innovative energy solutions make cooking more efficient, environmentally friendly, and accessible, aligning with sustainable development goals for cleaner and healthier energy practices across Africa. 
         </p>
         
