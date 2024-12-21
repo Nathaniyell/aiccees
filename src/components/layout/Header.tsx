@@ -32,7 +32,7 @@ export function Header() {
     { href: '#themes', label: 'Themes' },
     { href: '#publish', label: 'Publish Paper' },
     { href: '#cooking', label: 'Cooking Demonstration' },
-    { href: '#sponsors', label: 'Sponsors' },
+    { href: '/partners', label: 'Partners' },
   ]
 
   return (

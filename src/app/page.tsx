@@ -1,6 +1,6 @@
 "use client"
-import { Header } from '@/components/layout/Header'
-import { Footer } from '@/components/layout/Footer'
+// import { Header } from '@/components/layout/Header'
+// import { Footer } from '@/components/layout/Footer'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { SpeakersSection } from '@/components/sections/SpeakersSection'
 import AboutUs from '@/components/sections/AboutUs'
@@ -15,8 +15,7 @@ import ConferenceStats from '@/components/sections/ConferenceStats'
 
 export default function ConferencePage() {
   return (
-    <div className="flex flex-col min-h-screen bg-white text-gray-900">
-      <Header />
+ 
       <main className="flex-1">
         <HeroSection />
         <AboutUs />
@@ -29,7 +28,7 @@ export default function ConferencePage() {
         <PresentConference />
         <Sponsors />
       </main>
-      <Footer />
-    </div>
+    
+
   )
 }

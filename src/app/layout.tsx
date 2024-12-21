@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { ScrollToTop } from "@/components/ScrollToTop"
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://toveroenergy.com'), // Replace with your actual domain
@@ -126,8 +128,12 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={`${GeistSans.className} antialiased`}>
+      <div className="flex flex-col min-h-screen bg-white text-gray-900">
+      <Header />
         {children}
+        <Footer />
         <ScrollToTop />
+      </div>
       </body>
     </html>
   );
