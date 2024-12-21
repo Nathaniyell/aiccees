@@ -1,6 +1,6 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
-import { partners } from "../data-models/conferences"
+import { partners } from "@/components/data_models/conferences"
 
 
 export function Partners() {

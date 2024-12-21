@@ -154,6 +154,29 @@ export const sponsors_list = [
   { id: 5, image: uniport },
 ];
 
+export const partners = [
+  {
+    name: "Modern Energy Cooking Services",
+    logo: mecs,
+  },
+  {
+    name: "Transforming Energy Learning Partners",
+    logo: trans,
+  },
+  {
+    name: "Asteven Group",
+    logo: asteven,
+  },
+  {
+    name: "EnergyPro",
+    logo: enerpro,
+  },
+  {
+    name: "University of Port Harcourt",
+    logo: uniport,
+  },
+]
+
 export const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
