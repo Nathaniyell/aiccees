@@ -40,7 +40,7 @@ export const aicess = {
       {
         id: 2,
         logo: logo2,
-        number: "39",
+        number: "86",
         description: "Abstract Submissions",
       },
       {
