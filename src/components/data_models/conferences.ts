@@ -58,13 +58,13 @@ export const aicess = {
       {
         id: 5,
         logo: logo5,
-        number: "4",
+        number: "5",
         description: "Panel Sessions",
       },
       {
         id: 6,
         logo: logo6,
-        number: "2",
+        number: "7",
         description: "Keynote Speakers",
       },
   ]
