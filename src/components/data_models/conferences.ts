@@ -46,7 +46,7 @@ export const aicess = {
       {
         id: 3,
         logo: logo3,
-        number: "21",
+        number: "51",
         description: "Full Paper Accepted",
       },
       {
