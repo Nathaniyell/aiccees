@@ -52,7 +52,7 @@ export const aicess = {
       {
         id: 4,
         logo: logo4,
-        number: "17",
+        number: "45",
         description: "Paper Presentation",
       },
       {
