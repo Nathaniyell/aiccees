@@ -76,6 +76,7 @@ export function PartnerForm() {
       toast.success("Partnership request submitted successfully!")
     } catch (error) {
       toast.error("Something went wrong. Please try again.")
+      console.log(error)
     } finally {
       setIsPending(false)
     }
