@@ -5,6 +5,7 @@ import { Youtube, BookText, FileText } from "lucide-react"
 
 import { ConferenceMaterials } from "./ConferenceMaterials"
 import { containerVariants, itemVariants } from "../data_models/conferences"
+import KeynoteHeader from "../keynote-speakers-header"
 
 
 const materials = [
@@ -70,6 +71,7 @@ export default function ConferenceStats() {
               The 1st edition of the Africa International Conference on Clean Energy and Energy Storage (AICCEES) 2023 brought together researchers, industry experts, and innovators from around the world.
             </motion.p>
           </div>
+          <KeynoteHeader title="Keynote speakers for the 2023 conference" />
 
           <motion.div
             variants={containerVariants}
