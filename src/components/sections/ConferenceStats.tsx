@@ -77,23 +77,6 @@ const materials = [
   ]
 
 
-const CounterAnimation = ({ number }: { number: string }) => {
-  return (
-    <motion.span
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        type: "spring",
-        stiffness: 100,
-        damping: 10,
-        delay: 0.2,
-      }}
-      className="text-4xl md:text-5xl font-bold"
-    >
-      {number}
-    </motion.span>
-  )
-}
 
 export default function ConferenceStats() {
   return (
@@ -111,13 +94,13 @@ export default function ConferenceStats() {
               variants={itemVariants}
               className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-6 text-white"
             >
-              AICCEES 2023 Impact
+              AICCEES 2023
             </motion.h2>
             <motion.p
               variants={itemVariants}
               className="mx-auto max-w-[700px] text-gray-200 md:text-xl/relaxed text-center mb-6"
             >
-              Last year&apos;s conference brought together researchers, industry experts, and innovators from around the world.
+              The 1st edition of the Africa International Conference on Clean Energy and Energy Storage (AICCEES) 2023 brought together researchers, industry experts, and innovators from around the world.
             </motion.p>
           </div>
 
@@ -125,29 +108,7 @@ export default function ConferenceStats() {
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
-            {stats.map((stat) => (
-              <motion.div
-                key={stat.id}
-                variants={itemVariants}
-                className="relative group"
-              >
-                <div className="absolute inset-0 bg-green-200 rounded-2xl shadow-lg transform transition-transform group-hover:scale-105" />
-                <div className="relative p-6 space-y-4">
-                  <div className={`${stat.color} w-12 h-12 rounded-xl bg-opacity-10 flex items-center justify-center`}>
-                    <stat.icon className={`w-6 h-6 ${stat.color}`} />
-                  </div>
-                  <div className="space-y-2">
-                    <CounterAnimation number={stat.number} />
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {stat.title}
-                    </h3>
-                    <p className="text-gray-600">
-                      {stat.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+            
           </motion.div>
           <ConferenceMaterials 
             year={2023}
