@@ -1,45 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Users, Presentation, Globe, Award, Youtube, BookText, FileText } from "lucide-react"
+import { Youtube, BookText, FileText } from "lucide-react"
 
 import { ConferenceMaterials } from "./ConferenceMaterials"
 import { containerVariants, itemVariants } from "../data_models/conferences"
 
-const stats = [
-  {
-    id: 1,
-    number: "500+",
-    title: "Attendees",
-    description: "From academia and industry",
-    icon: Users,
-    color: "text-blue-500",
-  },
-  {
-    id: 2,
-    number: "150+",
-    title: "Presentations",
-    description: "Research papers and posters",
-    icon: Presentation,
-    color: "text-green-500",
-  },
-  {
-    id: 3,
-    number: "25+",
-    title: "Countries",
-    description: "Global participation",
-    icon: Globe,
-    color: "text-purple-500",
-  },
-  {
-    id: 4,
-    number: "30+",
-    title: "Awards",
-    description: "Recognition for excellence",
-    icon: Award,
-    color: "text-amber-500",
-  },
-]
+
 const materials = [
     {
       id: 1,
