@@ -24,8 +24,8 @@ const AboutUs = () => {
           className="flex flex-col justify-between md:justify-end items-center gap-2"
         >
           <Image alt="Logo" src={item.logo} />
-          <h1 className="text-2xl font-bold">{item.number}</h1>
-          <p className="text-[12px] text-primarytext">{item.description}</p>
+          <h1 className="text-4xl font-bold">{item.number}</h1>
+          <p className="text-[12px] text-primary">{item.description}</p>
         </div>
       ))}
     </div>
