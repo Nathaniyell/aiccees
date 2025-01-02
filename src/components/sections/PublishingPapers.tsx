@@ -11,7 +11,8 @@ const PublishingPapers = () => {
             <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-center mb-6">
               Share your research with the energy experts, students and researchers across Africa. Submit your papers for a chance to present at the yearly Africa International Conference on Energy and Environmental Studies (AICCEES)
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-center gap-4">
+              <Button className="bg-green-800 text-white hover:bg-green-700">Register for conference</Button>
               <Button className="bg-red-600 text-white hover:bg-red-700">Submit Your Paper</Button>
             </div>
           </div>
