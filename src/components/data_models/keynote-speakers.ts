@@ -53,3 +53,17 @@ export const keynoteSpeakerData= [
 
     },
 ]
+export const keynoteSpeakers2023 = [
+    {
+        name: "Professor Yacob Mulugetta",
+        role: "Energy and Development Expert",
+        topics: ["African Energy Future: Beyond Extractivism",]
+       
+      },
+    {
+        name: "Ifeoma Malo",
+        role: "Global Climate and Energy Leader",
+        topics: ["The role of Industry-Academia Collaboration in Advancing Clean Energy Innovation in Africa", ],
+       
+      },
+]
