@@ -10,7 +10,7 @@ import CookingDemonstration from '@/components/sections/CookingDemonstration'
 import PresentConference from '@/components/sections/PresentConference'
 import Sponsors from '@/components/sections/Sponsors'
 import Submissions from '@/components/sections/Submissions'
-import ConferenceStats from '@/components/sections/ConferenceStats'
+// import ConferenceStats from '@/components/sections/ConferenceStats'
 
 
 export default function ConferencePage() {
@@ -20,9 +20,9 @@ export default function ConferencePage() {
         <HeroSection />
         <AboutUs />
         <ConferenceThemes />
-        <ConferenceStats />
         <SpeakersSection />
         <PublishingPapers />
+        {/* <ConferenceStats /> */}
         <Submissions />
         <CookingDemonstration />
         <PresentConference />
