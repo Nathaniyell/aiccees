@@ -6,6 +6,8 @@ import { Youtube, BookText, FileText } from "lucide-react"
 import { ConferenceMaterials } from "./ConferenceMaterials"
 import { containerVariants, itemVariants } from "../data_models/conferences"
 import KeynoteHeader from "../keynote-speakers-header"
+import { keynoteSpeakers2023 } from "../data_models/keynote-speakers"
+import KeynoteSpeaker from "../keynote-speakers"
 
 
 const materials = [
@@ -75,9 +77,12 @@ export default function ConferenceStats() {
 
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
-            
+            {keynoteSpeakers2023.map((speaker) => (
+              <KeynoteSpeaker key={speaker.name} {...speaker} />
+            ))}
+
           </motion.div>
           <ConferenceMaterials 
             year={2023}
