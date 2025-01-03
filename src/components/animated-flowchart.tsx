@@ -16,21 +16,21 @@ const steps: Step[] = [
   {
     id: 1,
     title: "Prepare Your Paper",
-    description: "Format your research paper according to the conference guidelines. Include abstract, methodology, and findings.",
+    description: "Format your research paper according to the conference guidelines and themes. Include abstract, methodology, and findings.",
     icon: <FileText className="h-6 w-6" />,
     color: 'green'
   },
   {
     id: 2,
-    title: "Submit Draft",
-    description: "Upload your paper draft through the conference submission portal for initial review.",
+    title: "Abstract submission",
+    description: "Upload your abstract through the conference submission portal for initial review.",
     icon: <Upload className="h-6 w-6" />,
     color: 'red'
   },
   {
     id: 3,
-    title: "Peer Review",
-    description: "Your paper will be reviewed by experts in the field. Expect feedback within 4-6 weeks.",
+    title: "Initial Review",
+    description: "Your abstract will be reviewed by scientific committee members. Expect feedback within 3-7 days.",
     icon: <Users className="h-6 w-6" />,
     color: 'green'
   },
@@ -51,7 +51,7 @@ const steps: Step[] = [
   {
     id: 6,
     title: "Acceptance",
-    description: "Upon approval, your paper will be published in the conference proceedings.",
+    description: "Upon approval, the login details for the scientific.net portal will be shared with you via mail. Make payment and upload your full paper on the portal.",
     icon: <ThumbsUp className="h-6 w-6" />,
     color: 'red'
   }
@@ -94,12 +94,12 @@ export default function AnimatedFlowchart() {
   }, [])
 
   return (
-    <div className="relative min-h-screen w-full max-w-7xl mx-auto px-4 py-20 bg-white">
+    <div className="relative min-h-screen w-full max-w-5xl mx-auto px-4 py-20 bg-white">
       {/* Center line */}
       <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-100">
         <div 
           ref={progressLine}
-          className="absolute top-0 w-full bg-gradient-to-b from-emerald-500 to-rose-500 transition-all duration-700 ease-in-out"
+          className="absolute top-0 w-[1.5px] rounded-full bg-gradient-to-b from-emerald-700 to-rose-700 transition-all duration-700 ease-in-out"
           style={{ height: '0%' }}
         />
       </div>
