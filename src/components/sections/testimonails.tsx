@@ -1,6 +1,4 @@
 'use client'
-
-import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -9,7 +7,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Star } from 'lucide-react'
+import { Star, UserRound } from 'lucide-react'
+import Autoplay from "embla-carousel-autoplay"
+import { useRef } from 'react'
 
 interface Testimonial {
   id: number
@@ -61,17 +61,24 @@ const testimonials: Testimonial[] = [
 ]
 
 export default function TestimonialCarousel() {
+    const plugin = useRef(
+        Autoplay({ delay: 3000, stopOnInteraction: true })
+      )
+
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-gradient-to-b from-green-900 to-green-800 text-white">
       <div className="container">
         <h2 className="text-3xl font-bold text-center mb-12">
-          What Our Attendees Say
+          Testimonials
         </h2>
         <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
+          plugins={[plugin.current]}
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+         opts={{
+           align: "start",
+           loop: true,
+         }}
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
@@ -81,20 +88,16 @@ export default function TestimonialCarousel() {
                 className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
               >
                 <div className="p-1">
-                  <Card>
+                  <Card className="bg-green-50">
                     <CardContent className="p-6">
                       <div className="flex items-center gap-4 mb-4">
                         <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                          <Image
-                            src={testimonial.image}
-                            alt={testimonial.name}
-                            fill
-                            className="object-cover"
-                          />
+                            <UserRound className="h-full w-full rounded-full" />
+                         
                         </div>
                         <div>
                           <h3 className="font-semibold">{testimonial.name}</h3>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-sm text-slate-600">
                             {testimonial.role} at {testimonial.company}
                           </p>
                         </div>
@@ -107,7 +110,7 @@ export default function TestimonialCarousel() {
                           />
                         ))}
                       </div>
-                      <blockquote className="text-muted-foreground">
+                      <blockquote className="text-emerald-800">
                         &quot;{testimonial.content}&quot;
                       </blockquote>
                     </CardContent>
