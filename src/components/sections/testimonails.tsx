@@ -70,7 +70,7 @@ export default function TestimonialCarousel() {
                                                 &quot;{testimonial.content.slice(0, 150)}...&quot;
                                                 <button
                                                     onClick={() => setSelectedTestimonial(testimonial)}
-                                                    className="block mt-2 text-sm font-medium text-emerald-600 hover:text-emerald-700"
+                                                    className="block border border-green-600 rounded-md px-2 py-1 mt-2 text-sm font-medium text-rose-600 hover:text-rose-700"
                                                 >
                                                     Read More
                                                 </button>
