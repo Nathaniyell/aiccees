@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '../ui/button'
 import AOS from '../layout/AOS'
+import AnimatedFlowchart from '../animated-flowchart'
 
 const PublishingPapers = () => {
   return (
@@ -16,6 +17,7 @@ const PublishingPapers = () => {
               <Button className="bg-red-600 text-white hover:bg-red-700">Submit Your Paper</Button>
             </div>
           </div>
+          <AnimatedFlowchart />
         </section>
     </AOS>
   )
