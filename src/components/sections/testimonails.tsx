@@ -9,8 +9,9 @@ import {
 } from "@/components/ui/carousel"
 import { Star, UserRound } from 'lucide-react'
 import Autoplay from "embla-carousel-autoplay"
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { testimonials } from "../data_models/testimonials"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 
 
@@ -18,6 +19,7 @@ export default function TestimonialCarousel() {
     const plugin = useRef(
         Autoplay({ delay: 3000, stopOnInteraction: true })
     )
+    const [selectedTestimonial, setSelectedTestimonial] = useState<typeof testimonials[0] | null>(null)
 
     return (
         <section className="py-12 bg-gradient-to-b from-green-900 to-green-800 text-white">
@@ -65,7 +67,13 @@ export default function TestimonialCarousel() {
                                                 ))}
                                             </div>
                                             <blockquote className="text-emerald-800">
-                                                &quot;{testimonial.content}&quot;
+                                                &quot;{testimonial.content.slice(0, 150)}...&quot;
+                                                <button
+                                                    onClick={() => setSelectedTestimonial(testimonial)}
+                                                    className="block mt-2 text-sm font-medium text-emerald-600 hover:text-emerald-700"
+                                                >
+                                                    Read More
+                                                </button>
                                             </blockquote>
                                         </CardContent>
                                     </Card>
@@ -77,6 +85,35 @@ export default function TestimonialCarousel() {
                     <CarouselNext className="hidden md:flex" />
                 </Carousel>
             </div>
+
+            <Dialog open={!!selectedTestimonial} onOpenChange={() => setSelectedTestimonial(null)}>
+                <DialogContent className="max-w-2xl">
+                    <DialogHeader>
+                        <DialogTitle className="flex items-center gap-4">
+                            <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                                <UserRound className="h-full w-full rounded-full" />
+                            </div>
+                            <div>
+                                <h3 className="font-semibold">{selectedTestimonial?.name}</h3>
+                                <p className="text-sm text-slate-600">
+                                    {selectedTestimonial?.role} at {selectedTestimonial?.company}
+                                </p>
+                            </div>
+                        </DialogTitle>
+                    </DialogHeader>
+                    <div className="flex mb-4">
+                        {selectedTestimonial && [...Array(selectedTestimonial.rating)].map((_, i) => (
+                            <Star
+                                key={i}
+                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                            />
+                        ))}
+                    </div>
+                    <blockquote className="text-emerald-800">
+                        &quot;{selectedTestimonial?.content}&quot;
+                    </blockquote>
+                </DialogContent>
+            </Dialog>
         </section>
     )
 }
