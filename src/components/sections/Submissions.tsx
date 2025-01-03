@@ -145,9 +145,10 @@ function Submissions() {
 
           <motion.div 
             variants={itemVariants}
-            className="flex justify-center mt-12"
+            className="flex justify-center mt-12 gap-4"
           >
             <Link
+              target="_blank"
               href="https://drive.google.com/uc?export=download&id=1ELqJouaYKzQEUku8cHR0K_rup48C5I0B"
             >
               <Button 
@@ -157,6 +158,19 @@ function Submissions() {
               >
                 <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
                 Download Brochure
+              </Button>
+            </Link>
+            <Link
+              href="https://drive.google.com/file/d/1cdAL_cEv0AvaAfavw9rtJZ3pOIwt_zVk/view?usp=drive_link"
+              target="_blank"
+            >
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="bg-red-700 text-white hover:bg-red-600 transition-colors group hover:text-slate-100"
+              >
+                <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                2024 Conference Report
               </Button>
             </Link>
           </motion.div>
