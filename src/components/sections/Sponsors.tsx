@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/carousel"
 import { sponsors_list } from '../data_models/conferences'
 import Autoplay from "embla-carousel-autoplay"
+import Link from 'next/link'
 
 const Sponsors = () => {
   const plugin = useRef(
@@ -66,6 +67,13 @@ const Sponsors = () => {
             <CarouselNext className="right-2" />
           </div>
         </Carousel>
+        <div className="mt-16 text-center flex items-center justify-center gap-2 flex-col sm:flex-row">
+                        <h3 className="text-xl font-semibold">Do you want to paratner with us?</h3>
+                        <Link href="/partners" className="text-blue-700 hover:text-blue-800 underline text-lg">
+                           Please visit the partners page
+                        </Link>
+                        
+                    </div>
       </div>
     </section>
   )

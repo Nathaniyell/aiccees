@@ -70,7 +70,7 @@ export function SpeakersSection() {
     };
 
     return (
-        <AOS>   
+        <AOS>
             <section id="speakers" className="w-full py-12 md:py-24 bg-gradient-to-b from-green-700 to-green-900">
                 <div className="container md:w-11/12 mx-auto px-4 md:px-6">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-white">Keynote Speakers</h2>
@@ -90,15 +90,15 @@ export function SpeakersSection() {
                                 </CardHeader>
                                 <CardContent className='space-y-3'>
                                     <p className="text-sm text-gray-600">
-                                        {expandedCards[speaker.name] 
-                                            ? speaker.bio 
+                                        {expandedCards[speaker.name]
+                                            ? speaker.bio
                                             : speaker.bio.slice(0, 200) + '...'}
                                     </p>
                                     {expandedCards[speaker.name] && speaker.bio2 && (
                                         <p className="text-sm text-gray-600">{speaker.bio2}</p>
                                     )}
-                                    <Button 
-                                        variant="outline" 
+                                    <Button
+                                        variant="outline"
                                         className="mt-2 text-green-600 hover:text-green-700"
                                         onClick={() => toggleCard(speaker.name)}
                                     >
@@ -107,6 +107,16 @@ export function SpeakersSection() {
                                 </CardContent>
                             </Card>
                         ))}
+                    </div>
+
+                    {/* Keynote Speaker Registration CTA */}
+                    <div className="mt-16 text-center flex items-center justify-center gap-6 flex-col sm:flex-row">
+                        <h3 className="text-2xl font-semibold text-white">Want to be a Keynote Speaker?</h3>
+                        <Button
+                            className="bg-green-50 text-green-700 hover:bg-green-50 hover:text-green-800 font-semibold px-8 py-6 text-lg"
+                        >
+                            Register as a Keynote Speaker
+                        </Button>
                     </div>
                 </div>
             </section>

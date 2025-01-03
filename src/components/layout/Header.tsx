@@ -35,7 +35,7 @@ export function Header() {
     { href: '#speakers', label: 'Speakers' },
     { href: '#themes', label: 'Themes' },
     { href: '#publish', label: 'Publish Paper' },
-    { href: '#cooking', label: 'Cooking Demonstration' },
+    { href: '/gallery', label: 'Gallery' },
     { href: '/partners', label: 'Partners' },
   ]
 
