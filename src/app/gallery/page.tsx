@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 
 export default function GalleryPage() {
     return (
-        <main className="container mx-auto py-16 px-4">
+        <main className="container mx-auto py-10 px-4">
             <div className="space-y-8">
                 <div className="text-center space-y-4">
                     <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center text-green-700">Conference Gallery</h1>
@@ -13,7 +13,7 @@ export default function GalleryPage() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {conferenceImages.map((image, index) => (
                         <Card key={index} className="group overflow-hidden transition-all hover:shadow-xl">
                             <div className="relative aspect-[4/3] overflow-hidden">
