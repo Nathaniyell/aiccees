@@ -105,7 +105,7 @@ export default function AnimatedFlowchart() {
       </div>
 
       {/* Steps */}
-      <div className="relative space-y-24">
+      <div className="relative space-y-24 overflow-x-hidden">
         {steps.map((step, index) => (
           <div
             key={step.id}
