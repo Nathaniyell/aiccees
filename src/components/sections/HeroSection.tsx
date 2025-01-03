@@ -68,13 +68,10 @@ export function HeroSection() {
           <div className="space-x-4">
             <Button className="bg-red-600 text-white hover:bg-red-700">Register Now</Button>
             <Button 
-              onClick={() => {
-                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-              }}
               variant="outline" 
               className="!text-green-700 border-white hover:bg-green-700 hover:!text-white hover:border-green-700"
             >
-              Learn More
+             Submit Paper
             </Button>
           </div>
         </div>
