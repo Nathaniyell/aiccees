@@ -94,7 +94,7 @@ export default function AnimatedFlowchart() {
   }, [])
 
   return (
-    <div className="relative min-h-screen w-full max-w-5xl mx-auto px-4 py-20 bg-white">
+    <div className="relative min-h-screen w-full max-w-5xl mx-auto px-4 py-20 bg-[#fafafa]">
       {/* Center line */}
       <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-100">
         <div
