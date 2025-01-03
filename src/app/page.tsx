@@ -6,29 +6,26 @@ import { SpeakersSection } from '@/components/sections/SpeakersSection'
 import AboutUs from '@/components/sections/AboutUs'
 import ConferenceThemes from '@/components/sections/ConferenceThemes'
 import PublishingPapers from '@/components/sections/PublishingPapers'
-import CookingDemonstration from '@/components/sections/CookingDemonstration'
-import PresentConference from '@/components/sections/PresentConference'
 import Sponsors from '@/components/sections/Sponsors'
 import Submissions from '@/components/sections/Submissions'
-// import ConferenceStats from '@/components/sections/ConferenceStats'
+import GallerySection from '@/components/sections/GallerySection'
+
 
 
 export default function ConferencePage() {
   return (
- 
-      <main className="flex-1">
-        <HeroSection />
-        <AboutUs />
-        <ConferenceThemes />
-        <SpeakersSection />
-        <PublishingPapers />
-        {/* <ConferenceStats /> */}
-        <Submissions />
-        <CookingDemonstration />
-        <PresentConference />
-        <Sponsors />
-      </main>
-    
+
+    <main className="flex-1">
+      <HeroSection />
+      <AboutUs />
+      <ConferenceThemes />
+      <SpeakersSection />
+      <PublishingPapers />
+      <Submissions />
+      <Sponsors />
+      <GallerySection />
+    </main>
+
 
   )
 }
