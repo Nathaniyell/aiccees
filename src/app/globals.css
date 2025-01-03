@@ -11,10 +11,12 @@ body {
     --radius: 0.5rem;
   }
   
-  .step-card.show {
-    transform: translateX(0);
-    opacity: 1;
+  .step-card {
+    transition: all 0.7s ease-in-out;
   }
   
-  
+  .step-card.show {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
 }

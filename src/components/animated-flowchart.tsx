@@ -66,7 +66,7 @@ export default function AnimatedFlowchart() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('show')
-          
+
           // Update progress line height when card becomes visible
           if (progressLine.current) {
             const cards = document.querySelectorAll('.step-card')
@@ -97,7 +97,7 @@ export default function AnimatedFlowchart() {
     <div className="relative min-h-screen w-full max-w-5xl mx-auto px-4 py-20 bg-white">
       {/* Center line */}
       <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-100">
-        <div 
+        <div
           ref={progressLine}
           className="absolute top-0 w-[1.5px] rounded-full bg-gradient-to-b from-emerald-700 to-rose-700 transition-all duration-700 ease-in-out"
           style={{ height: '0%' }}
@@ -110,12 +110,12 @@ export default function AnimatedFlowchart() {
           <div
             key={step.id}
             className={`step-card opacity-0 transition-all duration-700 ease-in-out
-              ${index % 2 === 0 ? 
-                'translate-x-[-100%] md:translate-x-[-20%]' : 
-                'translate-x-[100%] md:translate-x-[20%]'
+              ${index % 2 === 0 ?
+                'translate-x-[-50%] md:translate-x-[-20%]' :
+                'translate-x-[50%] md:translate-x-[20%]'
               }
-              ${index % 2 === 0 ? 
-                'md:mr-auto md:ml-0' : 
+              ${index % 2 === 0 ?
+                'md:mr-auto md:ml-0' :
                 'md:ml-auto md:mr-0'
               }
               max-w-md relative`}
@@ -125,8 +125,8 @@ export default function AnimatedFlowchart() {
               ${step.color === 'green' ? 'hover:border-emerald-500' : 'hover:border-rose-500'}">
               <CardHeader className="flex flex-row items-center gap-4">
                 <div className={`rounded-full p-2 
-                  ${step.color === 'green' ? 
-                    'bg-emerald-50 text-emerald-500' : 
+                  ${step.color === 'green' ?
+                    'bg-emerald-50 text-emerald-500' :
                     'bg-rose-50 text-rose-500'
                   }`}>
                   {step.icon}
@@ -141,12 +141,12 @@ export default function AnimatedFlowchart() {
                 <p className="text-gray-600">{step.description}</p>
               </CardContent>
             </Card>
-            
+
             {/* Connection dot */}
             <div className={`absolute top-1/2 h-4 w-4 rounded-full
               ${step.color === 'green' ? 'bg-emerald-500' : 'bg-rose-500'}
-              ${index % 2 === 0 ? 
-                'right-0 translate-x-1/2' : 
+              ${index % 2 === 0 ?
+                'right-0 translate-x-1/2' :
                 'left-0 -translate-x-1/2'
               }
               -translate-y-1/2 md:block hidden`}

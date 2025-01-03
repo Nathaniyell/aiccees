@@ -22,7 +22,7 @@ export default function TestimonialCarousel() {
     const [selectedTestimonial, setSelectedTestimonial] = useState<typeof testimonials[0] | null>(null)
 
     return (
-        <section className="py-12 bg-gradient-to-b from-green-900 to-green-800 text-white">
+        <section className="py-12 bg-gradient-to-b from-green-900 to-green-800 text-white px-4">
             <div className="container">
                 <h2 className="text-3xl font-bold text-center mb-12">
                     Testimonials

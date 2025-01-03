@@ -15,7 +15,7 @@ const PublishingPapers = () => {
            
           </div>
           <AnimatedFlowchart />
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 px-4 md:px-0">
               <Button className="bg-green-800 text-white hover:bg-green-700">Register for conference</Button>
               <Button className="bg-red-600 text-white hover:bg-red-700">Submit Your Paper</Button>
             </div>
