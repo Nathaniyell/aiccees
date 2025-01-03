@@ -21,17 +21,17 @@ export default function ConferencePage() {
     <main className="flex-1">
       <HeroSection />
       <AboutUs />
+      <Submissions />
       <ConferenceThemes />
       <SpeakersSection />
-      <PublishingPapers />
-      <Submissions />
       <ScientificCommittee />
-      <Sponsors />
+      <PublishingPapers />
       <GallerySection />
+      <Sponsors />
       <TestimonialCarousel />
       <div className="lg:px-16 flex justify-center">
 
-      <ConferenceCallToAction />
+        <ConferenceCallToAction />
       </div>
     </main>
 
