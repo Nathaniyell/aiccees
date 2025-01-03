@@ -112,6 +112,33 @@ const testimonials: Testimonial[] = [
     rating: 5,
     image: "/placeholder.svg?height=100&width=100"
   },
+  {
+    id: 11,
+    name: "Mourice Kausya",
+    role: "Researcher",
+    company: "Kenyatta University",
+    content: "Attending the AICCEES conference profoundly shaped my understanding of my role in the clean energy sector and reaffirmed my career goals. With my background in economics, I often questioned my fit within the clean energy field, wondering if I should shift back to a more traditional economic focus. However, the insights gained from the conference clarified that I truly belong in clean energy. I realised that I don’t need to be an engineer or have a technical background in energy systems to make a meaningful impact in this critical sector. Clean energy is multifaceted, and my economics expertise positions me well to contribute… As my career has evolved, particularly through my work on electric cooking, off-grid energy access, and sustainability projects, I have become increasingly drawn to the intricate connections between economic development, clean energy access, climate change, environmental sustainability, and social inclusivity. This experience has solidified my commitment to focusing my career and academic pursuits on clean energy and inclusive, sustainable development",
+    rating: 5,
+    image: "/placeholder.svg?height=100&width=100"
+  },
+  {
+    id: 12,
+    name: "Sammy Joel Panwal",
+    role: "PhD Student",
+    company: "National Open University of Nigeria",
+    content: "The insights from the conference have provided me with a broader perspective on the role of sustainable energy in improving health outcomes, especially for vulnerable communities in Nigeria. First, I intend to apply the lessons learned to my ongoing research on energy poverty and its health implications, specifically by exploring cleaner energy alternatives for households and businesses. Second, I will use the professional relationships I established during the conference to foster collaborative projects, particularly those focused on bridging the gap between public health and energy access. This aligns with my long-term goal of contributing to policies that promote clean energy solutions to reduce environmental health risks. Finally, I plan to actively advocate for sustainable energy transitions in my role as a public health expert, using this platform to raise awareness about the health and socio-economic benefits of clean energy adoption.",
+    rating: 5,
+    image: "/placeholder.svg?height=100&width=100"
+  },
+  {
+    id: 13,
+    name: "Dr. Veronica Akpasoh",
+    role: "Chief Executive Officer",
+    company: "Tovero Energy Limited",
+    content: "The TEA-LP scholarship support played a significant role in shaping the success of the event by enabling students and researchers from across the continent to participate both in-person and virtually. This diversity enriched the quality of engagement and strengthened our collaborative vision for Africa’s clean energy future. Additionally, TEA-LP’s backing of research paper publication in Scopus-indexed journals helped elevate the academic quality of the conference, providing participants with a global platform to share their work. A testament to TEA-LP’s impactful support is the fact that both the Best Presenter and Best Research Paper awards went to beneficiaries of the Travel Scholarship. Their outstanding contributions highlighted the immense value of TEA-LP’s commitment to supporting talented researchers across Africa.",
+    rating: 5,
+    image: "/placeholder.svg?height=100&width=100"
+  },
 ]
 
 export default function TestimonialCarousel() {
