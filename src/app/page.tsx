@@ -9,6 +9,7 @@ import PublishingPapers from '@/components/sections/PublishingPapers'
 import Sponsors from '@/components/sections/Sponsors'
 import Submissions from '@/components/sections/Submissions'
 import GallerySection from '@/components/sections/GallerySection'
+import TestimonialCarousel from '@/components/sections/testimonails'
 
 
 
@@ -24,6 +25,7 @@ export default function ConferencePage() {
       <Submissions />
       <Sponsors />
       <GallerySection />
+      <TestimonialCarousel />
     </main>
 
 
