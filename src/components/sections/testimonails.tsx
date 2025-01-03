@@ -71,8 +71,44 @@ const testimonials: Testimonial[] = [
     id: 6,
     name: "G. Plason Z. Plakar",
     role: "Researcher",
-    company: "",
+    company: "Africa Center of Excellence in Future Energies and Electrochemical Systems, Federal University of Technology Owerri",
     content: "The keynote lecture by Prof Foluke on waste management  particularly engaging and informative because Africa remains a hub for abundance of energy resources, which are termed as wastes. The speaker’s passion and expertise made the topic accessible and enjoyable. I learned a great deal from this presentation and believe it will be valuable in my future work.",
+    rating: 5,
+    image: "/placeholder.svg?height=100&width=100"
+  },
+  {
+    id: 7,
+    name: "Mourice Kausya",
+    role: "Researcher",
+    company: "Kenyatta University",
+    content: "I have learnt that Africa has the potential to improve energy access using African expertise. The AICCEES has taught me that through networking and collaboration with sustainable energy professionals (students, young professionals, and senior professionals), Africa can solve problems in energy, health, agriculture, water, tourism, and other socio-economic-oriented sectors across Africa.",
+    rating: 5,
+    image: "/placeholder.svg?height=100&width=100"
+  },
+  {
+    id: 8,
+    name: "Cyril Praise",
+    role: "Researcher",
+    company: "Obafemi Awolowo University, Ile-Ife",
+    content: "The conference reaffirmed my commitment to addressing energy accessibility challenges in Nigeria, particularly in rural areas, where clean energy solutions can significantly improve the quality of life… I feel motivated to continue the path of finding renewable energy solutions for my country, Nigeria, and beyond. This conference has taught me that networking with like-minded professionals can open endless opportunities that can lead to innovative solutions and personal growth.",
+    rating: 5,
+    image: "/placeholder.svg?height=100&width=100"
+  },
+  {
+    id: 9,
+    name: "Isaac Kerina",
+    role: "Researcher",
+    company: "Strathmore University",
+    content: "I am motivated that there are many other professionals in the industry working to solve similar problems that I am working on. The questions that followed my presentation were engaging and detailed, this gave me the confirmation that my work is relevant and will help other professionals in the industry to solve real world problems.",
+    rating: 5,
+    image: "/placeholder.svg?height=100&width=100"
+  },
+  {
+    id: 10,
+    name: "G. Plason Z. Plakar",
+    role: "Researcher",
+    company: "Africa Center of Excellence in Future Energies and Electrochemical Systems, Federal University of Technology Owerri",
+    content: "Attending AICCEES has reaffirmed my passion for clean energy research and scale-up for commercialization. The opportunity to connect with like-minded individuals and experts in the field has inspired me to pursue a career in bioenergy (hydrogen) and Photovoltaics. My skills and knowledge are well-suited for this field, and I have the potential to make a significant contribution. The conference has also helped me identify specific areas of expertise that I would like to develop further.",
     rating: 5,
     image: "/placeholder.svg?height=100&width=100"
   },
