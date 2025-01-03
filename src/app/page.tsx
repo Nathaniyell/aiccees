@@ -11,6 +11,7 @@ import Submissions from '@/components/sections/Submissions'
 import GallerySection from '@/components/sections/GallerySection'
 import TestimonialCarousel from '@/components/sections/testimonails'
 import ConferenceCallToAction from '@/components/call-to-action'
+import ScientificCommittee from '@/components/sections/scientific-committee'
 
 
 
@@ -24,6 +25,7 @@ export default function ConferencePage() {
       <SpeakersSection />
       <PublishingPapers />
       <Submissions />
+      <ScientificCommittee />
       <Sponsors />
       <GallerySection />
       <TestimonialCarousel />

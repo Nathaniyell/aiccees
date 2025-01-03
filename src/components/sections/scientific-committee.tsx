@@ -4,11 +4,13 @@ import { Badge } from "@/components/ui/badge"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { GraduationCap, Building2, Globe2 } from 'lucide-react'
 import { committeeMembers } from "../data_models/scientific-committee-data"
+import AOS from "../layout/AOS"
 
 
 
 export default function ScientificCommittee() {
   return (
+    <AOS>
     <section className="py-12 bg-slate-100">
       <div className="container">
         <div className="text-center mb-10">
@@ -19,7 +21,7 @@ export default function ScientificCommittee() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className=" w-11/12 mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {committeeMembers.map((member) => (
             <Card key={member.id} className="group hover:shadow-lg transition-shadow">
               <CardHeader className="text-center pb-4">
@@ -27,7 +29,7 @@ export default function ScientificCommittee() {
                   <AvatarImage src={member.image} alt={member.name} />
                   <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                 </Avatar>
-                <CardTitle>{member.name}, {member.title}</CardTitle>
+                <CardTitle>{member.name}</CardTitle>
                 <CardDescription className="font-medium text-primary">
                   {member.role}
                 </CardDescription>
@@ -62,6 +64,7 @@ export default function ScientificCommittee() {
         </div>
       </div>
     </section>
+    </AOS>
   )
 }
 
