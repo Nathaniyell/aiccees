@@ -11,7 +11,7 @@ const info = [
     id: 1,
     status: "red",
     text: "Abstract/Full Paper Submission",
-    date: "Feb. 1st 2024",
+    date: "Feb. 3rd 2025",
     description: "Submission portal opens for all participants",
     icon: Calendar,
   },
@@ -95,7 +95,7 @@ function Submissions() {
               variants={itemVariants}
               className="text-green-300 text-base tracking-wider uppercase"
             >
-              AICCEES 2024
+              AICCEES 2025
             </motion.p>
             <motion.h2 
               variants={itemVariants}
