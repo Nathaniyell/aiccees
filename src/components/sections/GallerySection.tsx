@@ -68,7 +68,7 @@ const CookingDemonstration = () => {
             <CarouselNext className="right-2" />
           </Carousel>
           <div className="mt-16 text-center flex items-center justify-center">
-            <Link href="/gallery" className="bg-emerald-900 text-white hover:bg-emerald-800 font-semibold px-8 py-6 text-lg">
+            <Link href="/gallery" className="bg-green-900 text-white rounded-lg hover:bg-green-800 font-semibold px-6 py-4 text-lg">
               View More
             </Link>
           </div>
