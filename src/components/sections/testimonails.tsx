@@ -17,7 +17,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 
 export default function TestimonialCarousel() {
     const plugin = useRef(
-        Autoplay({ delay: 3000, stopOnInteraction: true })
+        Autoplay({ delay: 2000, stopOnInteraction: true })
     )
     const [selectedTestimonial, setSelectedTestimonial] = useState<typeof testimonials[0] | null>(null)
 

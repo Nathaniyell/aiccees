@@ -10,6 +10,7 @@ import Sponsors from '@/components/sections/Sponsors'
 import Submissions from '@/components/sections/Submissions'
 import GallerySection from '@/components/sections/GallerySection'
 import TestimonialCarousel from '@/components/sections/testimonails'
+import ConferenceCallToAction from '@/components/call-to-action'
 
 
 
@@ -26,6 +27,10 @@ export default function ConferencePage() {
       <Sponsors />
       <GallerySection />
       <TestimonialCarousel />
+      <div className="lg:px-16 flex justify-center">
+
+      <ConferenceCallToAction />
+      </div>
     </main>
 
 
