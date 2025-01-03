@@ -23,7 +23,7 @@ const steps: Step[] = [
   {
     id: 2,
     title: "Abstract submission",
-    description: "Upload your abstract through the conference submission portal for initial review.",
+    description: "Register and upload your abstract through the conference submission portal for initial review.",
     icon: <Upload className="h-6 w-6" />,
     color: 'red'
   },
@@ -53,7 +53,7 @@ const steps: Step[] = [
     title: "Acceptance",
     description: "Upon approval, the login details for the scientific.net portal will be shared with you via mail. Make payment and upload your full paper on the portal.",
     icon: <ThumbsUp className="h-6 w-6" />,
-    color: 'red'
+    color: 'green'
   }
 ]
 
