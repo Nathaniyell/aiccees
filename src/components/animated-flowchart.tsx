@@ -22,15 +22,15 @@ const steps: Step[] = [
   },
   {
     id: 2,
-    title: "Abstract submission",
-    description: "Register and upload your abstract through the conference submission portal for initial review.",
+    title: "Paper submission",
+    description: "Send your full research paper by email (aiccees@uniport.edu.ng) to the conference chairs for initial review.",
     icon: <Upload className="h-6 w-6" />,
     color: 'red'
   },
   {
     id: 3,
     title: "Initial Review",
-    description: "Your abstract will be reviewed by scientific committee members. Expect feedback within 3-7 days.",
+    description: "The decision to accept or reject the paper will be shared by email within 3 to 7 working days. Upon acceptance of your paper for further review, an invoice will be sent to you for payment",
     icon: <Users className="h-6 w-6" />,
     color: 'green'
   },
