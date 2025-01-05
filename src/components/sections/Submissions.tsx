@@ -10,17 +10,17 @@ const info = [
   {
     id: 1,
     status: "red",
-    text: "Abstract/Full Paper Submission",
-    date: "Feb. 3rd 2025",
+    text: "Full Paper Submission",
+    date: "Jan. 1st 2025",
     description: "Submission portal opens for all participants",
     icon: Calendar,
   },
   {
     id: 2,
     status: "amber",
-    text: "Abstract/Full Paper Submission Deadline",
-    date: "Aug. 30th 2025",
-    description: "Final deadline for all paper submissions",
+    text: "Full Paper Submission Deadline",
+    date: "June. 30th 2025",
+    description: "Final deadline for all research paper submissions",
     icon: Calendar,
   },
   {
@@ -28,7 +28,7 @@ const info = [
     status: "green",
     text: "Conference Date",
     date: "Sept. 25th & 26th 2025",
-    description: "Two days of inspiring presentations and networking",
+    description: "Two days of inspiring presentations, networking, and exhibitions",
     icon: Calendar,
   },
   {
