@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import Link from 'next/link'
 
 const ConferenceCallToAction = () => {
   return (
@@ -23,10 +24,14 @@ const ConferenceCallToAction = () => {
               Register Now
             </Button>
             <Button 
+              asChild
               size="lg"
               className="bg-red-600 hover:bg-red-700 text-white"
             >
+              <Link href="mailto:aiccees@uniport.edu.ng" target="_blank">
+             
               Submit Paper
+              </Link>
             </Button>
           </div>
         </div>
