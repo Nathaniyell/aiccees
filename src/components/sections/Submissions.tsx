@@ -129,7 +129,7 @@ function Submissions() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-green-300">
+                  <div className="flex flex-col md:flex-row md:items-center gap-2 text-green-300">
                     <item.icon className="w-4 h-4" />
                     <p className="text-sm">{item.date}</p>
                   </div>
