@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { FileText, Upload, CheckCircle2, Users, MessageSquare, ThumbsUp } from 'lucide-react'
+import { FileText, Upload, CheckCircle2, Users, MessageSquare } from 'lucide-react'
 
 interface Step {
   id: number
@@ -15,51 +15,51 @@ interface Step {
 const steps: Step[] = [
   {
     id: 1,
-    title: "Prepare Your Paper",
+    title: "Format Paper",
     description: "Prepare your research paper, using the format in the attached template",
     icon: <FileText className="h-6 w-6" />,
     color: 'green'
   },
   {
     id: 2,
-    title: "Paper submission",
+    title: "Email Submission",
     description: "Send your full research paper by email (aiccees@uniport.edu.ng) to the conference chairs for initial review.",
     icon: <Upload className="h-6 w-6" />,
     color: 'red'
   },
   {
     id: 3,
-    title: "Initial Review",
+    title: "Preliminary Review",
     description: "The decision to accept or reject the paper will be shared by email within 3 to 7 working days. Upon acceptance of your paper for further review, an invoice will be sent to you for payment",
     icon: <Users className="h-6 w-6" />,
     color: 'green'
   },
   {
     id: 4,
-    title: "Address Feedback",
+    title: "Revision Phase",
     description: "Make necessary revisions based on reviewer comments and suggestions.",
     icon: <MessageSquare className="h-6 w-6" />,
     color: 'red'
   },
   {
     id: 5,
-    title: "Final Submission",
+    title: "Scientific.net Upload",
     description: "The login details to scientific.net will be shared with you by email. Upload your updated research paper to the scientific.net platform for a comprehensive review by two independent reviewers",
-    icon: <CheckCircle2 className="h-6 w-6" />,
+    icon: <Upload className="h-6 w-6" />,
     color: 'green'
   },
   {
     id: 6,
-    title: "Acceptance",
+    title: "Reviewer Feedback",
     description: "Comments from the independent reviewers will be communicated through the scientific.net platform for updates",
-    icon: <ThumbsUp className="h-6 w-6" />,
+    icon: <MessageSquare className="h-6 w-6" />,
     color: 'red'
   },
   {
     id: 7,
-    title: "Acceptance",
+    title: "Final Submission",
     description: "Updated paper is re-uploaded to the scientific.net platform for final decision",
-    icon: <ThumbsUp className="h-6 w-6" />,
+    icon: <CheckCircle2 className="h-6 w-6" />,
     color: 'green'
   }
 ]
