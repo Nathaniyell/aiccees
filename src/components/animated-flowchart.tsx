@@ -44,14 +44,21 @@ const steps: Step[] = [
   {
     id: 5,
     title: "Final Submission",
-    description: "Submit your revised paper along with a response to reviewers' comments.",
+    description: "The login details to scientific.net will be shared with you by email. Upload your updated research paper to the scientific.net platform for a comprehensive review by two independent reviewers",
     icon: <CheckCircle2 className="h-6 w-6" />,
     color: 'green'
   },
   {
     id: 6,
     title: "Acceptance",
-    description: "Upon approval, the login details for the scientific.net portal will be shared with you via mail. Make payment and upload your full paper on the portal.",
+    description: "Comments from the independent reviewers will be communicated through the scientific.net platform for updates",
+    icon: <ThumbsUp className="h-6 w-6" />,
+    color: 'red'
+  },
+  {
+    id: 7,
+    title: "Acceptance",
+    description: "Updated paper is re-uploaded to the scientific.net platform for final decision",
     icon: <ThumbsUp className="h-6 w-6" />,
     color: 'green'
   }
