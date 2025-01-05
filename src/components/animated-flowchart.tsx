@@ -10,15 +10,17 @@ interface Step {
   description: string
   icon: JSX.Element
   color: 'green' | 'red'
+  templateUrl?: string
 }
 
 const steps: Step[] = [
   {
     id: 1,
-    title: "Format Paper",
+    title: "Prepare Paper",
     description: "Prepare your research paper, using the format in the attached template",
     icon: <FileText className="h-6 w-6" />,
-    color: 'green'
+    color: 'green',
+    templateUrl: 'https://docs.google.com/document/d/1JPIYtNkyr_Tz7ghWEGnul8OJjdklmUzM/edit?usp=sharing&ouid=103583805913807710533&rtpof=true&sd=true'
   },
   {
     id: 2,
@@ -146,6 +148,16 @@ export default function AnimatedFlowchart() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">{step.description}</p>
+                {step.id === 1 && (
+                  <a
+                    href={step.templateUrl}
+                    target="_blank"
+                    className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600 transition-colors"
+                  >
+                    <FileText className="h-4 w-4" />
+                    Download Template
+                  </a>
+                )}
               </CardContent>
             </Card>
 
