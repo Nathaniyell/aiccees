@@ -7,7 +7,7 @@ import Link from 'next/link'
 const PublishingPapers = () => {
   return (
     <AOS>
-      <section id="publish" className="w-full py-12 md:py-24  bg-white space-y-6">
+      <section id="submissions"  className="w-full py-12 md:py-24  bg-white space-y-6">
         <div className="container md:w-11/12 mx-auto px-4 md:px-6 mb-10">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4 text-green-600">Submitting Papers</h2>
           {/* <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-center mb-6">
