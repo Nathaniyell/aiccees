@@ -145,7 +145,7 @@ function Submissions() {
 
           <motion.div 
             variants={itemVariants}
-            className="flex justify-center mt-12 gap-4"
+            className="flex flex-col md:flex-row justify-center mt-12 gap-4"
           >
             <Link
               target="_blank"
