@@ -16,7 +16,7 @@ const steps: Step[] = [
   {
     id: 1,
     title: "Prepare Your Paper",
-    description: "Format your research paper according to the conference guidelines and themes. Include abstract, methodology, and findings.",
+    description: "Prepare your research paper, using the format in the attached template",
     icon: <FileText className="h-6 w-6" />,
     color: 'green'
   },
