@@ -18,7 +18,9 @@ export default function ScientificCommittee() {
                             Our distinguished committee members bring together expertise from leading institutions worldwide
                             to ensure the highest standards of scientific excellence.
                         </p>
-                        <p className="px-4 md:px-0">To become a scientific committee member <Link href="" className="text-green-800 font-medium underline">register here</Link></p>
+                        <p className="px-4 md:px-0">To become a scientific committee member <Link href="https://forms.gle/bM4SjcfATn8XPAyf7"
+                        target="_blank"
+                        className="text-green-800 font-medium underline">register here</Link></p>
                     </div>
 
                     <div className="w-11/12 mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
