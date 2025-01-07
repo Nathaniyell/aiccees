@@ -81,102 +81,103 @@ const getStatusColor = (status: string) => {
 function Submissions() {
   return (
     <AOS>
-    <section className="w-full bg-gradient-to-b from-green-900 to-green-800 py-16">
-      <div className="container md:w-11/12 mx-auto px-4 md:px-6">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-          className="space-y-8"
-        >
-          <div className="text-center space-y-4">
-            <motion.p 
-              variants={itemVariants}
-              className="text-green-300 text-base tracking-wider uppercase"
-            >
-              AICCEES 2025
-            </motion.p>
-            <motion.h2 
-              variants={itemVariants}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white font-header"
-            >
-              Call for Papers
-            </motion.h2>
-          </div>
-
-          <motion.div 
+      <section className="w-full bg-gradient-to-b from-green-900 to-green-800 py-16">
+        <div className="container md:w-11/12 mx-auto px-4 md:px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             variants={containerVariants}
-            className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-12"
+            className="space-y-8"
           >
-            {info.map((item) => (
-              <motion.div
-                key={item.id}
+            <div className="text-center space-y-4">
+              <motion.p
                 variants={itemVariants}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/15 transition-colors"
+                className="text-green-300 text-base tracking-wider uppercase"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="relative">
-                    <Circle 
-                      className={`w-6 h-6 ${getStatusColor(item.status)} animate-pulse`}
-                      fill="currentColor"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-white font-semibold leading-tight">
-                      {item.text}
-                    </h3>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex flex-col md:flex-row md:items-center gap-2 text-green-300">
-                    <item.icon className="w-4 h-4" />
-                    <p className="text-sm">{item.date}</p>
-                  </div>
-                  {item.description && (
-                    <p className="text-gray-300 text-sm">
-                      {item.description}
-                    </p>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+                AICCEES 2025
+              </motion.p>
+              <motion.h2
+                variants={itemVariants}
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-white font-header"
+              >
+                Call for Papers
+              </motion.h2>
+            </div>
 
-          <motion.div 
-            variants={itemVariants}
-            className="flex flex-col md:flex-row justify-center mt-12 gap-4"
-          >
-            <Link
-              target="_blank"
-              href="https://drive.google.com/uc?export=download&id=1ELqJouaYKzQEUku8cHR0K_rup48C5I0B"
+            <motion.div
+              variants={containerVariants}
+              className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-12"
             >
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="bg-white text-green-900 hover:bg-green-50 transition-colors group"
-              >
-                <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-                Download Brochure
-              </Button>
-            </Link>
-            <Link
-              href="https://drive.google.com/file/d/1cdAL_cEv0AvaAfavw9rtJZ3pOIwt_zVk/view?usp=drive_link"
-              target="_blank"
+              {info.map((item) => (
+                <motion.div
+                  key={item.id}
+                  variants={itemVariants}
+                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/15 transition-colors"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="relative">
+                      <Circle
+                        className={`w-6 h-6 ${getStatusColor(item.status)} animate-pulse`}
+                        fill="currentColor"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-white font-semibold leading-tight">
+                        {item.text}
+                      </h3>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex flex-col md:flex-row md:items-center gap-2 text-green-300">
+                      <item.icon className="w-4 h-4" />
+                      <p className="text-sm">{item.date}</p>
+                    </div>
+                    {item.description && (
+                      <p className="text-gray-300 text-sm">
+                        {item.description}
+                      </p>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col md:flex-row justify-center mt-12 gap-4"
             >
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="bg-red-700 text-white hover:bg-red-600 transition-colors group hover:text-slate-100"
+              <Link
+                target="_blank"
+                href="https://drive.google.com/uc?export=download&id=1ELqJouaYKzQEUku8cHR0K_rup48C5I0B"
               >
-                <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-                2024 Conference Report
-              </Button>
-            </Link>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-white text-green-900 hover:bg-green-50 transition-colors group"
+                >
+                  <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                  Download Brochure
+                </Button>
+              </Link>
+              <Link
+                href="/AICCEES-2024-Conference-Report.pdf"
+                download="AICCEES-2024-Conference-Report.pdf"
+                target="_blank"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="bg-red-700 text-white hover:bg-red-600 transition-colors group hover:text-slate-100"
+                >
+                  <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                  2024 Conference Report
+                </Button>
+              </Link>
+            </motion.div>
           </motion.div>
-        </motion.div>
-      </div>
-    </section>
+        </div>
+      </section>
     </AOS>
   )
 }
