@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { z } from "zod"
 
-import { Card } from "@/components/ui/card"
 import { registrationSchema, type RegistrationFormData } from "@/lib/validations/registration"
 import { addDoc, collection } from "firebase/firestore"
 import { db } from "@/lib/firebase"
@@ -238,8 +237,8 @@ export default function RegistrationPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 py-12">
-            <Card className="container max-w-4xl mx-auto">
+        <div className="min-h-screen bg-gray-50 py-12 px-4 md:px-0">
+            <div className="container max-w-4xl mx-auto">
                 <div className="p-8">
                     <AboutSection />
                     <ProgressSteps steps={steps} currentStep={currentStep} />
@@ -268,7 +267,7 @@ export default function RegistrationPage() {
                         />
                     </form>
                 </div>
-            </Card>
+            </div>
         </div>
     )
 } 
