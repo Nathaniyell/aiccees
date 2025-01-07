@@ -43,7 +43,7 @@ export function RegistrationForm({
 }: RegistrationFormProps) {
     return (
         <Form {...form}>
-            <div className="rounded-lg p-6 shadow-sm border space-y-6">
+            <div className="rounded-lg p-4 shadow-sm border space-y-6">
                 {currentStepFields.includes('title') && (
                     <FormField
                         control={form.control}

@@ -245,7 +245,7 @@ export default function RegistrationPage() {
     return (
         <div className="min-h-screen bg-gray-50 py-12 px-4 md:px-0">
             <div className="container max-w-4xl mx-auto">
-                <div className="p-8">
+                <div className="p-2">
                     <AboutSection />
                     <ProgressSteps steps={steps} currentStep={currentStep} />
                     <StepHeader
