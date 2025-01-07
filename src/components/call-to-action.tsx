@@ -17,11 +17,12 @@ const ConferenceCallToAction = () => {
           </div>
 
           <div className="flex sm:flex-row gap-4">
-            <Button 
+            <Button
+              asChild
               size="lg"
               className="bg-green-600 hover:bg-green-700 text-white"
             >
-              Register Now
+              <Link href="/register">Register Now</Link>
             </Button>
             <Button 
               asChild

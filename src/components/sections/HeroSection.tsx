@@ -13,6 +13,7 @@ import herobg4 from '@/public/images/herobg4.jpg'
 import herobg5 from '@/public/images/herobg5.jpg'
 import herobg6 from '@/public/images/herobg6.jpg'
 import herobg7 from '@/public/images/herobg7.jpg'
+import Link from 'next/link'
 
 const BACKGROUND_IMAGES = [
   herobg0,
@@ -66,7 +67,9 @@ export function HeroSection() {
             </p>
           </div>
           <div className="space-x-4">
-            <Button className="bg-red-600 text-white hover:bg-red-700">Register Now</Button>
+            <Button asChild className="bg-red-600 text-white hover:bg-red-700">
+              <Link href="/register">Register Now</Link>
+            </Button>
             <Button
               onClick={() => {
                 document.getElementById('submissions')?.scrollIntoView({ behavior: 'smooth' });

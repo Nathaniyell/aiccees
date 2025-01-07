@@ -17,7 +17,9 @@ const PublishingPapers = () => {
         </div>
         <AnimatedFlowchart />
         <div className="flex flex-col sm:flex-row justify-center gap-4 px-4 md:px-0">
-          <Button className="bg-green-800 text-white hover:bg-green-700">Register for conference</Button>
+          <Button asChild className="bg-green-800 text-white hover:bg-green-700">
+            <Link href="/register">Register for conference</Link>
+          </Button>
           <Link
             href="mailto:aiccees@uniport.edu.ng"
             target="_blank"
