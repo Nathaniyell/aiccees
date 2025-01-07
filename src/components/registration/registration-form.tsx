@@ -57,7 +57,7 @@ export function RegistrationForm({
                                         <Input
                                             placeholder="Enter your title"
                                             {...field}
-                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                          className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -77,7 +77,7 @@ export function RegistrationForm({
                                         <Input
                                             placeholder="Enter your surname"
                                             {...field}
-                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                            className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -97,7 +97,7 @@ export function RegistrationForm({
                                         <Input
                                             placeholder="Enter your first name"
                                             {...field}
-                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                            className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -118,7 +118,7 @@ export function RegistrationForm({
                                             placeholder="Enter your email address"
                                             type="email"
                                             {...field}
-                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                            className="border-green-200 focus:border-green-500 "
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -139,7 +139,7 @@ export function RegistrationForm({
                                         <Input
                                             placeholder="Enter your phone number"
                                             {...field}
-                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                            className="border-green-200 focus:border-green-500 "
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -157,7 +157,7 @@ export function RegistrationForm({
                                     <FormLabel>Country <span className="text-red-500">*</span></FormLabel>
                                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                                         <FormControl>
-                                            <SelectTrigger className="border-green-200 focus:border-green-500 focus:ring-green-500">
+                                            <SelectTrigger className="border-green-200 focus:border-green-500 ">
                                                 <SelectValue placeholder="Select your country" />
                                             </SelectTrigger>
                                         </FormControl>
@@ -191,7 +191,7 @@ export function RegistrationForm({
                                         <Input
                                             placeholder="Enter your organization"
                                             {...field}
-                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                            className="border-green-200 focus:border-green-500 "
                                         />
                                     </FormControl>
                                     <FormMessage />
