@@ -140,39 +140,37 @@ export default function RegistrationPage() {
             console.error(error)
         }
     }
+    const goToNextStep = () => {
+        setCurrentStep(prev => prev + 1)
+    }
+    async function onSubmit() {
+        try {
+            // Validate entire form before final submission
+            const formData = form.getValues()
+            await registrationSchema.parseAsync(formData)
 
-    async function onSubmit(data: RegistrationFormData) {
-        if (currentStep < steps.length) {
-            await handleNextStep(data)
-        } else {
-            try {
-                // Validate entire form before final submission
-                const formData = form.getValues()
-                await registrationSchema.parseAsync(formData)
-
-                setIsLoading(true)
-                await addDoc(collection(db, "registrations"), {
-                    ...formData,
-                    createdAt: new Date().toISOString(),
+            setIsLoading(true)
+            await addDoc(collection(db, "registrations"), {
+                ...formData,
+                createdAt: new Date().toISOString(),
+            })
+            toast.success("Registration submitted successfully")
+            router.push("/thank-you")
+        } catch (error) {
+            if (error instanceof z.ZodError) {
+                error.errors.forEach((err) => {
+                    if (err.path) {
+                        form.setError(err.path[0] as RegistrationField, {
+                            type: 'manual',
+                            message: err.message,
+                        })
+                    }
                 })
-                toast.success("Registration submitted successfully")
-                router.push("/thank-you")
-            } catch (error) {
-                if (error instanceof z.ZodError) {
-                    error.errors.forEach((err) => {
-                        if (err.path) {
-                            form.setError(err.path[0] as RegistrationField, {
-                                type: 'manual',
-                                message: err.message,
-                            })
-                        }
-                    })
-                }
-                toast.error("Please fill in all required fields correctly")
-                console.error(error)
-            } finally {
-                setIsLoading(false)
             }
+            toast.error("Please fill in all required fields correctly")
+            console.error(error)
+        } finally {
+            setIsLoading(false)
         }
     }
 
@@ -191,21 +189,24 @@ export default function RegistrationPage() {
                         totalSteps={steps.length}
                         stepName={steps[currentStep - 1].name}
                     />
-                    <RegistrationForm
-                        form={form}
-                        currentStepFields={currentStepFields}
-                        onSubmit={onSubmit}
-                        registrationTypes={registrationTypes}
-                        areasOfInterest={areasOfInterest}
-                        howDidYouHear={howDidYouHear}
-                        contactPreferences={contactPreferences}
-                    />
-                    <NavigationButtons
-                        currentStep={currentStep}
-                        totalSteps={steps.length}
-                        isLoading={isLoading}
-                        onPrevious={handlePreviousStep}
-                    />
+                    <form onSubmit={form.handleSubmit(currentStep === steps.length ? onSubmit : handleNextStep)}>
+                        <RegistrationForm
+                            form={form}
+                            currentStepFields={currentStepFields}
+                            onSubmit={onSubmit}
+                            registrationTypes={registrationTypes}
+                            areasOfInterest={areasOfInterest}
+                            howDidYouHear={howDidYouHear}
+                            contactPreferences={contactPreferences}
+                        />
+                        <NavigationButtons
+                            currentStep={currentStep}
+                            totalSteps={steps.length}
+                            isLoading={isLoading}
+                            onPrevious={handlePreviousStep}
+                            onNext={goToNextStep}
+                        />
+                    </form>
                 </div>
             </Card>
         </div>

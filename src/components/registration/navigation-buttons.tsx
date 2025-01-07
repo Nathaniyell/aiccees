@@ -7,9 +7,10 @@ interface NavigationButtonsProps {
     totalSteps: number
     isLoading: boolean
     onPrevious: () => void
+    onNext: () => void
 }
 
-export function NavigationButtons({ currentStep, totalSteps, isLoading, onPrevious }: NavigationButtonsProps) {
+export function NavigationButtons({ currentStep, totalSteps, isLoading, onPrevious, onNext }: NavigationButtonsProps) {
     return (
         <div className="flex justify-between pt-6">
             {currentStep > 1 && (
@@ -23,31 +24,33 @@ export function NavigationButtons({ currentStep, totalSteps, isLoading, onPrevio
                     Previous Step
                 </Button>
             )}
-            <Button
-                type="submit"
-                className={cn(
-                    "bg-green-600 hover:bg-green-700 text-white",
-                    currentStep === 1 && "ml-auto"
-                )}
-                disabled={isLoading}
-            >
-                {isLoading
-                    ? "Submitting..."
-                    : currentStep === totalSteps
-                        ? (
-                            <>
-                                Submit Registration
-                                <ArrowRightIcon className="ml-2" />
-                            </>
-                        )
-                        : (
-                            <>
-                                Next Step
-                                <ArrowRightIcon className="ml-2" />
-                            </>
-                        )
-                }
-            </Button>
+
+            {currentStep < totalSteps ? (
+                <>
+                    <Button
+                        type="button"
+                        onClick={onNext}
+                        className="bg-green-600 hover:bg-green-700 text-white"
+                    >
+                        Next Step
+                        <ArrowRightIcon className="ml-2" />
+                    </Button>
+                </>
+            ) : (
+                <Button
+                    type="submit"
+                    className={cn(
+                        "bg-green-600 hover:bg-green-700 text-white",
+                        currentStep === 1 && "ml-auto"
+                    )}
+                    disabled={isLoading}
+                >
+                    Submit Registration
+                </Button>
+            )}
+
+
+
         </div>
     )
 } 
