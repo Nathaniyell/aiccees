@@ -216,7 +216,7 @@ export function RegistrationForm({
                                             {registrationTypes.map((type) => (
                                                 <FormItem className="flex items-center space-x-3 space-y-0" key={type}>
                                                     <FormControl>
-                                                        <RadioGroupItem value={type} className="border-green-200 text-green-600" />
+                                                        <RadioGroupItem value={type} className="border-green-700 text-green-600" />
                                                     </FormControl>
                                                     <FormLabel className="font-normal">
                                                         {type}
@@ -263,7 +263,7 @@ export function RegistrationForm({
                                                                                 )
                                                                             )
                                                                     }}
-                                                                    className="border-green-200 text-green-600"
+                                                                    className="border-green-700 text-green-600"
                                                                 />
                                                             </FormControl>
                                                             <FormLabel className="font-normal">
@@ -297,7 +297,7 @@ export function RegistrationForm({
                                             {howDidYouHear.map((source) => (
                                                 <FormItem className="flex items-center space-x-3 space-y-0" key={source}>
                                                     <FormControl>
-                                                        <RadioGroupItem value={source} className="border-green-200 text-green-600" />
+                                                        <RadioGroupItem value={source} className="border-green-700 text-green-600" />
                                                     </FormControl>
                                                     <FormLabel className="font-normal">
                                                         {source}
@@ -328,7 +328,7 @@ export function RegistrationForm({
                                             {contactPreferences.map((preference) => (
                                                 <FormItem className="flex items-center space-x-3 space-y-0" key={preference}>
                                                     <FormControl>
-                                                        <RadioGroupItem value={preference} className="border-green-200 text-green-600" />
+                                                        <RadioGroupItem value={preference} className="border-green-700 text-green-600" />
                                                     </FormControl>
                                                     <FormLabel className="font-normal">
                                                         {preference}
@@ -353,7 +353,7 @@ export function RegistrationForm({
                                         <Checkbox
                                             checked={field.value}
                                             onCheckedChange={field.onChange}
-                                            className="border-green-200 text-green-600"
+                                            className="border-green-700 text-green-600"
                                         />
                                     </FormControl>
                                     <div className="space-y-1 leading-none">
