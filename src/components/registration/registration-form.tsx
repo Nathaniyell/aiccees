@@ -1,0 +1,373 @@
+import { UseFormReturn } from "react-hook-form"
+import { RegistrationFormData } from "@/lib/validations/registration"
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+    FormDescription,
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+import {
+    RadioGroup,
+    RadioGroupItem,
+} from "@/components/ui/radio-group"
+import { Checkbox } from "@/components/ui/checkbox"
+
+interface RegistrationFormProps {
+    form: UseFormReturn<RegistrationFormData>
+    currentStepFields: (keyof RegistrationFormData)[]
+    onSubmit: (data: RegistrationFormData) => Promise<void>
+    registrationTypes: readonly string[]
+    areasOfInterest: readonly string[]
+    howDidYouHear: readonly string[]
+    contactPreferences: readonly string[]
+}
+
+export function RegistrationForm({
+    form,
+    currentStepFields,
+    onSubmit,
+    registrationTypes,
+    areasOfInterest,
+    howDidYouHear,
+    contactPreferences
+}: RegistrationFormProps) {
+    return (
+        <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="rounded-lg p-6 shadow-sm border space-y-6">
+                    {currentStepFields.includes('title') && (
+                        <FormField
+                            control={form.control}
+                            name="title"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Title <span className="text-red-500">*</span></FormLabel>
+                                    <FormControl>
+                                        <Input
+                                            placeholder="Enter your title"
+                                            {...field}
+                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+
+                    {currentStepFields.includes('surname') && (
+                        <FormField
+                            control={form.control}
+                            name="surname"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Surname <span className="text-red-500">*</span></FormLabel>
+                                    <FormControl>
+                                        <Input
+                                            placeholder="Enter your surname"
+                                            {...field}
+                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+
+                    {currentStepFields.includes('firstName') && (
+                        <FormField
+                            control={form.control}
+                            name="firstName"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>First Name <span className="text-red-500">*</span></FormLabel>
+                                    <FormControl>
+                                        <Input
+                                            placeholder="Enter your first name"
+                                            {...field}
+                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+
+                    {currentStepFields.includes('email') && (
+                        <FormField
+                            control={form.control}
+                            name="email"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Email address <span className="text-red-500">*</span></FormLabel>
+                                    <FormControl>
+                                        <Input
+                                            placeholder="Enter your email address"
+                                            type="email"
+                                            {...field}
+                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+
+                    {currentStepFields.includes('phoneNumber') && (
+                        <FormField
+                            control={form.control}
+                            name="phoneNumber"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Contact Phone number <span className="text-red-500">*</span></FormLabel>
+                                    <FormDescription>with Country Code e.g +221......</FormDescription>
+                                    <FormControl>
+                                        <Input
+                                            placeholder="Enter your phone number"
+                                            {...field}
+                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+
+                    {currentStepFields.includes('country') && (
+                        <FormField
+                            control={form.control}
+                            name="country"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Country <span className="text-red-500">*</span></FormLabel>
+                                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                        <FormControl>
+                                            <SelectTrigger className="border-green-200 focus:border-green-500 focus:ring-green-500">
+                                                <SelectValue placeholder="Select your country" />
+                                            </SelectTrigger>
+                                        </FormControl>
+                                        <SelectContent>
+                                            <SelectItem value="nigeria">Nigeria</SelectItem>
+                                            <SelectItem value="ghana">Ghana</SelectItem>
+                                            <SelectItem value="kenya">Kenya</SelectItem>
+                                            <SelectItem value="south-africa">South Africa</SelectItem>
+                                            <SelectItem value="ethiopia">Ethiopia</SelectItem>
+                                            <SelectItem value="tanzania">Tanzania</SelectItem>
+                                            <SelectItem value="uganda">Uganda</SelectItem>
+                                            <SelectItem value="rwanda">Rwanda</SelectItem>
+                                            <SelectItem value="senegal">Senegal</SelectItem>
+                                            <SelectItem value="other">Other</SelectItem>
+                                        </SelectContent>
+                                    </Select>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+
+                    {currentStepFields.includes('organization') && (
+                        <FormField
+                            control={form.control}
+                            name="organization"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Organization/Company <span className="text-red-500">*</span></FormLabel>
+                                    <FormControl>
+                                        <Input
+                                            placeholder="Enter your organization"
+                                            {...field}
+                                            className="border-green-200 focus:border-green-500 focus:ring-green-500"
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+
+                    {currentStepFields.includes('registrationType') && (
+                        <FormField
+                            control={form.control}
+                            name="registrationType"
+                            render={({ field }) => (
+                                <FormItem className="space-y-3">
+                                    <FormLabel>Registration Type <span className="text-red-500">*</span></FormLabel>
+                                    <FormControl>
+                                        <RadioGroup
+                                            onValueChange={field.onChange}
+                                            defaultValue={field.value}
+                                            className="flex flex-col space-y-1"
+                                        >
+                                            {registrationTypes.map((type) => (
+                                                <FormItem className="flex items-center space-x-3 space-y-0" key={type}>
+                                                    <FormControl>
+                                                        <RadioGroupItem value={type} className="border-green-200 text-green-600" />
+                                                    </FormControl>
+                                                    <FormLabel className="font-normal">
+                                                        {type}
+                                                    </FormLabel>
+                                                </FormItem>
+                                            ))}
+                                        </RadioGroup>
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+
+                    {currentStepFields.includes('areasOfInterest') && (
+                        <FormField
+                            control={form.control}
+                            name="areasOfInterest"
+                            render={() => (
+                                <FormItem>
+                                    <FormLabel>Area of Interest <span className="text-red-500">*</span></FormLabel>
+                                    <FormDescription>Check all that apply</FormDescription>
+                                    <div className="space-y-2">
+                                        {areasOfInterest.map((area) => (
+                                            <FormField
+                                                key={area}
+                                                control={form.control}
+                                                name="areasOfInterest"
+                                                render={({ field }) => {
+                                                    return (
+                                                        <FormItem
+                                                            key={area}
+                                                            className="flex flex-row items-start space-x-3 space-y-0"
+                                                        >
+                                                            <FormControl>
+                                                                <Checkbox
+                                                                    checked={field.value?.includes(area)}
+                                                                    onCheckedChange={(checked) => {
+                                                                        return checked
+                                                                            ? field.onChange([...field.value, area])
+                                                                            : field.onChange(
+                                                                                field.value?.filter(
+                                                                                    (value) => value !== area
+                                                                                )
+                                                                            )
+                                                                    }}
+                                                                    className="border-green-200 text-green-600"
+                                                                />
+                                                            </FormControl>
+                                                            <FormLabel className="font-normal">
+                                                                {area}
+                                                            </FormLabel>
+                                                        </FormItem>
+                                                    )
+                                                }}
+                                            />
+                                        ))}
+                                    </div>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+
+                    {currentStepFields.includes('howDidYouHear') && (
+                        <FormField
+                            control={form.control}
+                            name="howDidYouHear"
+                            render={({ field }) => (
+                                <FormItem className="space-y-3">
+                                    <FormLabel>How did you hear about the conference? <span className="text-red-500">*</span></FormLabel>
+                                    <FormControl>
+                                        <RadioGroup
+                                            onValueChange={field.onChange}
+                                            defaultValue={field.value}
+                                            className="flex flex-col space-y-1"
+                                        >
+                                            {howDidYouHear.map((source) => (
+                                                <FormItem className="flex items-center space-x-3 space-y-0" key={source}>
+                                                    <FormControl>
+                                                        <RadioGroupItem value={source} className="border-green-200 text-green-600" />
+                                                    </FormControl>
+                                                    <FormLabel className="font-normal">
+                                                        {source}
+                                                    </FormLabel>
+                                                </FormItem>
+                                            ))}
+                                        </RadioGroup>
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+
+                    {currentStepFields.includes('contactPreference') && (
+                        <FormField
+                            control={form.control}
+                            name="contactPreference"
+                            render={({ field }) => (
+                                <FormItem className="space-y-3">
+                                    <FormLabel>How would you like to receive additional information about the conference? <span className="text-red-500">*</span></FormLabel>
+                                    <FormControl>
+                                        <RadioGroup
+                                            onValueChange={field.onChange}
+                                            defaultValue={field.value}
+                                            className="flex flex-col space-y-1"
+                                        >
+                                            {contactPreferences.map((preference) => (
+                                                <FormItem className="flex items-center space-x-3 space-y-0" key={preference}>
+                                                    <FormControl>
+                                                        <RadioGroupItem value={preference} className="border-green-200 text-green-600" />
+                                                    </FormControl>
+                                                    <FormLabel className="font-normal">
+                                                        {preference}
+                                                    </FormLabel>
+                                                </FormItem>
+                                            ))}
+                                        </RadioGroup>
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+
+                    {currentStepFields.includes('privacyPolicy') && (
+                        <FormField
+                            control={form.control}
+                            name="privacyPolicy"
+                            render={({ field }) => (
+                                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                                    <FormControl>
+                                        <Checkbox
+                                            checked={field.value}
+                                            onCheckedChange={field.onChange}
+                                            className="border-green-200 text-green-600"
+                                        />
+                                    </FormControl>
+                                    <div className="space-y-1 leading-none">
+                                        <FormLabel>
+                                            I acknowledge that this event is hybrid, and I will receive details for virtual sessions closer to the date. For in-person attendance, venue and logistics information will be provided. I confirm that I have read and understood the <a href="https://drive.google.com/file/d/1S3dWvfSukizZceCQr3R4m-cknBAYx7Tb/view?usp=drive_link" className="text-green-600 underline" target="_blank" rel="noopener noreferrer">privacy policy</a> <span className="text-red-500">*</span>
+                                        </FormLabel>
+                                    </div>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    )}
+                </div>
+            </form>
+        </Form>
+    )
+} 
