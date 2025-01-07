@@ -11,6 +11,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import AOS from '../layout/AOS'
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
+import Link from 'next/link'
 
 const SPEAKERS = [
     {
@@ -110,13 +111,9 @@ export function SpeakersSection() {
                     </div>
 
                     {/* Keynote Speaker Registration CTA */}
-                    <div className="mt-16 text-center flex items-center justify-center gap-6 flex-col sm:flex-row">
-                        <h3 className="text-2xl font-semibold text-white">Want to be a Keynote Speaker?</h3>
-                        <Button
-                            className="bg-green-50 text-green-700 hover:bg-green-50 hover:text-green-800 font-semibold px-8 py-6 text-lg"
-                        >
-                            Register as a Keynote Speaker
-                        </Button>
+                    <div className="mt-16 text-center flex items-center justify-center gap-6 flex-col sm:flex-row text-white bg-[rgba(0,0,0,0.3)] p-4 rounded-lg max-w-3xl mx-auto">
+                        <h3 className="text-2xl font-semibold">Want to be a Keynote Speaker?</h3>
+                        <p>Reach out to us on <Link href="mailto:aiccees@uniport.edu.ng" className="font-medium underline">aiccees@uniport.edu.ng</Link></p>
                     </div>
                 </div>
             </section>
