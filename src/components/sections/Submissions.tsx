@@ -168,7 +168,7 @@ function Submissions() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="bg-red-700 text-white hover:bg-red-600 transition-colors group hover:text-slate-100"
+                  className="bg-red-700 text-white hover:bg-red-600 transition-colors group hover:text-slate-100 border-red-700"
                 >
                   <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
                   2024 Conference Report
