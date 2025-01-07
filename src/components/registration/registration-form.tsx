@@ -358,7 +358,7 @@ export function RegistrationForm({
                                     </FormControl>
                                     <div className="space-y-1 leading-none">
                                         <FormLabel>
-                                            I acknowledge that this event is hybrid, and I will receive details for virtual sessions closer to the date. For in-person attendance, venue and logistics information will be provided. I confirm that I have read and understood the <a href="https://drive.google.com/file/d/1S3dWvfSukizZceCQr3R4m-cknBAYx7Tb/view?usp=drive_link" className="text-green-600 underline" target="_blank" rel="noopener noreferrer">privacy policy</a> <span className="text-red-500">*</span>
+                                            I acknowledge that this event is hybrid, and I will receive details for virtual sessions closer to the date. For in-person attendance, venue and logistics information will be provided. I confirm that I have read and understood the <a href="https://docs.google.com/document/d/1vGj2MvQZk-rigl6zlAEZW-J_mRo19fp_/edit?usp=drive_link&ouid=103583805913807710533&rtpof=true&sd=true" className="text-green-600 underline" target="_blank" rel="noopener noreferrer">privacy policy</a> <span className="text-red-500">*</span>
                                         </FormLabel>
                                     </div>
                                     <FormMessage />
