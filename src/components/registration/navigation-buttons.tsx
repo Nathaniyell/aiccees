@@ -30,7 +30,7 @@ export function NavigationButtons({ currentStep, totalSteps, isLoading, onPrevio
                     <Button
                         type="button"
                         onClick={onNext}
-                        className="bg-green-600 hover:bg-green-700 text-white"
+                        className="bg-green-600 hover:bg-green-700 text-white ml-auto"
                     >
                         Next Step
                         <ArrowRightIcon className="ml-2" />
