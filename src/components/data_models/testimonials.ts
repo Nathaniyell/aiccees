@@ -21,7 +21,7 @@ interface Testimonial {
     {
       id: 2,
       name: "Desire Mussa",
-      role: "M.Sc Student",
+      role: "M.Sc. Student",
       company: "Malawi University of Business and Applied Science",
       content: "Attending the AICCEES conference has taught me that young professionals in the energy sector have a significant role to play in increasing energy access across Africa. The AICCEES has inspired me to continue investing my time in sustainable energy research, innovation, and entrepreneurship. The AICCEES has shown me that I don’t need to be older to contribute to sustainable energy access development. I have been motivated that I can make a difference even in my youth days",
       rating: 5,
