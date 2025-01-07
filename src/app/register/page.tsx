@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
-import { toast } from "sonner"
 import { z } from "zod"
 
 import { Card } from "@/components/ui/card"
@@ -16,6 +15,8 @@ import { ProgressSteps } from "@/components/registration/progress-steps"
 import { StepHeader } from "@/components/registration/step-header"
 import { NavigationButtons } from "@/components/registration/navigation-buttons"
 import { RegistrationForm } from "@/components/registration/registration-form"
+import { useToast } from "@/hooks/use-toast"
+
 
 type RegistrationField = keyof RegistrationFormData
 
@@ -81,6 +82,7 @@ export default function RegistrationPage() {
     const router = useRouter()
     const [isLoading, setIsLoading] = useState(false)
     const [currentStep, setCurrentStep] = useState(1)
+    const { toast } = useToast()
 
     const form = useForm<RegistrationFormData>({
         resolver: zodResolver(registrationSchema),
@@ -102,15 +104,22 @@ export default function RegistrationPage() {
 
     const currentStepFields = steps.find(step => step.id === currentStep)?.fields || []
 
-    const handleNextStep = async (data: RegistrationFormData) => {
-        // Get current step fields
+    const handleNextStep = async (e: React.MouseEvent) => {
+        // Prevent default form submission
+        e.preventDefault()
+
         const currentFields = steps[currentStep - 1].fields
-        const stepData = Object.fromEntries(
-            Object.entries(data).filter(([key]) => currentFields.includes(key as RegistrationField))
-        ) as Pick<RegistrationFormData, keyof RegistrationFormData>
+        const formData = form.getValues()
 
         try {
-            // Create a partial schema for current step fields
+            form.clearErrors()
+
+            const stepData = Object.fromEntries(
+                Object.entries(formData).filter(([key]) =>
+                    currentFields.includes(key as RegistrationField)
+                )
+            )
+
             const stepSchema = z.object(
                 currentFields.reduce<z.ZodRawShape>((acc, field) => ({
                     ...acc,
@@ -118,15 +127,18 @@ export default function RegistrationPage() {
                 }), {})
             )
 
-            // Validate only the current step's data
-            await stepSchema.parseAsync(stepData)
+            const validatedData = await stepSchema.parseAsync(stepData)
+            console.log('Validation passed:', validatedData)
 
-            // Save the current step's data
-            form.reset({ ...form.getValues(), ...stepData }, { keepValues: true })
-
-            // If validation passes, move to next step
-            setCurrentStep(prev => prev + 1)
+            // If we're on the last step, submit the form
+            if (currentStep === steps.length) {
+                await onSubmit()
+            } else {
+                // Otherwise, move to next step
+                setCurrentStep(currentStep + 1)
+            }
         } catch (error) {
+            console.error('Validation error:', error)
             if (error instanceof z.ZodError) {
                 error.errors.forEach((err) => {
                     if (err.path) {
@@ -137,13 +149,10 @@ export default function RegistrationPage() {
                     }
                 })
             }
-            console.error(error)
         }
     }
-    const goToNextStep = () => {
-        setCurrentStep(prev => prev + 1)
-    }
-    async function onSubmit() {
+
+    const onSubmit = async () => {
         try {
             // Validate entire form before final submission
             const formData = form.getValues()
@@ -154,7 +163,10 @@ export default function RegistrationPage() {
                 ...formData,
                 createdAt: new Date().toISOString(),
             })
-            toast.success("Registration submitted successfully")
+            toast({
+                title: "Registration submitted successfully",
+                variant: "success",
+            })
             router.push("/thank-you")
         } catch (error) {
             if (error instanceof z.ZodError) {
@@ -167,7 +179,10 @@ export default function RegistrationPage() {
                     }
                 })
             }
-            toast.error("Please fill in all required fields correctly")
+            toast({
+                title: "Please fill in all required fields correctly",
+                variant: "destructive",
+            })
             console.error(error)
         } finally {
             setIsLoading(false)
@@ -176,6 +191,50 @@ export default function RegistrationPage() {
 
     const handlePreviousStep = () => {
         setCurrentStep(prev => prev - 1)
+    }
+
+    const handleSubmit = async (e: React.MouseEvent) => {
+        e.preventDefault()
+
+        try {
+            // Validate entire form before submission
+            const formData = form.getValues()
+            await registrationSchema.parseAsync(formData)
+
+            setIsLoading(true)
+            await addDoc(collection(db, "registrations"), {
+                ...formData,
+                createdAt: new Date().toISOString(),
+            })
+            toast({
+                title: "Registration submitted successfully",
+                variant: "success",
+            })
+            router.push("/")
+        } catch (error) {
+            if (error instanceof z.ZodError) {
+                error.errors.forEach((err) => {
+                    if (err.path) {
+                        form.setError(err.path[0] as RegistrationField, {
+                            type: 'manual',
+                            message: err.message,
+                        })
+                    }
+                })
+                toast({
+                    title: "Please fill in all required fields correctly",
+                    variant: "destructive",
+                })
+            } else {
+                toast({
+                    title: "An error occurred while submitting the form",
+                    variant: "destructive",
+                })
+            }
+            console.error(error)
+        } finally {
+            setIsLoading(false)
+        }
     }
 
     return (
@@ -189,7 +248,7 @@ export default function RegistrationPage() {
                         totalSteps={steps.length}
                         stepName={steps[currentStep - 1].name}
                     />
-                    <form onSubmit={form.handleSubmit(currentStep === steps.length ? onSubmit : handleNextStep)}>
+                    <form onSubmit={(e) => e.preventDefault()}>
                         <RegistrationForm
                             form={form}
                             currentStepFields={currentStepFields}
@@ -204,7 +263,8 @@ export default function RegistrationPage() {
                             totalSteps={steps.length}
                             isLoading={isLoading}
                             onPrevious={handlePreviousStep}
-                            onNext={goToNextStep}
+                            onNext={handleNextStep}
+                            onSubmit={handleSubmit}
                         />
                     </form>
                 </div>

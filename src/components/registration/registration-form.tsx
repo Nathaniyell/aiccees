@@ -116,7 +116,7 @@ export function RegistrationForm({
                                         placeholder="Enter your email address"
                                         type="email"
                                         {...field}
-                                        className="border-green-200 focus:border-green-500 "
+                                       className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
                                     />
                                 </FormControl>
                                 <FormMessage />
@@ -137,7 +137,7 @@ export function RegistrationForm({
                                     <Input
                                         placeholder="Enter your phone number"
                                         {...field}
-                                        className="border-green-200 focus:border-green-500 "
+                                       className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
                                     />
                                 </FormControl>
                                 <FormMessage />
@@ -189,7 +189,7 @@ export function RegistrationForm({
                                     <Input
                                         placeholder="Enter your organization"
                                         {...field}
-                                        className="border-green-200 focus:border-green-500 "
+                                       className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
                                     />
                                 </FormControl>
                                 <FormMessage />

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://toveroenergy.com'), // Replace with your actual domain
@@ -131,6 +132,7 @@ export default function RootLayout({
       <div className="flex flex-col min-h-screen bg-white text-gray-900">
       <Header />
         {children}
+        <Toaster />
         <Footer />
         <ScrollToTop />
       </div>
