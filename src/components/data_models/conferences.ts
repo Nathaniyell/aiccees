@@ -35,7 +35,7 @@ export const aicess = {
         id: 1,
         logo: logo1,
         number: "1,173",
-        description: "Participant",
+        description: "Participants",
       },
       {
         id: 2,
@@ -47,13 +47,13 @@ export const aicess = {
         id: 3,
         logo: logo3,
         number: "51",
-        description: "Full Paper Accepted",
+        description: "Full Papers Accepted",
       },
       {
         id: 4,
         logo: logo4,
         number: "45",
-        description: "Paper Presentation",
+        description: "Paper Presentations",
       },
       {
         id: 5,
