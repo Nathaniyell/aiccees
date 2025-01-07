@@ -61,7 +61,13 @@ const registrationTypes = [
 const areasOfInterest = [
     "Energy Storage and Sustainable Battery Manufacturing in Africa",
     "Hydrogen Development in Africa",
-    "Renewable Energy Systems"
+    "Renewable Energy Systems",
+    "Energy Supply & Energy Access in Africa",
+    "Mini - grids & Hydropower Development",
+    "Clean Mobility",
+    "Energy Transition Finance",
+    "Waste to Energy",
+    "Energy Efficiency & Smart Systems",
 ] as const
 
 const howDidYouHear = [
