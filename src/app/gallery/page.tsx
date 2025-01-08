@@ -4,11 +4,11 @@ import { Card } from "@/components/ui/card";
 
 export default function GalleryPage() {
     return (
-        <main className="min-h-screen bg-gradient-to-b from-green-50 to-white py-10 px-4">
+        <main className="min-h-screen bg-gradient-to-b from-green-50 to-white py-10 px-2">
             <div className="space-y-16">
                 <div className="text-center space-y-4 relative">
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-green-600" />
-                    <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-green-500 pt-8">
+                    <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-r from-green-900 to-green-600 pt-8">
                         Event Gallery
                     </h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto italic">
@@ -43,7 +43,7 @@ export default function GalleryPage() {
 
                 <section className="space-y-8">
                     <h2 className="text-2xl font-semibold text-center relative">
-                        <span className="bg-white text-green-700 px-8 py-3 rounded-lg shadow-lg border-2 border-green-600">
+                        <span className="bg-white text-green-700 px-2 md:px-8 py-3 rounded-lg shadow-lg border-2 border-green-600">
                             Cooking Demonstrations
                         </span>
                     </h2>
