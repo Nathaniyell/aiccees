@@ -7,7 +7,7 @@ export default function GalleryPage() {
         <main className="min-h-screen bg-gradient-to-b from-green-50 to-white py-10 px-2">
             <div className="space-y-16">
                 <div className="text-center space-y-4 relative">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-green-600" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-red-700" />
                     <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-r from-green-900 to-green-600 pt-8">
                         Event Gallery
                     </h1>
