@@ -7,16 +7,21 @@ import conferencePics5 from "@/public/images/conference-pics/IMG_1923.jpg"
 import conferencePics6 from "@/public/images/conference-pics/IMG_1934.jpg"
 import conferencePics7 from "@/public/images/conference-pics/IMG_1938.jpg"
 import conferencePics8 from "@/public/images/conference-pics/IMG_2015.jpg"
-import conferencePics9 from "@/public/images/conference-pics/IMG_2020.jpg"
 import conferencePics10 from "@/public/images/conference-pics/IMG_2103.jpg"
 import conferencePics11 from "@/public/images/conference-pics/IMG_2026.jpg"
 import conferencePics12 from "@/public/images/conference-pics/IMG_2107.jpg"
-import conferencePics13 from "@/public/images/conference-pics/IMG_2417.jpg"
 import conferencePics14 from "@/public/images/conference-pics/IMG_2431.jpg"
-import cooking from '@/public/images/cooking-demonstration/cooking.jpg'
-import cooking1 from '@/public/images/cooking-demonstration/cooking1.jpg'
-import cooking2 from '@/public/images/cooking-demonstration/cooking2.jpg'
-import cooking3 from '@/public/images/cooking-demonstration/cooking3.jpg'
+import conferencePics15 from "@/public/images/conference-pics/IMG_2095.jpg"
+import conferencePics16 from "@/public/images/conference-pics/IMG_2110.jpg"
+import conferencePics17 from "@/public/images/conference-pics/IMG_2119.jpg"
+import conferencePics18 from "@/public/images/conference-pics/IMG_2124.jpg"
+import conferencePics19 from "@/public/images/conference-pics/IMG_2170.jpg"
+import conferencePics20 from "@/public/images/conference-pics/IMG_2279.jpg"
+import conferencePics21 from "@/public/images/conference-pics/IMG_2361.jpg"
+import conferencePics22 from "@/public/images/conference-pics/IMG_2360.jpg"
+import conferencePics23 from "@/public/images/conference-pics/IMG_2363.jpg"
+import conferencePics24 from "@/public/images/conference-pics/IMG_2550.jpg"
+
 import cooking4 from '@/public/images/cooking-demonstration/cooking4.jpg'
 import cooking5 from '@/public/images/cooking-demonstration/cooking5.jpg'
 
@@ -30,17 +35,24 @@ export const conferenceImages = [
     { src: conferencePics6, alt: "Conference Image 7" },
     { src: conferencePics7, alt: "Conference Image 8" },
     { src: conferencePics8, alt: "Conference Image 9" },
-    { src: conferencePics9, alt: "Conference Image 10" },
     { src: conferencePics10, alt: "Conference Image 11" },
     { src: conferencePics11, alt: "Conference Image 12" },
     { src: conferencePics12, alt: "Conference Image 13" },
-    { src: conferencePics13, alt: "Conference Image 14" },
     { src: conferencePics14, alt: "Conference Image 15" },
-    { src: cooking, alt: "Cooking Demonstration 1" },
-    { src: cooking1, alt: "Cooking Demonstration 2" },
-    { src: cooking2, alt: "Cooking Demonstration 3" },
-    { src: cooking3, alt: "Cooking Demonstration 4" },
+    { src: conferencePics15, alt: "Conference Image 16" },
+    { src: conferencePics16, alt: "Conference Image 17" },
+    { src: conferencePics17, alt: "Conference Image 18" },
+    { src: conferencePics18, alt: "Conference Image 19" },
+    { src: conferencePics19, alt: "Conference Image 20" },
+    { src: conferencePics20, alt: "Conference Image 21" },
+    { src: conferencePics21, alt: "Conference Image 22" },
+    { src: conferencePics22, alt: "Conference Image 23" },
+    { src: conferencePics23, alt: "Conference Image 24" },
+    { src: conferencePics24, alt: "Conference Image 25" },
+]
+
+
+export const cookingImages = [
     { src: cooking4, alt: "Cooking Demonstration 5" },
     { src: cooking5, alt: "Cooking Demonstration 6" },
-
 ]

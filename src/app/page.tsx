@@ -12,6 +12,7 @@ import GallerySection from '@/components/sections/GallerySection'
 import TestimonialCarousel from '@/components/sections/testimonails'
 import ConferenceCallToAction from '@/components/call-to-action'
 import ScientificCommittee from '@/components/sections/scientific-committee'
+import CookingDemonstration from '@/components/sections/CookingDemonstration'
 
 
 
@@ -27,6 +28,7 @@ export default function ConferencePage() {
       <ScientificCommittee />
       <PublishingPapers />
       <GallerySection />
+      <CookingDemonstration />
       <Sponsors />
       <TestimonialCarousel />
       <div className="lg:px-16 flex justify-center">
