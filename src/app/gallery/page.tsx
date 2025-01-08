@@ -44,7 +44,7 @@ export default function GalleryPage() {
                 <section className="space-y-8">
                     <h2 className="text-2xl font-semibold text-center relative">
                         <span className="bg-white text-green-700 px-2 md:px-8 py-3 rounded-lg shadow-lg border-2 border-green-600">
-                            Cooking Demonstrations
+                            Cooking Demonstration
                         </span>
                     </h2>
                     <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
