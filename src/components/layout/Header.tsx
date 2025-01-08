@@ -9,11 +9,12 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // Only handle scroll for anchor links (those starting with #)
+    setIsMenuOpen(false) // Close mobile menu regardless of link type
+
+    // Only handle smooth scroll for anchor links (those starting with #)
     if (!href.startsWith('#')) return
 
     e.preventDefault()
-    setIsMenuOpen(false) // Close mobile menu
 
     // Remove the # from the href
     const targetId = href.replace('#', '')
