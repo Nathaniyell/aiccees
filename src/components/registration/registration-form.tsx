@@ -1,3 +1,5 @@
+"use client"
+
 import { UseFormReturn } from "react-hook-form"
 import { RegistrationFormData } from "@/lib/validations/registration"
 import {
@@ -22,6 +24,7 @@ import {
     RadioGroupItem,
 } from "@/components/ui/radio-group"
 import { Checkbox } from "@/components/ui/checkbox"
+import { useEffect, useState } from "react"
 
 interface RegistrationFormProps {
     form: UseFormReturn<RegistrationFormData>
@@ -33,6 +36,11 @@ interface RegistrationFormProps {
     contactPreferences: readonly string[]
 }
 
+interface Country {
+    name: { common: string }
+    cca2: string
+}
+
 export function RegistrationForm({
     form,
     currentStepFields,
@@ -41,6 +49,30 @@ export function RegistrationForm({
     howDidYouHear,
     contactPreferences
 }: RegistrationFormProps) {
+    const [countries, setCountries] = useState<Country[]>([])
+
+    useEffect(() => {
+        const fetchCountries = async () => {
+            try {
+                const response = await fetch('https://restcountries.com/v3.1/all')
+                const data = await response.json()
+                const sortedCountries = data
+                    .map((country: Country) => ({
+                        name: country.name,
+                        cca2: country.cca2
+                    }))
+                    .sort((a: Country, b: Country) =>
+                        a.name.common.localeCompare(b.name.common)
+                    )
+                setCountries(sortedCountries)
+            } catch (error) {
+                console.error('Error fetching countries:', error)
+            }
+        }
+
+        fetchCountries()
+    }, [])
+
     return (
         <Form {...form}>
             <div className="rounded-lg p-4 shadow-sm border space-y-6">
@@ -116,7 +148,7 @@ export function RegistrationForm({
                                         placeholder="Enter your email address"
                                         type="email"
                                         {...field}
-                                       className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
+                                        className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
                                     />
                                 </FormControl>
                                 <FormMessage />
@@ -137,7 +169,7 @@ export function RegistrationForm({
                                     <Input
                                         placeholder="Enter your phone number"
                                         {...field}
-                                       className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
+                                        className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
                                     />
                                 </FormControl>
                                 <FormMessage />
@@ -160,16 +192,14 @@ export function RegistrationForm({
                                         </SelectTrigger>
                                     </FormControl>
                                     <SelectContent>
-                                        <SelectItem value="nigeria">Nigeria</SelectItem>
-                                        <SelectItem value="ghana">Ghana</SelectItem>
-                                        <SelectItem value="kenya">Kenya</SelectItem>
-                                        <SelectItem value="south-africa">South Africa</SelectItem>
-                                        <SelectItem value="ethiopia">Ethiopia</SelectItem>
-                                        <SelectItem value="tanzania">Tanzania</SelectItem>
-                                        <SelectItem value="uganda">Uganda</SelectItem>
-                                        <SelectItem value="rwanda">Rwanda</SelectItem>
-                                        <SelectItem value="senegal">Senegal</SelectItem>
-                                        <SelectItem value="other">Other</SelectItem>
+                                        {countries.map((country) => (
+                                            <SelectItem
+                                                key={country.cca2}
+                                                value={country.name.common}
+                                            >
+                                                {country.name.common}
+                                            </SelectItem>
+                                        ))}
                                     </SelectContent>
                                 </Select>
                                 <FormMessage />
@@ -189,7 +219,7 @@ export function RegistrationForm({
                                     <Input
                                         placeholder="Enter your organization"
                                         {...field}
-                                       className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
+                                        className="border-green-400 ring-offset-0 focus-visible:ring-0 focus:border-green-700"
                                     />
                                 </FormControl>
                                 <FormMessage />
