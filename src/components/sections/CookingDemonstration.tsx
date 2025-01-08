@@ -24,7 +24,7 @@ const CookingDemonstration = () => {
 
   return (
     <AOS>
-      <section id="cooking" className="w-full py-12 md:py-24">
+      <section id="cooking" className="w-full py-12 md:py-24 border-t border-t-slate-200 bg-neutral-50">
         <div className="container md:w-11/12 mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-green-600">
             Cooking Demonstration
@@ -44,7 +44,7 @@ const CookingDemonstration = () => {
             className="w-full max-w-5xl mx-auto"
           >
             <CarouselContent>
-              {cookingImages.map((image, index) => (
+              {cookingImages.slice(0, 5).map((image, index) => (
                 <CarouselItem key={index} className="md:basis-1/2">
                   <div className="p-1">
                     <Card>

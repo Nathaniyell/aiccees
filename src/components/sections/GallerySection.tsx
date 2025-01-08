@@ -43,7 +43,7 @@ const CookingDemonstration = () => {
             className="w-full max-w-5xl mx-auto"
           >
             <CarouselContent>
-              {conferenceImages.map((image, index) => (
+              {conferenceImages.slice(0, 5).map((image, index) => (
                 <CarouselItem key={index} className="md:basis-1/2">
                   <div className="p-1">
                     <Card>

@@ -21,9 +21,17 @@ import conferencePics21 from "@/public/images/conference-pics/IMG_2361.jpg"
 import conferencePics22 from "@/public/images/conference-pics/IMG_2360.jpg"
 import conferencePics23 from "@/public/images/conference-pics/IMG_2363.jpg"
 import conferencePics24 from "@/public/images/conference-pics/IMG_2550.jpg"
-
-import cooking4 from '@/public/images/cooking-demonstration/cooking4.jpg'
-import cooking5 from '@/public/images/cooking-demonstration/cooking5.jpg'
+import cooking1 from '@/public/images/cooking-demonstration/IMG_1753.jpg'
+import cooking2 from '@/public/images/cooking-demonstration/IMG_1765.jpg'
+import cooking3 from '@/public/images/cooking-demonstration/IMG_2213.jpg'
+import cooking4 from '@/public/images/cooking-demonstration/IMG_2216.jpg'
+import cooking5 from '@/public/images/cooking-demonstration/IMG_2217.jpg'
+import cooking6 from '@/public/images/cooking-demonstration/IMG_2330.jpg'
+import cooking7 from '@/public/images/cooking-demonstration/IMG_2385.jpg'
+import cooking8 from '@/public/images/cooking-demonstration/cooking4.jpg'
+import cooking9 from '@/public/images/cooking-demonstration/cooking5.jpg'
+import cooking10 from '@/public/images/cooking-demonstration/IMG_2389.jpg'
+import cooking11 from '@/public/images/cooking-demonstration/IMG_2406.jpg'
 
 export const conferenceImages = [
     { src: conferencePics, alt: "Conference Image 1" },
@@ -53,6 +61,16 @@ export const conferenceImages = [
 
 
 export const cookingImages = [
+    { src: cooking1, alt: "Cooking Demonstration 2" },
+    { src: cooking2, alt: "Cooking Demonstration 3" },
+    { src: cooking3, alt: "Cooking Demonstration 4" },
     { src: cooking4, alt: "Cooking Demonstration 5" },
     { src: cooking5, alt: "Cooking Demonstration 6" },
+    { src: cooking6, alt: "Cooking Demonstration 7" },
+    { src: cooking7, alt: "Cooking Demonstration 8" },
+    { src: cooking8, alt: "Cooking Demonstration 9" },
+    { src: cooking9, alt: "Cooking Demonstration 10" },
+    { src: cooking10, alt: "Cooking Demonstration 11" },
+    { src: cooking11, alt: "Cooking Demonstration 12" },
 ]
+
