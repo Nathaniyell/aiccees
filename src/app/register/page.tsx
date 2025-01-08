@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { useRouter } from "next/navigation"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { z } from "zod"
 
 import { registrationSchema, type RegistrationFormData } from "@/lib/validations/registration"
@@ -109,6 +109,34 @@ export default function RegistrationPage() {
 
     const currentStepFields = steps.find(step => step.id === currentStep)?.fields || []
 
+    // Initialize form data from localStorage
+    useEffect(() => {
+        const savedStep = localStorage.getItem('registrationStep')
+        const savedFormData = localStorage.getItem('registrationFormData')
+
+        if (savedStep && savedFormData) {
+            const parsedFormData = JSON.parse(savedFormData)
+            // Set all form values at once
+            form.reset(parsedFormData)
+            setCurrentStep(parseInt(savedStep, 10))
+        }
+    }, [])
+
+    // Save form data to localStorage whenever form values change
+    useEffect(() => {
+        const subscription = form.watch((formData) => {
+            localStorage.setItem('registrationStep', currentStep.toString())
+            localStorage.setItem('registrationFormData', JSON.stringify(formData))
+        })
+
+        return () => subscription.unsubscribe()
+    }, [form, currentStep])
+
+    const clearStoredData = () => {
+        localStorage.removeItem('registrationStep')
+        localStorage.removeItem('registrationFormData')
+    }
+
     const handleNextStep = async (e: React.MouseEvent) => {
         // Prevent default form submission
         e.preventDefault()
@@ -168,11 +196,12 @@ export default function RegistrationPage() {
                 ...formData,
                 createdAt: new Date().toISOString(),
             })
+            clearStoredData()
             toast({
                 title: "Registration submitted successfully",
                 variant: "success",
             })
-            router.push("/thank-you")
+            router.push("/")
         } catch (error) {
             if (error instanceof z.ZodError) {
                 error.errors.forEach((err) => {

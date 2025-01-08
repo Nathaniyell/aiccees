@@ -50,28 +50,41 @@ export function RegistrationForm({
     contactPreferences
 }: RegistrationFormProps) {
     const [countries, setCountries] = useState<Country[]>([])
+    const [isLoadingCountries, setIsLoadingCountries] = useState(false)
 
     useEffect(() => {
         const fetchCountries = async () => {
-            try {
-                const response = await fetch('https://restcountries.com/v3.1/all')
-                const data = await response.json()
-                const sortedCountries = data
-                    .map((country: Country) => ({
-                        name: country.name,
-                        cca2: country.cca2
-                    }))
-                    .sort((a: Country, b: Country) =>
-                        a.name.common.localeCompare(b.name.common)
-                    )
-                setCountries(sortedCountries)
-            } catch (error) {
-                console.error('Error fetching countries:', error)
+            if (currentStepFields.includes('country')) {
+                setIsLoadingCountries(true)
+                try {
+                    const response = await fetch('https://restcountries.com/v3.1/all?fields=name,cca2')
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch countries')
+                    }
+                    const data = await response.json()
+                    const sortedCountries = data
+                        .sort((a: Country, b: Country) =>
+                            a.name.common.localeCompare(b.name.common)
+                        )
+                    setCountries(sortedCountries)
+                } catch (error) {
+                    console.error('Error fetching countries:', error)
+                    // Set a minimal fallback list of African countries if the API fails
+                    setCountries([
+                        { name: { common: 'Senegal' }, cca2: 'SN' },
+                        { name: { common: 'Nigeria' }, cca2: 'NG' },
+                        { name: { common: 'Kenya' }, cca2: 'KE' },
+                        { name: { common: 'South Africa' }, cca2: 'ZA' },
+                        { name: { common: 'Ghana' }, cca2: 'GH' },
+                    ])
+                } finally {
+                    setIsLoadingCountries(false)
+                }
             }
         }
 
         fetchCountries()
-    }, [])
+    }, [currentStepFields])
 
     return (
         <Form {...form}>
@@ -187,8 +200,8 @@ export function RegistrationForm({
                                 <FormLabel>Country <span className="text-red-500">*</span></FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
-                                        <SelectTrigger className="border-green-200 focus:border-green-500 ">
-                                            <SelectValue placeholder="Select your country" />
+                                        <SelectTrigger className="border-green-200 focus:border-green-500">
+                                            <SelectValue placeholder={isLoadingCountries ? "Loading countries..." : "Select your country"} />
                                         </SelectTrigger>
                                     </FormControl>
                                     <SelectContent>
