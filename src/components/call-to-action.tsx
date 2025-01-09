@@ -22,7 +22,7 @@ const ConferenceCallToAction = () => {
               size="lg"
               className="bg-green-600 hover:bg-green-700 text-white"
             >
-              <Link href="/register">Register Now</Link>
+              <Link target="_blank" href="https://docs.google.com/forms/d/1FxgRduMD96dFgxJW6RtaZgCOUD2rfnfPp_D6U4_kAoA/edit">Register Now</Link>
             </Button>
             <Button 
               asChild
