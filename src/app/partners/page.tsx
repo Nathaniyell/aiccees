@@ -1,5 +1,5 @@
 import { Partners } from "@/components/partners"
-import { PartnerForm } from "@/components/partners"
+
 
 export default function PartnersPage() {
     return (
@@ -22,10 +22,9 @@ export default function PartnersPage() {
                             Become a Partner
                         </h2>
                         <p className="text-slate-500">
-                            Fill out the form below to start your partnership journey with us.
+                            To start your partnership journey with us  <a href="https://forms.gle/" className="text-green-700 hover:text-green-600">please visit this link</a>.
                         </p>
                     </div>
-                    <PartnerForm />
                 </section>
             </div>
         </div>
