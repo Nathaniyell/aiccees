@@ -161,8 +161,8 @@ function Submissions() {
                 </Button>
               </Link>
               <Link
-                href="/AICCEES-2024-Conference-Report.pdf"
-                download="AICCEES-2024-Conference-Report.pdf"
+                href="/2024-Conference-Report.pdf"
+                download="2024-Conference-Report.pdf"
                 target="_blank"
               >
                 <Button
