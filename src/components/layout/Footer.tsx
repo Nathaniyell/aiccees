@@ -6,7 +6,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="w-full border-t border-red-200 bg-green-50 py-12">
-      <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-6">
+      <div className="w-11/12 md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-6">
         {/* Company Info */}
         <div className="flex flex-col items-center md:items-start space-y-2">
         <Link href="/" className="flex items-center space-x-2">
@@ -38,9 +38,9 @@ export function Footer() {
               className="text-sm text-gray-600 hover:text-green-600 hover:underline underline-offset-4">
               aiccees@uniport.edu.ng
             </a>
-            <a href="tel:+1234567890"
+            <a href="tel:+2348037641860"
               className="text-sm text-gray-600 hover:text-green-600 hover:underline underline-offset-4">
-              +1 (234) 567-890
+              +2348037641860
             </a>
           </div>
         </div>
