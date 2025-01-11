@@ -69,8 +69,8 @@ const Sponsors = () => {
         </Carousel>
         <div className="mt-16 text-center flex items-center justify-center gap-2 flex-col sm:flex-row">
                         <h3 className="text-xl font-semibold">Do you want to partner with us?</h3>
-                        <Link href="/partners" className="text-blue-700 hover:text-blue-800 underline text-lg">
-                           Please visit the partners page
+                        <Link target="_blank" href="https://docs.google.com/forms/d/1FxgRduMD96dFgxJW6RtaZgCOUD2rfnfPp_D6U4_kAoA/edit" className="text-blue-700 hover:text-blue-800 underline text-lg">
+                       Register here
                         </Link>
                         
                     </div>
