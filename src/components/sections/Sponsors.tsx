@@ -69,7 +69,7 @@ const Sponsors = () => {
         </Carousel>
         <div className="mt-16 text-center flex items-center justify-center gap-2 flex-col sm:flex-row">
                         <h3 className="text-xl font-semibold">Do you want to partner with us?</h3>
-                        <Link target="_blank" href="https://docs.google.com/forms/d/1FxgRduMD96dFgxJW6RtaZgCOUD2rfnfPp_D6U4_kAoA/edit" className="text-blue-700 hover:text-blue-800 underline text-lg">
+                        <Link target="_blank" href="https://docs.google.com/forms/d/1UmXabWk7VkBlHPvO4zLtU4Ww87m1ci4VDrM1311FiFI" className="text-blue-700 hover:text-blue-800 underline text-lg">
                        Register here
                         </Link>
                         
