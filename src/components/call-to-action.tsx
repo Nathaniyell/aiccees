@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from 'next/link'
+import AOS from "./layout/AOS"
 
 const ConferenceCallToAction = () => {
   return (
+    <AOS>
     <Card className="w-11/12 md:w-full bg-[#fafafa] my-8 px-4">
       <CardContent className="p-6 md:p-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -38,6 +40,7 @@ const ConferenceCallToAction = () => {
         </div>
       </CardContent>
     </Card>
+    </AOS>
   )
 }
 

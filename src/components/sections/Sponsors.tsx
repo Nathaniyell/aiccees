@@ -13,6 +13,7 @@ import {
 import { sponsors_list } from '../data_models/conferences'
 import Autoplay from "embla-carousel-autoplay"
 import Link from 'next/link'
+import AOS from '../layout/AOS'
 
 const Sponsors = () => {
   const plugin = useRef(
@@ -21,6 +22,7 @@ const Sponsors = () => {
  
 
   return (
+    <AOS>
     <section id="partners" className="w-full py-12 md:pt-24 bg-emerald-50">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-green-600">
@@ -76,6 +78,7 @@ const Sponsors = () => {
                     </div>
       </div>
     </section>
+    </AOS>
   )
 }
 
