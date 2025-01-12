@@ -126,7 +126,7 @@ export default function RootLayout({
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
+        {/* <link rel="manifest" href="/manifest.json" /> */}
       </head>
       <body className={`${GeistSans.className} antialiased`}>
       <div className="flex flex-col min-h-screen bg-white text-gray-900">
