@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://toveroenergy.com'), // Replace with your actual domain
+  metadataBase: new URL('https://aiccees.com'), 
   title: {
     default: "Africa International Conference on Clean Energy & Energy Storage",
     template: "%s | AICEES",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Africa International Conference on Clean Energy & Energy Storage",
     description: "Africa International Conference on Clean Energy & Energy Storage - Empowering Africa's Future Through Clean Energy Innovation and Sustainable Storage Solutions",
-    creator: "@ToveroEnergy", // Replace with actual Twitter handle
+    creator: "@ToveroEnergy", 
     images: ["../../public/images/herobg2.jpg"],
   },
   robots: {
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
     // bing: "bing-verification-code",
   },
   alternates: {
-    canonical: "https://toveroenergy.com",
+    canonical: "https://aiccees.com",
     languages: {
-      'en-US': 'https://toveroenergy.com',
+      'en-US': 'https://aiccees.com',
       // Add other language versions if available
     },
   },
@@ -90,11 +90,11 @@ const jsonLd = {
   "@type": "Event",
   name: "Africa International Conference on Clean Energy & Energy Storage",
   description: "Empowering Africa's Future Through Clean Energy Innovation and Sustainable Storage Solutions",
-  startDate: "2024-03-18", // Replace with actual date
-  endDate: "2025-12-25", // Replace with actual date
+  startDate: "2025-01-01",
+  endDate: "2025-12-26", 
   location: {
     "@type": "Place",
-    name: "Conference Venue Name",
+    name: "University of Port Harcourt",
     address: {
       "@type": "PostalAddress",
       streetAddress: "University of Port Hacourt",
