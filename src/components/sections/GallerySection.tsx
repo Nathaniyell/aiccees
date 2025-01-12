@@ -25,6 +25,7 @@ const CookingDemonstration = () => {
 
   return (
     <AOS>
+      <hr />
       <section id="cooking" className="w-full py-12 md:pb-24">
         <div className="container md:w-11/12 mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-green-600">
