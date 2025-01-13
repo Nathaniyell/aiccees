@@ -29,22 +29,13 @@ interface Testimonial {
     },
     {
       id: 3,
-      name: "Dr. Veronica Akpasoh",
-      role: "Chief Executive Officer",
+      name: "Engr. Anthony Akpasoh",
+      role: "COO",
       company: "Tovero Energy Limited",
       content: "The diversity of perspectives and innovative solutions presented reaffirmed the importance of collaborative efforts in advancing clean energy and sustainable development across the continent and the world.",
       rating: 5,
       image: "/placeholder.svg?height=100&width=100"
-    },
-    {
-      id: 4,
-      name: "Dr. Veronica Akpasoh",
-      role: "Chief Executive Officer",
-      company: "Tovero Energy Limited",
-      content: "AICCESS 2024 combined exhibitions, networking, and electric cooking demonstrations to create a new formidable platform for knowledge sharing, collaboration, and innovation in clean energy and sustainable cooking.",
-      rating: 5,
-      image: "/placeholder.svg?height=100&width=100"
-    },
+    },  
     {
       id: 5,
       name: "Mourice Kausya",
