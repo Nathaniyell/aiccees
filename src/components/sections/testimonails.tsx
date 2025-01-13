@@ -83,8 +83,8 @@ export default function TestimonialCarousel() {
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious className="hidden md:flex" />
-                        <CarouselNext className="hidden md:flex" />
+                        <CarouselPrevious className="hidden md:flex text-black" />
+                        <CarouselNext className="hidden md:flex text-black" />
                     </Carousel>
                 </div>
 
