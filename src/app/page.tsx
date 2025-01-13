@@ -13,6 +13,7 @@ import TestimonialCarousel from '@/components/sections/testimonails'
 import ConferenceCallToAction from '@/components/call-to-action'
 import ScientificCommittee from '@/components/sections/scientific-committee'
 import CookingDemonstration from '@/components/sections/CookingDemonstration'
+import ConferenceChairs from '@/components/sections/conference-chairs'
 
 
 
@@ -25,6 +26,7 @@ export default function ConferencePage() {
       <Submissions />
       <ConferenceThemes />
       <SpeakersSection />
+      <ConferenceChairs />
       <ScientificCommittee />
       <PublishingPapers />
       <GallerySection />
