@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Building2 } from 'lucide-react'
 import { conferenceChairInfo } from "../data_models/conference-chairs"
 import AOS from "../layout/AOS"
+import Image from "next/image"
 
 export default function ConferenceChairs() {
     return (
@@ -22,12 +23,24 @@ export default function ConferenceChairs() {
                         {conferenceChairInfo.map((chair) => (
                             <Card key={chair.id} className="group hover:shadow-lg transition-shadow bg-white border-slate-200">
                                 <CardHeader className="text-center pb-4">
-                                    <Avatar className="w-24 h-24 mx-auto mb-4">
-                                        <AvatarImage src={chair.image} alt={chair.name} />
-                                        <AvatarFallback className="bg-white rounded-full border-green-800 border text-slate-600">
-                                            {chair.name.split(' ').map(n => n[0]).join('')}
-                                        </AvatarFallback>
-                                    </Avatar>
+                                    <div className="w-48 h-48 mx-auto mb-4 relative">
+                                        {typeof chair.image === 'string' ? (
+                                            <Avatar className="w-full h-full">
+                                                <AvatarImage src={chair.image} alt={chair.name} />
+                                                <AvatarFallback className="bg-white rounded-full border-green-800 border text-slate-600 text-xl">
+                                                    {chair.name.split(' ').map(n => n[0]).join('')}
+                                                </AvatarFallback>
+                                            </Avatar>
+                                        ) : (
+                                            <Image
+                                                src={chair.image}
+                                                alt={chair.name}
+                                                width={96}
+                                                height={96}
+                                                className="rounded-full object-cover w-full h-full"
+                                            />
+                                        )}
+                                    </div>
                                     <CardTitle className="text-slate-800">{chair.name}</CardTitle>
                                     <CardDescription className="font-medium text-green-700">
                                         {chair.role}
