@@ -70,10 +70,10 @@ export default function ParticipationSection() {
   }
 
   return (
-    <div className="py-12 bg-teal-50">
+    <div className="py-12 bg-teal-50" id='participation'>
       <div className="max-w-5xl mx-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-8">
-          <h1 className="text-4xl font-bold tracking-tighter text-[#AA0000]">PARTICIPATION</h1>
+          <h1 className="text-4xl font-bold tracking-tighter text-[#AA0000]">Conference Fees</h1>
           <p className="mx-auto max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Participation at AICCEES 2025 will be open to all virtually and physically, however this will come with a determined fee. 
             Participants can publish a paper, present a paper, or be audience members. Certificate of participation will be given to all conference participants.
