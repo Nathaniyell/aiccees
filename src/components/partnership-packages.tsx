@@ -154,15 +154,6 @@ export default function Partnerships() {
                         </Card>
                     ))}
                 </div>
-
-                <div className="mt-12 text-center">
-                    <p className="text-gray-500 mb-4">
-                        Interested in a custom sponsorship package? Contact us to discuss your needs.
-                    </p>
-                    <Button variant="outline" size="lg">
-                        Contact for Custom Package
-                    </Button>
-                </div>
             </div>
         </div>
     )
