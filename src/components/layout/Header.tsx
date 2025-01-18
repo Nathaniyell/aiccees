@@ -37,7 +37,7 @@ export function Header() {
     { href: '/#themes', label: 'Conference Themes' },
     { href: '/#submissions', label: 'Submit Paper' },
     { href: '/gallery', label: 'Gallery' },
-    { href: '/#partners', label: 'Partners' },
+    { href: '/partners', label: 'Partnership' },
   ]
 
   return (

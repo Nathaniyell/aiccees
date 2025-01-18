@@ -1,4 +1,5 @@
 import { Partners } from "@/components/partners"
+import PartnershipPackages from "@/components/partnership-packages"
 
 
 export default function PartnersPage() {
@@ -13,6 +14,7 @@ export default function PartnersPage() {
                         Join our growing network of industry leaders and innovators who are shaping the future together.
                     </p>
                 </section>
+                <PartnershipPackages />
 
                 <Partners />
 
