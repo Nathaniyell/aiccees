@@ -14,6 +14,7 @@ import ConferenceCallToAction from '@/components/call-to-action'
 import ScientificCommittee from '@/components/sections/scientific-committee'
 import CookingDemonstration from '@/components/sections/CookingDemonstration'
 import ConferenceChairs from '@/components/sections/conference-chairs'
+import Participation from '@/components/sections/participation'
 
 
 
@@ -29,6 +30,7 @@ export default function ConferencePage() {
       <ConferenceChairs />
       <ScientificCommittee />
       <PublishingPapers />
+      <Participation />
       <GallerySection />
       <CookingDemonstration />
       <Sponsors />
