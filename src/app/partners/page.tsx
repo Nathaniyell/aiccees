@@ -5,7 +5,7 @@ import PartnershipPackages from "@/components/partnership-packages"
 export default function PartnersPage() {
     return (
         <div className="container mx-auto py-12 px-4 bg-slate-50">
-            <div className="max-w-5xl mx-auto space-y-16">
+            <div className="max-w-5xl mx-auto space-y-8">
                 <section className="text-center space-y-4">
                     <h1 className="text-4xl font-bold text-green-700 tracking-tighter sm:text-5xl">
                         Partnership Opportunities
@@ -32,7 +32,7 @@ export default function PartnersPage() {
                         </p>
                         <div className="pt-4">
                             <a
-                                href="https://forms.gle/"
+                                href="https://docs.google.com/forms/d/1UmXabWk7VkBlHPvO4zLtU4Ww87m1ci4VDrM1311FiFI"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-green-700 hover:bg-green-600 rounded-md transition-colors"
