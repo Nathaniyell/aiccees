@@ -84,13 +84,10 @@ export default function Partnerships() {
   const [showNGN, setShowNGN] = useState(false)
 
   return (
-    <div className="py-12 bg-gray-50">
+    <div className="pb-12 bg-gray-50">
       <div className="px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">Partnership Opportunities</h1>
-          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Join us as a sponsor and connect with leading researchers and industry professionals
-          </p>
+               
           <div className="flex items-center justify-center space-x-2">
             <Label htmlFor="currency">Show prices in NGN</Label>
             <Switch
@@ -101,7 +98,7 @@ export default function Partnerships() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {tiers.map((tier) => (
             <Card 
               key={tier.name}
@@ -112,7 +109,7 @@ export default function Partnerships() {
               }`}
             >
               <CardHeader>
-                <CardTitle>{tier.name}</CardTitle>
+                <CardTitle>{tier.name} Sponsorship</CardTitle>
                 <CardDescription>{tier.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-1">
