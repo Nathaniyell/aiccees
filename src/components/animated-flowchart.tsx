@@ -17,7 +17,7 @@ const steps: Step[] = [
   {
     id: 1,
     title: "Prepare Paper",
-    description: "Download and fill out the research paper template",
+    description: "Prepare your research paper following the conference template (Download the template attached). \nPlease note that research papers sent in for the conference must be an original research that has neither been published or submitted for publication in any other conference or journal. Additionally it must adhere to our ethical standards outlined in the guidelines attached.",
     icon: <FileText className="h-6 w-6" />,
     color: 'green',
     templateUrl: "/Research_Paper_Template.pdf"
