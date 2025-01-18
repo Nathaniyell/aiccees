@@ -94,10 +94,10 @@ export default function Partnerships() {
     return (
         <div className="pb-12 bg-gray-50">
             <div className="px-4 md:px-6">
-                <div className="text-center space-y-4 mb-4">
-
+                <div className="text-center space-y-4 mb-8">
+                    <h1 className="text-2xl font-bold text-gray-900 mb-4">Sponsorship Packages</h1>
                     <div className="flex items-center justify-center space-x-2">
-                        <Label htmlFor="currency">Show prices in NGN</Label>
+                        <Label htmlFor="currency" className="text-gray-700">Show prices in NGN</Label>
                         <Switch
                             id="currency"
                             checked={showNGN}
@@ -111,13 +111,13 @@ export default function Partnerships() {
                         <Card
                             key={tier.name}
                             className={`flex flex-col h-full ${tier.featured
-                                ? 'border-primary shadow-lg scale-105'
-                                : ''
+                                    ? 'border-green-600 shadow-lg scale-105'
+                                    : ''
                                 }`}
                         >
                             <CardHeader>
-                                <CardTitle className="text-green-700">{tier.name} Sponsorship</CardTitle>
-                                <CardDescription className="text-slate-500">{tier.description}</CardDescription>
+                                <CardTitle className="text-green-600">{tier.name} Sponsorship</CardTitle>
+                                <CardDescription className="text-gray-600">{tier.description}</CardDescription>
                             </CardHeader>
                             <CardContent className="flex-1 flex flex-col">
                                 <div className="mb-4">
@@ -140,8 +140,7 @@ export default function Partnerships() {
                                     {tier.benefits.length >= 3 && (
                                         <div className="mt-4 grid place-items-center pt-2 border-t">
                                             <Button
-                                           
-                                                className="p-0 h-auto bg-black text-white px-2 py-1"
+                                                className="p-0 h-auto bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full"
                                                 onClick={() => toggleCard(tier.name)}
                                             >
                                                 {expandedCards[tier.name] ? 'Show Less' : 'Read More'}
@@ -150,7 +149,7 @@ export default function Partnerships() {
                                     )}
                                 </div>
                             </CardContent>
-         
+
                         </Card>
                     ))}
                 </div>

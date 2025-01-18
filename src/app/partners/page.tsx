@@ -14,15 +14,12 @@ export default function PartnersPage() {
                     Organisations, companies, groups, and individuals are invited to partner with the conference organisers for this conference by selecting any of the sponsorship packages listed below. 
                     </p>
                 </section>
-
+                <section>
+                                     <PartnershipPackages />
+                </section>
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold tracking-tight text-center">Our Partners</h2>
                     <Partners />
-                </section>
-
-                <section className="space-y-4">
-                    <h2 className="text-2xl font-bold tracking-tight text-center">Sponsorship Packages</h2>
-                    <PartnershipPackages />
                 </section>
 
                 <section className="space-y-8 rounded-2xl border bg-white p-8 text-center">
