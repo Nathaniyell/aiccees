@@ -25,14 +25,14 @@ const steps: Step[] = [
   {
     id: 2,
     title: "Email Submission",
-    description: "Send your full research paper by email (aiccees@uniport.edu.ng) to the conference chairs for initial review.",
+    description: "Send your full research paper by email (aiccees@uniport.edu.ng) to the conference chairs for initial review. Please note that any research paper with a plagiarism index of more than 15% will be rejected.",
     icon: <Upload className="h-6 w-6" />,
     color: 'red'
   },
   {
     id: 3,
     title: "Preliminary Review",
-    description: "The decision to accept or reject the paper will be shared by email within 3 to 7 working days. Upon acceptance of your paper for further review, an invoice will be sent to you for payment",
+    description: "The decision to accept or reject the paper will be shared by email within 3 to 7 working days. Upon acceptance of your paper for further review, an invoice will be sent to you for payment.",
     icon: <Users className="h-6 w-6" />,
     color: 'green'
   },
@@ -53,14 +53,14 @@ const steps: Step[] = [
   {
     id: 6,
     title: "Reviewer Feedback",
-    description: "Comments from the independent reviewers will be communicated through the scientific.net platform for updates",
+    description: "Comments from the independent reviewers will be communicated through the scientific.net platform for updates.",
     icon: <MessageSquare className="h-6 w-6" />,
     color: 'red'
   },
   {
     id: 7,
     title: "Final Submission",
-    description: "Updated paper is re-uploaded to the scientific.net platform for final decision",
+    description: "Updated paper is re-uploaded to the scientific.net platform for final decision.",
     icon: <CheckCircle2 className="h-6 w-6" />,
     color: 'green'
   }
