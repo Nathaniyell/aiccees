@@ -5,7 +5,7 @@ import PartnershipPackages from "@/components/partnership-packages"
 export default function PartnersPage() {
     return (
         <div className="container mx-auto py-12 px-4 bg-slate-50">
-            <div className="max-w-6xl mx-auto space-y-16">
+            <div className="max-w-5xl mx-auto space-y-16">
                 <section className="text-center space-y-4">
                     <h1 className="text-4xl font-bold text-green-700 tracking-tighter sm:text-5xl">
                     Partnership Opportunities

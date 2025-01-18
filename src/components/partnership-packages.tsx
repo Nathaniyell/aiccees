@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Check } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 
@@ -86,7 +86,7 @@ export default function Partnerships() {
   return (
     <div className="pb-12 bg-gray-50">
       <div className="px-4 md:px-6">
-        <div className="text-center space-y-4 mb-12">
+        <div className="text-center space-y-4 mb-4">
                
           <div className="flex items-center justify-center space-x-2">
             <Label htmlFor="currency">Show prices in NGN</Label>
@@ -98,7 +98,7 @@ export default function Partnerships() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {tiers.map((tier) => (
             <Card 
               key={tier.name}
@@ -109,8 +109,8 @@ export default function Partnerships() {
               }`}
             >
               <CardHeader>
-                <CardTitle>{tier.name} Sponsorship</CardTitle>
-                <CardDescription>{tier.description}</CardDescription>
+                <CardTitle className="text-green-700">{tier.name} Sponsorship</CardTitle>
+                <CardDescription className="text-slate-500">{tier.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-1">
                 <div className="mb-4">
@@ -130,11 +130,11 @@ export default function Partnerships() {
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter>
-                <Button className="w-full bg-green-700" variant="ghost">
+              {/* <CardFooter>
+                <Button className="w-full bg-green-700 text-white" variant="ghost">
                   Select {tier.name} Package
                 </Button>
-              </CardFooter>
+              </CardFooter> */}
             </Card>
           ))}
         </div>
