@@ -17,10 +17,7 @@ export default function PartnersPage() {
                 <section>
                                      <PartnershipPackages />
                 </section>
-                <section className="space-y-4">
-                    <h2 className="text-2xl font-bold tracking-tight text-center">Our Partners</h2>
-                    <Partners />
-                </section>
+                
 
                 <section className="space-y-8 rounded-2xl border bg-white p-8 text-center">
                     <div className="space-y-4">
@@ -41,6 +38,10 @@ export default function PartnersPage() {
                             </a>
                         </div>
                     </div>
+                </section>
+                <section className="space-y-4">
+                    <h2 className="text-2xl font-bold tracking-tight text-center">Our Partners</h2>
+                    <Partners />
                 </section>
             </div>
         </div>
