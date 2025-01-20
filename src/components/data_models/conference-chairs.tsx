@@ -24,7 +24,7 @@ export const conferenceChairInfo = [
         id: 3,
         name: "Professor Sunday Oyedepo",
         role: "Conference Co-Chair",
-        school: "University of Port Harcourt",
+        school: "Bells University",
         image: oyedepo
     },
     {
