@@ -3,6 +3,7 @@ import abam from "@/public/images/conference-chairs/abam.jpg"
 
 import oghneruona from "@/public/images/conference-chairs/ruona.jpg"
 import oyedepo from "@/public/images/conference-chairs/oyedepo.jpg"
+import vero from "@/public/images/conference-chairs/verro.jpg"
 
 export const conferenceChairInfo = [
     {
@@ -32,5 +33,12 @@ export const conferenceChairInfo = [
         role: "Conference Co-Chair",
         school: "University of Port Harcourt",
         image: oghneruona
+    },
+    {
+        id: 5,
+        name: "Dr. Veronica Akpasoh",
+        role: "Conference Co-Chair",
+        school: "CEO Tovero Energy Ltd.",
+        image: vero
     },
 ]
