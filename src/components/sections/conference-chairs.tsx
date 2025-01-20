@@ -19,7 +19,7 @@ export default function ConferenceChairs() {
                         </p>
                     </div>
 
-                    <div className="w-11/12 mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                    <div className="w-11/12 mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {conferenceChairInfo.map((chair) => (
                             <Card key={chair.id} className="group hover:shadow-lg transition-shadow bg-white border-slate-200">
                                 <CardHeader className="text-center pb-4">
