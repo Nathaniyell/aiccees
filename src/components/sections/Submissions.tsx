@@ -149,7 +149,8 @@ function Submissions() {
             >
               <Link
                 target="_blank"
-                href="https://drive.google.com/uc?export=download&id=1ELqJouaYKzQEUku8cHR0K_rup48C5I0B"
+                href="/Book_of_abstracts.pdf"
+                download="Book_of_abstracts.pdf"
               >
                 <Button
                   variant="outline"
