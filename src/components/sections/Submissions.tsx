@@ -93,9 +93,9 @@ function Submissions() {
             <div className="text-center space-y-4">
               <motion.p
                 variants={itemVariants}
-                className="text-green-300 text-base tracking-wider uppercase"
+                className="text-green-300 text-base tracking-wider uppercase "
               >
-                AICCEES 2025
+               AICCEES 2025 - <span className="normal-case">3rd Edition</span>
               </motion.p>
               <motion.h2
                 variants={itemVariants}
