@@ -66,7 +66,7 @@ export function Footer() {
               className="max-h-12 w-auto" 
             />
           </Link>
-          <p>in Collaboration with University of Port Harcourt</p>
+          <p>in Collaboration with <span className='text-lg font-medium'>University of Port Harcourt</span> </p>
         </div>
       </div>
     </footer>
