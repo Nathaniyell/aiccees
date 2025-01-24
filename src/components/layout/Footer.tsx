@@ -3,6 +3,7 @@ import logo from '@/public/images/aicess/aicess_aicess.png'
 import ToveroLogo from '@/public/tovero-logo.png'
 import Image from 'next/image';
 import {Mail, Phone} from 'lucide-react'
+import uniport from "@/public/images/home/unipor.svg";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -57,16 +58,22 @@ export function Footer() {
 
       {/* Organizer Section */}
       <div className="w-full py-6 border-t border-t-red-600">
-        <div className="w-10/12 mx-auto flex flex-col md:flex-row items-center justify-center gap-4 md">
+        <div className="w-10/12 mx-auto flex flex-col lg:flex-row items-center justify-center gap-2 md">
           <h5 className="text-lg font-medium">Organized by:</h5>
           <Link href="https://toveroenergy.com" target="_blank" className="transition-transform hover:scale-105">
             <Image 
               src={ToveroLogo} 
               alt="Tovero Energy Limited"
-              className="max-h-12 w-auto" 
+              className="max-h-8 w-auto" 
             />
           </Link>
-          <p>in Collaboration with <span className='text-lg font-medium'>University of Port Harcourt</span> </p>
+          <p>in Collaboration with </p>
+          <Image 
+              src={uniport}
+              alt="Uniport"
+              className="max-h-8 w-auto" 
+            />
+          <span className='font-medium text-green-800 flex items-center'>University of Port Harcourt</span> 
         </div>
       </div>
     </footer>
