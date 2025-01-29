@@ -133,14 +133,13 @@ const WhatsappLive = () => {
             {/* WhatsApp Icon Button */}
             <button
                 onClick={handleChatOpen}
-                className="bg-[#25d366] w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#1ea952] transition-colors"
+                className="relative bg-[#25d366] rounded-full flex items-center justify-center shadow-lg size-14 hover:bg-[#1ea952] transition-colors"
             >
+                <span className="absolute inset-0 bg-[#25d366] rounded-full animate-ping opacity-75"></span>
                 <Image
                     src={whatsappIcon}
                     alt="WhatsApp"
-                    width={30}
-                    height={30}
-                    className="object-contain"
+                    className="object-contain rounded-full relative"
                 />
             </button>
         </div>
