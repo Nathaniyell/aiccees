@@ -5,6 +5,7 @@ import { ScrollToTop } from "@/components/ScrollToTop"
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/toaster"
+import WhatsappLive from "@/components/WhatsappLive";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aiccees.com'), 
@@ -134,6 +135,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <Footer />
+        <WhatsappLive />
         <ScrollToTop />
       </div>
       </body>
