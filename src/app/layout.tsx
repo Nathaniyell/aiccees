@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description: "Africa International Conference on Clean Energy & Energy Storage - Empowering Africa's Future Through Clean Energy Innovation and Sustainable Storage Solutions",
     images: [
       {
-        url: "../../public/images/herobg2.jpg",
+        url: "/images/herobg2.jpg",
         width: 1200,
         height: 630,
         alt: "AICEES Conference",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Africa International Conference on Clean Energy & Energy Storage",
     description: "Africa International Conference on Clean Energy & Energy Storage - Empowering Africa's Future Through Clean Energy Innovation and Sustainable Storage Solutions",
     creator: "@ToveroEnergy", 
-    images: ["../../public/images/herobg2.jpg"],
+    images: ["/images/herobg2.jpg"],
   },
   robots: {
     index: true,

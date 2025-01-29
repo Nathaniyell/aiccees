@@ -1,12 +1,16 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import whatsappIcon from '@/public/images/whatsapp.png'
+import logo from '@/public/images/aicess/aicess_aicess.png'
 import Image from 'next/image'
+import { Send, X } from 'lucide-react'
 
 const WhatsappLive = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [isChatOpen, setIsChatOpen] = useState(false);
+    const [messages, setMessages] = useState<Array<{ text: string; isBot: boolean }>>([]);
+    const [userInput, setUserInput] = useState('');
     const whatsappNumber = '+2347035151088'
-    const whatsappMessage = 'Dear Dr. Veronica, I want to enquire about AICCEES 2025'
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,25 +22,129 @@ const WhatsappLive = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleChatOpen = () => {
+        setIsChatOpen(true);
+        setMessages([
+            {
+                text: "Hi there 👋\n\nWelcome to AICCEES 2025\nHow can we help you?",
+                isBot: true
+            }
+        ]);
+        setUserInput('');
+    };
+
+    const handleUserMessage = () => {
+        if (!userInput.trim()) return;
+
+        // Add user message
+        const message = userInput;
+        setMessages(prev => [...prev, { text: message, isBot: false }]);
+        setUserInput('');
+
+        // Open WhatsApp with the message
+        window.open(
+            `https://api.whatsapp.com/send/?phone=${whatsappNumber}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
+            '_blank'
+        );
+    };
+
+    const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            handleUserMessage();
+        }
+    };
+
     if (!isVisible) return null;
 
     return (
-        <div className="relative">
-            <a href={`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text=${whatsappMessage}&type=phone_number&app_absent=0`} target="_blank" rel="noopener noreferrer"
-                className="fixed bottom-20 left-4 z-[9999]"
-            >
-                <span className='absolute left-0 top-0 size-16 animate-pulse'>
-                    <span className='flex size-full items-center justify-center bg-green-500 rounded-full opacity-75 shadow-lg'>
-                        <Image
-                            src={whatsappIcon}
-                            alt="Whatsapp"
-                            className="size-14 rounded-full p-2 hover:scale-110 transition-transform duration-300"
+        <div className="fixed bottom-4 left-4 z-[999] flex flex-col items-start space-y-4">
+            {isChatOpen && (
+                <div className="w-[330px] bg-white rounded-lg shadow-xl overflow-hidden">
+                    {/* Header */}
+                    <div className="bg-[#075e54] text-white p-4">
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center space-x-3">
+                                <div className="w-10 h-10 rounded-full overflow-hidden bg-white">
+                                    <Image
+                                        src={logo}
+                                        alt="AICCEES Logo"
+                                        width={40}
+                                        height={40}
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className="font-semibold">AICCEES 2025</h3>
+                                    <p className="text-xs opacity-90">Typically replies in a few hours</p>
+                                </div>
+                            </div>
+                            <button
+                                onClick={() => setIsChatOpen(false)}
+                                className="text-white hover:opacity-80"
+                            >
+                                <X size={24} />
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Chat Area */}
+                    <div className="h-[300px] overflow-y-auto p-4 bg-[#efeae2]">
+                        {messages.map((message, index) => (
+                            <div
+                                key={index}
+                                className={`flex ${message.isBot ? 'justify-start' : 'justify-end'} mb-4`}
+                            >
+                                <div
+                                    className={`rounded-lg px-4 py-2 max-w-[80%] ${message.isBot
+                                        ? 'bg-white text-black'
+                                        : 'bg-[#dcf8c6] text-black'
+                                        }`}
+                                >
+                                    <p className="whitespace-pre-line">{message.text}</p>
+                                    <span className="text-[10px] text-gray-500 flex justify-end">
+                                        {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Input Area */}
+                    <div className="p-3 bg-[#f0f2f5] flex items-center space-x-2">
+                        <input
+                            type="text"
+                            value={userInput}
+                            onChange={(e) => setUserInput(e.target.value)}
+                            onKeyPress={handleKeyPress}
+                            placeholder="Type a message"
+                            className="flex-1 py-2 px-4 rounded-full border-none focus:outline-none bg-white"
                         />
-                    </span>
-                </span>
-            </a>
+                        <button
+                            onClick={handleUserMessage}
+                            disabled={!userInput.trim()}
+                            className="w-10 h-10 rounded-full bg-[#00a884] text-white flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            <Send size={20} />
+                        </button>
+                    </div>
+                </div>
+            )}
+
+            {/* WhatsApp Icon Button */}
+            <button
+                onClick={handleChatOpen}
+                className="bg-[#25d366] w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#1ea952] transition-colors"
+            >
+                <Image
+                    src={whatsappIcon}
+                    alt="WhatsApp"
+                    width={30}
+                    height={30}
+                    className="object-contain"
+                />
+            </button>
         </div>
-    )
-}
+    );
+};
 
 export default WhatsappLive
