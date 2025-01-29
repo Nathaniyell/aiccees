@@ -59,36 +59,36 @@ const WhatsappLive = () => {
     return (
         <div className="fixed bottom-4 left-4 z-[999] flex flex-col items-start space-y-4">
             {isChatOpen && (
-                <div className="w-[330px] bg-white rounded-lg shadow-xl overflow-hidden">
+                <div className="w-[330px] max-h-[80vh] bg-white rounded-lg shadow-xl overflow-hidden">
                     {/* Header */}
-                    <div className="bg-[#075e54] text-white p-4">
+                    <div className="bg-[#075e54] text-white p-3">
                         <div className="flex items-center justify-between">
-                            <div className="flex items-center space-x-3">
-                                <div className="w-10 h-10 rounded-full overflow-hidden bg-white">
+                            <div className="flex items-center space-x-2">
+                                <div className="w-8 h-8 rounded-full overflow-hidden bg-white">
                                     <Image
                                         src={logo}
                                         alt="AICCEES Logo"
-                                        width={40}
-                                        height={40}
+                                        width={32}
+                                        height={32}
                                         className="object-cover"
                                     />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold">AICCEES 2025</h3>
-                                    <p className="text-xs opacity-90">Typically replies in a few hours</p>
+                                    <h3 className="font-semibold text-sm">AICCEES 2025</h3>
+                                    <p className="text-[10px] opacity-90">Typically replies in a few hours</p>
                                 </div>
                             </div>
                             <button
                                 onClick={() => setIsChatOpen(false)}
                                 className="text-white hover:opacity-80"
                             >
-                                <X size={24} />
+                                <X size={20} />
                             </button>
                         </div>
                     </div>
 
                     {/* Chat Area */}
-                    <div className="h-[300px] overflow-y-auto p-4 bg-[#efeae2]">
+                    <div className="h-[50vh] overflow-y-auto p-4 bg-[#efeae2]">
                         {messages.map((message, index) => (
                             <div
                                 key={index}
