@@ -4,6 +4,7 @@ import ToveroLogo from '@/public/tovero-logo.png'
 import Image from 'next/image';
 import {Mail, Phone} from 'lucide-react'
 import uniport from "@/public/images/home/unipor.svg";
+import { officeNumber } from '@/lib/utils'
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -46,10 +47,10 @@ export function Footer() {
                 <Mail className='w-4 h-4 text-green-700' />
                 aiccees@uniport.edu.ng
               </a>
-              <a href="tel:+2348037641860"
+              <a href={`tel:${officeNumber}`}
                 className="text-sm text-gray-600 hover:text-green-700 transition-colors duration-200 hover:underline underline-offset-4 flex items-center gap-2">
                 <Phone className='w-4 h-4 text-green-700' />
-                +2348037641860
+                {officeNumber}
               </a>
             </div>
           </div>

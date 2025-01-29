@@ -4,13 +4,13 @@ import whatsappIcon from '@/public/images/whatsapp.png'
 import logo from '@/public/images/aicess/aicess_aicess.png'
 import Image from 'next/image'
 import { Send, X } from 'lucide-react'
+import { officeNumber } from '@/lib/utils'
 
 const WhatsappLive = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [isChatOpen, setIsChatOpen] = useState(false);
     const [messages, setMessages] = useState<Array<{ text: string; isBot: boolean }>>([]);
     const [userInput, setUserInput] = useState('');
-    const whatsappNumber = '+2347035151088'
 
     useEffect(() => {
         const handleScroll = () => {
@@ -43,7 +43,7 @@ const WhatsappLive = () => {
 
         // Open WhatsApp with the message
         window.open(
-            `https://api.whatsapp.com/send/?phone=${whatsappNumber}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
+            `https://api.whatsapp.com/send/?phone=${officeNumber}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`,
             '_blank'
         );
     };
