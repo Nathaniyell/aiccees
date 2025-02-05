@@ -187,8 +187,8 @@ function Submissions() {
                   <h4 className="text-white text-lg font-semibold">Conference Proceedings</h4>
                   <div className="flex flex-col gap-4">
                     <Link
-                      href="/proceedings-2023.pdf"
-                      download="AICCEES-2023-Proceedings.pdf"
+                     href="https://www.scientific.net/book/the-2nd-africa-international-conference-on-clean-energy-and-energy-storage-aiccees/978-3-0364-1547-5"
+                    
                       target="_blank"
                     >
                       <Button
@@ -196,13 +196,11 @@ function Submissions() {
                         size="lg"
                         className="w-full bg-blue-700 text-white hover:bg-blue-600 transition-colors group hover:text-slate-100 border-blue-700"
                       >
-                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
                         2nd Edition (2024) Proceedings
                       </Button>
                     </Link>
                     <Link
-                      href="/proceedings-2022.pdf"
-                      download="AICCEES-2022-Proceedings.pdf"
+                       href="https://www.scientific.net/book/africa-international-conference-on-clean-energy-and-energy-storage/978-3-0357-3771-4"
                       target="_blank"
                     >
                       <Button
@@ -210,7 +208,6 @@ function Submissions() {
                         size="lg"
                         className="w-full bg-purple-700 text-white hover:bg-purple-600 transition-colors group hover:text-slate-100 border-purple-700"
                       >
-                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
                         1st Edition (2023) Proceedings
                       </Button>
                     </Link>
