@@ -72,27 +72,32 @@ export default function ScientificCommittee() {
                         ))}
                     </div>
 
-                   
-                    <div className="flex justify-center items-center gap-4 mt-8">
-                        <Button
-                            variant="outline"
-                            size="icon"
-                            onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-                            disabled={currentPage === 1}
-                        >
-                            <ChevronLeft className="h-4 w-4" />
-                        </Button>
-                        <span className="text-sm text-slate-600">
-                            Page {currentPage} of {totalPages}
-                        </span>
-                        <Button
-                            variant="outline"
-                            size="icon"
-                            onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-                            disabled={currentPage === totalPages}
-                        >
-                            <ChevronRight className="h-4 w-4" />
-                        </Button>
+                    {/* Pagination Info and Controls */}
+                    <div className="flex flex-col items-center gap-4 mt-8">
+                        <p className="text-sm text-slate-600">
+                            Showing {startIndex + 1}-{Math.min(endIndex, committeeMembers.length)} of {committeeMembers.length} members
+                        </p>
+                        <div className="flex justify-center items-center gap-4">
+                            <Button
+                                variant="outline"
+                                size="icon"
+                                onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                                disabled={currentPage === 1}
+                            >
+                                <ChevronLeft className="h-4 w-4" />
+                            </Button>
+                            <span className="text-sm text-slate-600">
+                                Page {currentPage} of {totalPages}
+                            </span>
+                            <Button
+                                variant="outline"
+                                size="icon"
+                                onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                                disabled={currentPage === totalPages}
+                            >
+                                <ChevronRight className="h-4 w-4" />
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </section>
