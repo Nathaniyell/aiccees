@@ -95,7 +95,7 @@ function Submissions() {
                 variants={itemVariants}
                 className="text-green-300 text-base tracking-wider uppercase "
               >
-               AICCEES 2025 - <span className="normal-case">3rd Edition</span>
+                AICCEES 2025 - <span className="normal-case">3rd Edition</span>
               </motion.p>
               <motion.h2
                 variants={itemVariants}
@@ -145,36 +145,78 @@ function Submissions() {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-col md:flex-row justify-center mt-12 gap-4"
+              className="flex flex-col items-center gap-8 mt-12"
             >
-              <Link
-                target="_blank"
-                href="/Book_of_abstracts.pdf"
-                download="Book_of_abstracts.pdf"
-              >
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="bg-white text-green-900 hover:bg-green-50 transition-colors group"
-                >
-                  <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-                 2024 Conference Brochure
-                </Button>
-              </Link>
-              <Link
-                href="/2024-Conference-Report.pdf"
-                download="2024-Conference-Report.pdf"
-                target="_blank"
-              >
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="bg-red-700 text-white hover:bg-red-600 transition-colors group hover:text-slate-100 border-red-700"
-                >
-                  <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-                  2024 Conference Report
-                </Button>
-              </Link>
+              <h3 className="text-2xl font-bold text-white mb-4">Conference Materials</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl">
+                <div className="space-y-4">
+                  <h4 className="text-white text-lg font-semibold">2024 Documents</h4>
+                  <div className="flex flex-col gap-4">
+                    <Link
+                      target="_blank"
+                      href="/Book_of_abstracts.pdf"
+                      download="Book_of_abstracts.pdf"
+                    >
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="w-full bg-white text-green-900 hover:bg-green-50 transition-colors group"
+                      >
+                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                        2024 Conference Brochure
+                      </Button>
+                    </Link>
+                    <Link
+                      href="/2024-Conference-Report.pdf"
+                      download="2024-Conference-Report.pdf"
+                      target="_blank"
+                    >
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="w-full bg-red-700 text-white hover:bg-red-600 transition-colors group hover:text-slate-100 border-red-700"
+                      >
+                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                        2024 Conference Report
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <h4 className="text-white text-lg font-semibold">Conference Proceedings</h4>
+                  <div className="flex flex-col gap-4">
+                    <Link
+                      href="/proceedings-2023.pdf"
+                      download="AICCEES-2023-Proceedings.pdf"
+                      target="_blank"
+                    >
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="w-full bg-blue-700 text-white hover:bg-blue-600 transition-colors group hover:text-slate-100 border-blue-700"
+                      >
+                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                        2nd Edition (2024) Proceedings
+                      </Button>
+                    </Link>
+                    <Link
+                      href="/proceedings-2022.pdf"
+                      download="AICCEES-2022-Proceedings.pdf"
+                      target="_blank"
+                    >
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="w-full bg-purple-700 text-white hover:bg-purple-600 transition-colors group hover:text-slate-100 border-purple-700"
+                      >
+                        <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                        1st Edition (2023) Proceedings
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         </div>
