@@ -158,7 +158,7 @@ function Submissions() {
                   className="bg-white text-green-900 hover:bg-green-50 transition-colors group"
                 >
                   <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-                  Download Brochure
+                 2024 Conference Brochure
                 </Button>
               </Link>
               <Link
