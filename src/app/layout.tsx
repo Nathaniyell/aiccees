@@ -8,7 +8,7 @@ import { Toaster } from "@/components/ui/toaster"
 import WhatsappLive from "@/components/WhatsappLive";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://aiccees.com'), 
+  metadataBase: new URL('https://aiccees.com'),
   title: {
     default: "Africa International Conference on Clean Energy & Energy Storage",
     template: "%s | AICEES",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://toveroenergy.com",
+    url: "https://aiccees.com",
     siteName: "AICEES",
     title: "Africa International Conference on Clean Energy & Energy Storage",
     description: "Africa International Conference on Clean Energy & Energy Storage - Empowering Africa's Future Through Clean Energy Innovation and Sustainable Storage Solutions",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Africa International Conference on Clean Energy & Energy Storage",
     description: "Africa International Conference on Clean Energy & Energy Storage - Empowering Africa's Future Through Clean Energy Innovation and Sustainable Storage Solutions",
-    creator: "@ToveroEnergy", 
+    creator: "@ToveroEnergy",
     images: ["/images/herobg2.jpg"],
   },
   robots: {
@@ -91,8 +91,8 @@ const jsonLd = {
   "@type": "Event",
   name: "Africa International Conference on Clean Energy & Energy Storage",
   description: "Empowering Africa's Future Through Clean Energy Innovation and Sustainable Storage Solutions",
-  startDate: "2025-01-01",
-  endDate: "2025-12-26", 
+  startDate: "2025-09-25",
+  endDate: "2025-09-26",
   location: {
     "@type": "Place",
     name: "University of Port Harcourt",
@@ -107,7 +107,7 @@ const jsonLd = {
   },
   organizer: {
     "@type": "Organization",
-    name: "AICEES",
+    name: "Toveroenergy Limited",
     url: "https://toveroenergy.com"
   },
   // Add more structured data as needed
@@ -130,14 +130,14 @@ export default function RootLayout({
         {/* <link rel="manifest" href="/manifest.json" /> */}
       </head>
       <body className={`${GeistSans.className} antialiased`}>
-      <div className="flex flex-col min-h-screen bg-white text-gray-900">
-      <Header />
-        {children}
-        <Toaster />
-        <Footer />
-        <WhatsappLive />
-        <ScrollToTop />
-      </div>
+        <div className="flex flex-col min-h-screen bg-white text-gray-900">
+          <Header />
+          {children}
+          <Toaster />
+          <Footer />
+          <WhatsappLive />
+          <ScrollToTop />
+        </div>
       </body>
     </html>
   );
