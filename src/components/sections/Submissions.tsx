@@ -145,7 +145,7 @@ function Submissions() {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-col items-center gap-8 mt-12"
+              className="flex flex-col items-center gap-6 mt-10"
             >
               <h3 className="text-2xl font-bold text-white mb-4">Conference Materials</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl">
