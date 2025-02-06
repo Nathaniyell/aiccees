@@ -187,7 +187,7 @@ function Submissions() {
                   <h4 className="text-white text-lg font-semibold">Conference Proceedings</h4>
                   <div className="flex flex-col gap-4">
                     <Link
-                      href="https://www.scientific.net/book/the-2nd-africa-international-conference-on-clean-energy-and-energy-storage-aiccees/978-3-0364-1547-5"
+                      href="https://www.scientific.net/AST.160?utm_source=AST160&utm_medium=email&utm_campaign=AST160_authors&utm_id=AST160"
                       target="_blank"
                     >
                       <Button
