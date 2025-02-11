@@ -18,61 +18,64 @@ interface ParticipationType {
   }
 }
 
-const participationTypes: ParticipationType[] = [
-  {
-    category: "Audience Member Only",
-    physical: {
-      regular: 30,
-      student: 20000
-    },
-    virtual: {
-      regular: 20,
-      student: 20000
-    }
-  },
-  {
-    category: "Only Paper Presentation",
-    physical: {
-      regular: 50
-    },
-    virtual: {
-      regular: 40
-    }
-  },
-  {
-    category: "Paper Presentation + Abstract Publication",
-    physical: {
-      regular: 100
-    },
-    virtual: {
-      regular: 100
-    }
-  },
-  {
-    category: "Paper Presentation + Paper Publication + Abstract Publication",
-    physical: {
-      regular: 150
-    },
-    virtual: {
-      regular: 150
-    }
-  },
-  {
-    category: "Paper Presentation + Open Access Paper Publication + Abstract Publication",
-    physical: {
-      regular: 350  // Base fee + Open Access fee
-    },
-    virtual: {
-      regular: 350  // Base fee + Open Access fee
-    }
-  }
-]
-
 export default function ParticipationSection() {
   const [showNGN, setShowNGN] = useState(false)
 
-  const formatPrice = (price: number) => {
+  const participationTypes: ParticipationType[] = [
+    {
+      category: "Audience Member Only",
+      physical: {
+        regular: 30,
+        student: 20000
+      },
+      virtual: {
+        regular: 20,
+        student: 20000
+      }
+    },
+    {
+      category: "Only Paper Presentation",
+      physical: {
+        regular: 50
+      },
+      virtual: {
+        regular: 40
+      }
+    },
+    {
+      category: "Paper Presentation + Abstract Publication",
+      physical: {
+        regular: 100
+      },
+      virtual: {
+        regular: 100
+      }
+    },
+    {
+      category: "Paper Presentation + Paper Publication + Abstract Publication",
+      physical: {
+        regular: 150
+      },
+      virtual: {
+        regular: 150
+      }
+    },
+    {
+      category: "Paper Presentation + Open Access Paper Publication + Abstract Publication",
+      physical: {
+        regular: 350
+      },
+      virtual: {
+        regular: 350
+      }
+    }
+  ]
+
+  const formatPrice = (price: number, isOpenAccess = false) => {
     if (showNGN) {
+      if (isOpenAccess) {
+        return `₦${(400000).toLocaleString()}`
+      }
       return `₦${(price * 1000).toLocaleString()}`
     }
     return `$${price.toLocaleString()}`
@@ -115,7 +118,7 @@ export default function ParticipationSection() {
                   <TableRow key={type.category}>
                     <TableCell className="font-medium">{type.category}</TableCell>
                     <TableCell>
-                      {formatPrice(type.physical.regular)}
+                      {formatPrice(type.physical.regular, type.category.includes('Open Access'))}
                       {type.physical.student && (
                         <div className="text-sm text-gray-500">
                           Students: ₦{type.physical.student.toLocaleString()}
@@ -123,7 +126,7 @@ export default function ParticipationSection() {
                       )}
                     </TableCell>
                     <TableCell>
-                      {formatPrice(type.virtual.regular)}
+                      {formatPrice(type.virtual.regular, type.category.includes('Open Access'))}
                       {type.virtual.student && (
                         <div className="text-sm text-gray-500">
                           Students: ₦{type.virtual.student.toLocaleString()}
