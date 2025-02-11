@@ -137,9 +137,6 @@ export default function ParticipationSection() {
                 ))}
               </TableBody>
             </Table>
-            <div className="mt-4 text-sm text-gray-600">
-              <p>{`* Open Access Publication Fee: $350.00 / ₦${(400000).toLocaleString()}`}</p>
-            </div>
           </CardContent>
         </Card>
 
