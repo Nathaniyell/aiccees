@@ -56,6 +56,15 @@ const participationTypes: ParticipationType[] = [
     virtual: {
       regular: 150
     }
+  },
+  {
+    category: "Paper Presentation + Open Access Paper Publication + Abstract Publication",
+    physical: {
+      regular: 350  // Base fee + Open Access fee
+    },
+    virtual: {
+      regular: 350  // Base fee + Open Access fee
+    }
   }
 ]
 
@@ -75,7 +84,7 @@ export default function ParticipationSection() {
         <div className="text-center space-y-4 mb-8">
           <h1 className="text-4xl font-bold tracking-tighter text-[#AA0000]">Conference Fees</h1>
           <p className="mx-auto max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Participation at AICCEES 2025 will be open to all virtually and physically, however this will come with a determined fee. 
+            Participation at AICCEES 2025 will be open to all virtually and physically, however this will come with a determined fee.
             Participants can publish a paper, present a paper, or be audience members. Certificate of participation will be given to all conference participants.
           </p>
           <div className="flex items-center justify-center space-x-2">
@@ -125,6 +134,9 @@ export default function ParticipationSection() {
                 ))}
               </TableBody>
             </Table>
+            <div className="mt-4 text-sm text-gray-600">
+              <p>{`* Open Access Publication Fee: $350.00 / ₦${(400000).toLocaleString()}`}</p>
+            </div>
           </CardContent>
         </Card>
 
