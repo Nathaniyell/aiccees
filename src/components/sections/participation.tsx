@@ -18,65 +18,68 @@ interface ParticipationType {
   }
 }
 
+const participationTypes: ParticipationType[] = [
+  {
+    category: "Audience Member Only",
+    physical: {
+      regular: 30,
+      student: 20000
+    },
+    virtual: {
+      regular: 20,
+      student: 20000
+    }
+  },
+  {
+    category: "Only Paper Presentation",
+    physical: {
+      regular: 50
+    },
+    virtual: {
+      regular: 40
+    }
+  },
+  {
+    category: "Paper Presentation + Abstract Publication",
+    physical: {
+      regular: 100
+    },
+    virtual: {
+      regular: 100
+    }
+  },
+  {
+    category: "Paper Presentation + Paper Publication + Abstract Publication",
+    physical: {
+      regular: 150
+    },
+    virtual: {
+      regular: 150
+    }
+  },
+  {
+    category: "Paper Presentation + Open Access Paper Publication + Abstract Publication",
+    physical: {
+      regular: 500  // Base fee + Open Access fee
+    },
+    virtual: {
+      regular: 500  // Base fee + Open Access fee
+    }
+  }
+]
+
 export default function ParticipationSection() {
   const [showNGN, setShowNGN] = useState(false)
-
-  const participationTypes: ParticipationType[] = [
-    {
-      category: "Audience Member Only",
-      physical: {
-        regular: 30,
-        student: 20000
-      },
-      virtual: {
-        regular: 20,
-        student: 20000
-      }
-    },
-    {
-      category: "Only Paper Presentation",
-      physical: {
-        regular: 50
-      },
-      virtual: {
-        regular: 40
-      }
-    },
-    {
-      category: "Paper Presentation + Abstract Publication",
-      physical: {
-        regular: 100
-      },
-      virtual: {
-        regular: 100
-      }
-    },
-    {
-      category: "Paper Presentation + Paper Publication + Abstract Publication",
-      physical: {
-        regular: 150
-      },
-      virtual: {
-        regular: 150
-      }
-    },
-    {
-      category: "Paper Presentation + Open Access Paper Publication + Abstract Publication",
-      physical: {
-        regular: 350
-      },
-      virtual: {
-        regular: 350
-      }
-    }
-  ]
 
   const formatPrice = (price: number, isOpenAccess = false) => {
     if (showNGN) {
       if (isOpenAccess) {
-        return `₦${(400000).toLocaleString()}`
+        return `$400.00`
       }
       return `₦${(price * 1000).toLocaleString()}`
+    }
+    if (isOpenAccess) {
+      return `$400.00`
     }
     return `$${price.toLocaleString()}`
   }
