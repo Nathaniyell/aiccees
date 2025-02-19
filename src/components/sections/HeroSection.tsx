@@ -56,7 +56,7 @@ export function HeroSection() {
       <div className="absolute z-[2] inset-0 bg-gradient-to-r from-green-600/90 to-green-800/90" />
 
       {/* Content */}
-      <div className="relative z-[3] container h-full px-4 md:px-6 flex items-center">
+      <div className="relative z-[3] container mx-auto h-full px-4 md:px-6 flex items-center">
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-3 text-center">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
