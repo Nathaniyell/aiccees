@@ -24,7 +24,7 @@ const Sponsors = () => {
   return (
     <AOS>
     <section id="partners" className="w-full py-12 md:pt-24 bg-emerald-50">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-green-600">
           Our Partners
         </h2>
