@@ -25,7 +25,7 @@ export default function TestimonialCarousel() {
     return (
         <AOS>
             <section className="py-12 bg-gradient-to-b from-green-900 to-green-800 text-white px-4">
-                <div className="container">
+                <div className="container mx-auto">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">
                         Testimonials
                     </h2>
