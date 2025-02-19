@@ -20,7 +20,7 @@ export default function ScientificCommittee() {
     return (
         <AOS>
             <section className="py-12 bg-slate-50">
-                <div className="container">
+                <div className="container mx-auto">
                     <div className="text-center mb-10">
                         <h2 className="text-3xl tracking-tighter sm:text-5xl text-center font-bold mb-4 text-green-800">Scientific Committee</h2>
                         <p className="text-slate-600 max-w-2xl mx-auto">
