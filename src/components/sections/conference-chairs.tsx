@@ -9,7 +9,7 @@ export default function ConferenceChairs() {
     return (
         <AOS>
             <section className="py-12 bg-white">
-                <div className="container">
+                <div className="container mx-auto">
                     <div className="text-center mb-10">
                         <h2 className="text-3xl tracking-tighter sm:text-5xl text-center font-bold mb-4 text-green-800">
                             Conference Chairs
