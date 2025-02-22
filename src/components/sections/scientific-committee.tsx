@@ -29,14 +29,14 @@ export default function ScientificCommittee() {
                     </div>
 
                     <div className="w-11/12 lg:w-9/12 mx-auto">
-                        <div className="rounded-md border bg-white">
+                        <div className="border bg-white">
                             <Table>
                                 <TableHeader>
                                     <TableRow>
-                                        <TableHead>Name</TableHead>
-                                        <TableHead>Institution</TableHead>
-                                        <TableHead>Country</TableHead>
-                                        <TableHead>Expertise</TableHead>
+                                        <TableHead className="text-black">Name</TableHead>
+                                        <TableHead className="text-black">Institution</TableHead>
+                                        <TableHead className="text-black">Country</TableHead>
+                                        <TableHead className="text-black">Expertise</TableHead>
                                     </TableRow>
                                 </TableHeader>
                                 <TableBody>
@@ -56,7 +56,7 @@ export default function ScientificCommittee() {
                                                                 <Badge
                                                                     key={skill}
                                                                     variant="secondary"
-                                                                    className="font-normal text-green-700 hover:bg-green-600"
+                                                                    className="font-normal text-green-700"
                                                                 >
                                                                     {skill}
                                                                 </Badge>
