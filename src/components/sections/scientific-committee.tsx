@@ -28,7 +28,7 @@ export default function ScientificCommittee() {
                         </p>
                     </div>
 
-                    <div className="w-11/12 mx-auto">
+                    <div className="w-11/12 lg:w-9/12 mx-auto">
                         <div className="rounded-md border bg-white">
                             <Table>
                                 <TableHeader>
