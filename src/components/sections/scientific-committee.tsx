@@ -56,7 +56,7 @@ export default function ScientificCommittee() {
                                                                 <Badge
                                                                     key={skill}
                                                                     variant="secondary"
-                                                                    className="font-normal bg-green-700 text-green-50 hover:bg-green-600"
+                                                                    className="font-normal text-green-700 hover:bg-green-600"
                                                                 >
                                                                     {skill}
                                                                 </Badge>
