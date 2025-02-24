@@ -44,7 +44,7 @@ export default function ScientificCommittee() {
                                         <TableRow key={member.id}>
                                             <TableCell className="font-medium text-lg space-y-2">{member.name}
                                                 <p className="text-sm text-slate-600">{member.role}</p>
-                                                <p className="text-sm text-slate-600 break-words w-3/5">
+                                                <p className="text-sm text-slate-600 break-words md:w-3/5">
                                                     {member.institution}
                                                 </p>
                                             </TableCell>

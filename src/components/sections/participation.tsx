@@ -111,15 +111,15 @@ export default function ParticipationSection() {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-[40%]">CATEGORY</TableHead>
-                  <TableHead>PHYSICAL</TableHead>
-                  <TableHead>VIRTUAL</TableHead>
+                  <TableHead className="w-[40%] text-black">CATEGORY</TableHead>
+                  <TableHead className="text-black">PHYSICAL</TableHead>
+                  <TableHead className="text-black">VIRTUAL</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {participationTypes.map((type) => (
                   <TableRow key={type.category}>
-                    <TableCell className="font-medium">{type.category}</TableCell>
+                    <TableCell className="font-medium text-lg">{type.category}</TableCell>
                     <TableCell>
                       {formatPrice(type.physical.regular, type.category.includes('Open Access'))}
                       {type.physical.student && (
