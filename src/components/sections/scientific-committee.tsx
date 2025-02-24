@@ -34,19 +34,20 @@ export default function ScientificCommittee() {
                                 <TableHeader>
                                     <TableRow>
                                         <TableHead className="text-black">Name</TableHead>
-                                        <TableHead className="text-black">Institution</TableHead>
+
                                         <TableHead className="text-black">Country</TableHead>
-                                        <TableHead className="text-black">Expertise</TableHead>
+                                        <TableHead className="text-black">Area of Expertise</TableHead>
                                     </TableRow>
                                 </TableHeader>
                                 <TableBody>
                                     {currentMembers.map((member) => (
                                         <TableRow key={member.id}>
-                                            <TableCell className="font-medium">{member.name}
+                                            <TableCell className="font-medium text-lg space-y-2">{member.name}
                                                 <p className="text-sm text-slate-600">{member.role}</p>
+                                                <p className="text-sm text-slate-600 break-words w-3/5">
+                                                    {member.institution}
+                                                </p>
                                             </TableCell>
-
-                                            <TableCell>{member.institution}</TableCell>
                                             <TableCell>{member.country}</TableCell>
                                             <TableCell>
                                                 {member.expertise && member.expertise.length > 0 && (
