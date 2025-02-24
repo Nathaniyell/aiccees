@@ -68,7 +68,7 @@ export function HeroSection() {
           </div>
           <div className="space-x-4">
             <Button asChild className="bg-red-600 text-white hover:bg-red-700">
-              <Link target="_blank" href="https://docs.google.com/forms/d/1FxgRduMD96dFgxJW6RtaZgCOUD2rfnfPp_D6U4_kAoA/edit">Register Now</Link>
+              <Link target="_blank" href="https://forms.office.com/r/w3H6dV02J2">Register Now</Link>
             </Button>
             <Button
               onClick={() => {
