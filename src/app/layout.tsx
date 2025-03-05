@@ -71,9 +71,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-site-verification", // Replace with actual verification code
-    // yandex: "yandex-verification-code",
-    // bing: "bing-verification-code",
+    google: "e4Ko4zpT-l9ohrv4KMluOAqqzSx7yzl-8nXvJejcTRw", 
   },
   alternates: {
     canonical: "https://aiccees.com",
