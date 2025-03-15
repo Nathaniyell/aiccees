@@ -37,6 +37,7 @@ export function Header() {
     { href: '/#themes', label: 'Conference Themes' },
     { href: '/#submissions', label: 'Submit Paper' },
     { href: '/#participation', label: 'Conference Fees' },
+    { href: '/#exhibitions', label: 'Exhibitions' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/partners', label: 'Partnership' },
   ]
