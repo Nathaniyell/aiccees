@@ -45,7 +45,7 @@ export default function Exhibitions() {
   }
 
   return (
-    <div id="exhibitions" className="mb-10">
+    <div id="exhibitions" className="mb-6 py-8">
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold tracking-tight text-[#008751] sm:text-4xl md:text-5xl">
           Exhibition Packages
