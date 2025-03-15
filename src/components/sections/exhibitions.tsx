@@ -82,14 +82,11 @@ export default function Exhibitions() {
         </Card>
       </div>
 
-      <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold mb-4 text-[#008751]">Need More Information?</h2>
+      <div className="mt-8 text-center">
+        <h2 className="text-2xl font-bold mb-2 text-[#008751]">Need More Information?</h2>
         <p className="mb-6 text-muted-foreground max-w-2xl mx-auto">
-          Contact our exhibitions team for custom requirements or additional information about our exhibition packages.
+        Please send us an email via <a href="mailto:aiccees@uniport.edu.ng" className="underline text-blue-600">aiccees@uniport.edu.ng</a> for custom requirements or additional information about our exhibition packages.
         </p>
-        <Button asChild className="bg-[#CE1126] hover:bg-[#CE1126]/90 text-theme-white">
-          <Link href="/contact">Contact Us</Link>
-        </Button>
       </div>
     </div>
   )
