@@ -12,9 +12,6 @@ export default function Exhibitions() {
         <h1 className="text-3xl font-bold tracking-tight text-[#008751] sm:text-4xl md:text-5xl">
           Exhibition Packages
         </h1>
-        <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          Choose the right exhibition package for your needs.
-        </p>
       </div>
 
       <div className="grid gap-8 md:grid-cols-3">
