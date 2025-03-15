@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 export default function Exhibitions() {
   return (
-    <div className="container md:w-11/12 mx-auto px-4 py-12">
+    <div id="exhibitions" className="py-12">
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold tracking-tight text-[#008751] sm:text-4xl md:text-5xl">
           Exhibition Packages
