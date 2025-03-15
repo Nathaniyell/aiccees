@@ -36,14 +36,12 @@ export default function Exhibitions() {
               <FeatureItem>Power Supply (Generator-100/200 KVA)</FeatureItem>
             </ul>
           </CardContent>
-          <CardFooter>
-            <Button className="w-full bg-[#008751] hover:bg-[#008751]/90 text-theme-white">Book Now</Button>
-          </CardFooter>
+
         </Card>
 
         {/* Dedicated Booth Package */}
         <Card className="flex flex-col relative overflow-hidden border-[#008751]">
-          <div className="absolute top-0 right-0 bg-[#CE1126] text-theme-white px-4 py-1 text-sm font-medium">
+          <div className="absolute top-0 right-0 bg-[#CE1126] text-white px-4 py-1 text-sm font-medium">
             Popular
           </div>
           <CardHeader className="border-b border-[#008751]/20">
@@ -53,9 +51,9 @@ export default function Exhibitions() {
           </CardHeader>
           <CardContent className="flex-1 pt-6">
             <ul className="space-y-2 mb-6">
-              <FeatureItem>2 Tables (Plastic) - ₦1,000</FeatureItem>
-              <FeatureItem>2 Tables (Wooden) - ₦2,000</FeatureItem>
-              <FeatureItem>2 Chairs (Plastic) - ₦200</FeatureItem>
+              <FeatureItem>2 Tables (Plastic)</FeatureItem>
+              <FeatureItem>2 Tables (Wooden)</FeatureItem>
+              <FeatureItem>2 Chairs (Plastic)</FeatureItem>
               <FeatureItem>Networking opportunities</FeatureItem>
               <FeatureItem>Advertisement</FeatureItem>
               <FeatureItem>Lunch (x2 people)</FeatureItem>
@@ -65,9 +63,7 @@ export default function Exhibitions() {
               <FeatureItem>Power Supply (Generator-100/200 KVA)</FeatureItem>
             </ul>
           </CardContent>
-          <CardFooter>
-            <Button className="w-full bg-[#CE1126] hover:bg-[#CE1126]/90 text-theme-white">Book Now</Button>
-          </CardFooter>
+
         </Card>
 
         {/* Premium Booth Package */}
@@ -85,9 +81,7 @@ export default function Exhibitions() {
               <FeatureItem>Priority support</FeatureItem>
             </ul>
           </CardContent>
-          <CardFooter>
-            <Button className="w-full bg-[#008751] hover:bg-[#008751]/90 text-theme-white">Book Now</Button>
-          </CardFooter>
+
         </Card>
       </div>
 
