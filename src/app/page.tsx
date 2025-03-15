@@ -15,7 +15,6 @@ import ScientificCommittee from '@/components/sections/scientific-committee'
 import CookingDemonstration from '@/components/sections/CookingDemonstration'
 import ConferenceChairs from '@/components/sections/conference-chairs'
 import Participation from '@/components/sections/participation'
-import Exhibitions from '@/components/sections/exhibitions'
 
 
 
@@ -32,7 +31,6 @@ export default function ConferencePage() {
       <ScientificCommittee />
       <PublishingPapers />
       <Participation />
-      <Exhibitions />
       <GallerySection />
       <CookingDemonstration />
       <Sponsors />

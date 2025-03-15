@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
+import Exhibitions from './exhibitions'
 
 interface ParticipationType {
   category: string
@@ -142,7 +143,7 @@ export default function ParticipationSection() {
             </Table>
           </CardContent>
         </Card>
-
+        <Exhibitions />
         <div className="space-y-8">
           <div className="text-center">
             <h2 className="text-2xl font-bold mb-4 text-green-900">Payment Currency and Bank Details</h2>
