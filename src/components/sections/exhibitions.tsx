@@ -8,18 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 
 export default function Exhibitions() {
-  const [expandedCards, setExpandedCards] = useState<{ [key: string]: boolean }>({
-    open: false,
-    dedicated: false,
-    premium: false,
-  })
-
-  const toggleCard = (cardId: string) => {
-    setExpandedCards((prev) => ({
-      ...prev,
-      [cardId]: !prev[cardId],
-    }))
-  }
+ 
 
   // Define visible and hidden features for each card
   const basicBoothFeatures = {
