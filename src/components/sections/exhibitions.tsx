@@ -1,12 +1,12 @@
 "use client"
 
 import type React from "react"
-import { Check} from "lucide-react"
+import { Check } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 export default function Exhibitions() {
-  const basicBoothFeatures = ["5x7ft Dedicated Space","Networking opportunities", "Advertisement"]
+  const basicBoothFeatures = ["5x7ft Dedicated Space", "Networking opportunities", "Advertisement"]
   const dedicatedBoothFeatures = ["All Basic Booth Benefits", "Extra Furniture"]
   const premiumBoothFeatures = ["All Standard Booth benefits", "Branding Services"]
 
@@ -16,6 +16,7 @@ export default function Exhibitions() {
         <h1 className="text-3xl font-bold tracking-tight text-[#008751] sm:text-4xl md:text-5xl">
           Exhibition Packages
         </h1>
+
       </div>
 
       <div className="grid gap-8 md:grid-cols-3">
@@ -37,7 +38,7 @@ export default function Exhibitions() {
               variant="outline"
               className="w-full border-[#008751] text-[#008751] hover:bg-[#008751]/10"
             >
-            Apply Here
+              Apply Here
             </Button>
           </CardContent>
         </Card>
@@ -54,19 +55,19 @@ export default function Exhibitions() {
                 <FeatureItem key={`dedicated-visible-${index}`}>{feature}</FeatureItem>
               ))}
 
-             
+
             </ul>
 
             <Button
               variant="outline"
               className="w-full border-[#CE1126] text-[#CE1126] hover:bg-[#CE1126]/10"
-             
+
             >
-           Apply Here
+              Apply Here
             </Button>
           </CardContent>
         </Card>
-       <Card className="flex flex-col border-[#008751]">
+        <Card className="flex flex-col border-[#008751]">
           <CardHeader className="border-b border-[#008751]/20">
             <CardTitle className="text-2xl text-[#008751]">Premium Booth</CardTitle>
             {/* <CardDescription>Premium exhibition experience with branding</CardDescription> */}
@@ -78,20 +79,23 @@ export default function Exhibitions() {
                 <FeatureItem key={`premium-visible-${index}`}>{feature}</FeatureItem>
               ))}
 
-            
+
             </ul>
 
             <Button
               variant="outline"
               className="w-full border-[#008751] text-[#008751] hover:bg-[#008751]/10"
-           
+
             >
-             Apply Here
+              Apply Here
             </Button>
           </CardContent>
         </Card>
       </div>
-
+      <section className="space-y-2">
+        <p>Please note that every Dedicated Space contains: a 5x7ft fram, furniture(1 table & chair), Electricity supply and 2 meal tickets</p>
+        <p>Branding Includes: 2 Medium sized roll-up banners and a designed/branded booth frams and tables</p>
+      </section>
       <div className="mt-8 text-center">
         <h2 className="text-2xl font-bold mb-2 text-[#008751]">Need More Information?</h2>
         <p className="mb-6 text-muted-foreground max-w-2xl mx-auto">
