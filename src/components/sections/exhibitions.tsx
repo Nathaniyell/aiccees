@@ -22,26 +22,17 @@ export default function Exhibitions() {
   }
 
   // Define visible and hidden features for each card
-  const openBoothFeatures = {
-    visible: ["Networking opportunities", "Advertisement", "Lunch (x2 people)"],
-    hidden: ["Demarcation panel", "Frame (lighting point)", "AC/Fan", "Power Supply (Generator-100/200 KVA)"],
+  const basicBoothFeatures = {
+    visible: ["Networking opportunities", "Advertisement", "Dedicated Space"],
   }
 
   const dedicatedBoothFeatures = {
-    visible: ["2 Tables (Plastic)", "2 Tables (Wooden)", "2 Chairs (Plastic)", "Networking opportunities"],
-    hidden: [
-      "Advertisement",
-      "Lunch (x2 people)",
-      "Demarcation panel",
-      "Frame",
-      "AC/Fan",
-      "Power Supply (Generator-100/200 KVA)",
-    ],
+    visible: ["All Basic Booth Benefits", "Extra Furniture"],
+    
   }
 
   const premiumBoothFeatures = {
-    visible: ["All Dedicated Booth benefits", "Custom Branding"],
-    hidden: ["Premium location", "Priority support"],
+    visible: ["All Standard Booth benefits", "Branding Services"],
   }
 
   return (
@@ -56,23 +47,16 @@ export default function Exhibitions() {
         {/* Open Booth Package */}
         <Card className="flex flex-col border-[#008751]">
           <CardHeader className="border-b border-[#008751]/20">
-            <CardTitle className="text-2xl text-[#008751]">Open Booth</CardTitle>
-            <CardDescription>Basic exhibition space</CardDescription>
-            <div className="mt-4 text-4xl font-bold">₦50,000</div>
+            <CardTitle className="text-2xl text-[#008751]">Basic Booth</CardTitle>
+            {/* <CardDescription>Basic exhibition space</CardDescription> */}
+            <div className="mt-4 text-4xl font-bold">₦60,000</div>
           </CardHeader>
           <CardContent className="flex-1 pt-6">
             <ul className="space-y-2 mb-4">
-              {openBoothFeatures.visible.map((feature, index) => (
+              {basicBoothFeatures.visible.map((feature, index) => (
                 <FeatureItem key={`open-visible-${index}`}>{feature}</FeatureItem>
               ))}
 
-              <div
-                className={`overflow-hidden transition-all duration-300 ${expandedCards.open ? "max-h-96" : "max-h-0"}`}
-              >
-                {openBoothFeatures.hidden.map((feature, index) => (
-                  <FeatureItem key={`open-hidden-${index}`}>{feature}</FeatureItem>
-                ))}
-              </div>
             </ul>
 
             <Button
@@ -80,15 +64,7 @@ export default function Exhibitions() {
               className="w-full border-[#008751] text-[#008751] hover:bg-[#008751]/10"
               onClick={() => toggleCard("open")}
             >
-              {expandedCards.open ? (
-                <span className="flex items-center">
-                  Read Less <ChevronUp className="ml-2 h-4 w-4" />
-                </span>
-              ) : (
-                <span className="flex items-center">
-                  Read More <ChevronDown className="ml-2 h-4 w-4" />
-                </span>
-              )}
+            Apply Here
             </Button>
           </CardContent>
         </Card>
@@ -97,9 +73,9 @@ export default function Exhibitions() {
         <Card className="flex flex-col relative overflow-hidden border-[#008751]">
           <div className="absolute top-0 right-0 bg-[#CE1126] text-white px-4 py-1 text-sm font-medium">Popular</div>
           <CardHeader className="border-b border-[#008751]/20">
-            <CardTitle className="text-2xl text-[#008751]">Dedicated Booth</CardTitle>
-            <CardDescription>Complete exhibition setup</CardDescription>
-            <div className="mt-4 text-4xl font-bold">₦100,000</div>
+            <CardTitle className="text-2xl text-[#008751]">Standard Booth</CardTitle>
+            {/* <CardDescription>Complete exhibition setup</CardDescription> */}
+            <div className="mt-4 text-4xl font-bold">₦120,000</div>
           </CardHeader>
           <CardContent className="flex-1 pt-6">
             <ul className="space-y-2 mb-4">
@@ -107,13 +83,7 @@ export default function Exhibitions() {
                 <FeatureItem key={`dedicated-visible-${index}`}>{feature}</FeatureItem>
               ))}
 
-              <div
-                className={`overflow-hidden transition-all duration-300 ${expandedCards.dedicated ? "max-h-96" : "max-h-0"}`}
-              >
-                {dedicatedBoothFeatures.hidden.map((feature, index) => (
-                  <FeatureItem key={`dedicated-hidden-${index}`}>{feature}</FeatureItem>
-                ))}
-              </div>
+             
             </ul>
 
             <Button
@@ -121,15 +91,7 @@ export default function Exhibitions() {
               className="w-full border-[#CE1126] text-[#CE1126] hover:bg-[#CE1126]/10"
               onClick={() => toggleCard("dedicated")}
             >
-              {expandedCards.dedicated ? (
-                <span className="flex items-center">
-                  Read Less <ChevronUp className="ml-2 h-4 w-4" />
-                </span>
-              ) : (
-                <span className="flex items-center">
-                  Read More <ChevronDown className="ml-2 h-4 w-4" />
-                </span>
-              )}
+           Apply Here
             </Button>
           </CardContent>
         </Card>
@@ -138,8 +100,8 @@ export default function Exhibitions() {
         <Card className="flex flex-col border-[#008751]">
           <CardHeader className="border-b border-[#008751]/20">
             <CardTitle className="text-2xl text-[#008751]">Premium Booth</CardTitle>
-            <CardDescription>Premium exhibition experience with branding</CardDescription>
-            <div className="mt-4 text-4xl font-bold">₦150,000</div>
+            {/* <CardDescription>Premium exhibition experience with branding</CardDescription> */}
+            <div className="mt-4 text-4xl font-bold">₦260,000</div>
           </CardHeader>
           <CardContent className="flex-1 pt-6">
             <ul className="space-y-2 mb-4">
@@ -147,13 +109,7 @@ export default function Exhibitions() {
                 <FeatureItem key={`premium-visible-${index}`}>{feature}</FeatureItem>
               ))}
 
-              <div
-                className={`overflow-hidden transition-all duration-300 ${expandedCards.premium ? "max-h-96" : "max-h-0"}`}
-              >
-                {premiumBoothFeatures.hidden.map((feature, index) => (
-                  <FeatureItem key={`premium-hidden-${index}`}>{feature}</FeatureItem>
-                ))}
-              </div>
+            
             </ul>
 
             <Button
@@ -161,15 +117,7 @@ export default function Exhibitions() {
               className="w-full border-[#008751] text-[#008751] hover:bg-[#008751]/10"
               onClick={() => toggleCard("premium")}
             >
-              {expandedCards.premium ? (
-                <span className="flex items-center">
-                  Read Less <ChevronUp className="ml-2 h-4 w-4" />
-                </span>
-              ) : (
-                <span className="flex items-center">
-                  Read More <ChevronDown className="ml-2 h-4 w-4" />
-                </span>
-              )}
+             Apply Here
             </Button>
           </CardContent>
         </Card>
