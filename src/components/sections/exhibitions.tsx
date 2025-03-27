@@ -1,28 +1,22 @@
 "use client"
 
 import type React from "react"
-
-import { useState } from "react"
-import { Check, ChevronDown, ChevronUp } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Check} from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 export default function Exhibitions() {
  
 
   // Define visible and hidden features for each card
-  const basicBoothFeatures = {
-    visible: ["Networking opportunities", "Advertisement", "Dedicated Space"],
-  }
+  const basicBoothFeatures = ["Networking opportunities", "Advertisement", "Dedicated Space"]
+  
 
-  const dedicatedBoothFeatures = {
-    visible: ["All Basic Booth Benefits", "Extra Furniture"],
+  const dedicatedBoothFeatures = ["All Basic Booth Benefits", "Extra Furniture"]
     
-  }
+  
 
-  const premiumBoothFeatures = {
-    visible: ["All Standard Booth benefits", "Branding Services"],
-  }
+  const premiumBoothFeatures = ["All Standard Booth benefits", "Branding Services"]
 
   return (
     <div id="exhibitions" className="mb-6 py-8">
@@ -42,7 +36,7 @@ export default function Exhibitions() {
           </CardHeader>
           <CardContent className="flex-1 pt-6">
             <ul className="space-y-2 mb-4">
-              {basicBoothFeatures.visible.map((feature, index) => (
+              {basicBoothFeatures.map((feature, index) => (
                 <FeatureItem key={`open-visible-${index}`}>{feature}</FeatureItem>
               ))}
 
@@ -51,7 +45,7 @@ export default function Exhibitions() {
             <Button
               variant="outline"
               className="w-full border-[#008751] text-[#008751] hover:bg-[#008751]/10"
-              onClick={() => toggleCard("open")}
+              
             >
             Apply Here
             </Button>
@@ -68,7 +62,7 @@ export default function Exhibitions() {
           </CardHeader>
           <CardContent className="flex-1 pt-6">
             <ul className="space-y-2 mb-4">
-              {dedicatedBoothFeatures.visible.map((feature, index) => (
+              {dedicatedBoothFeatures.map((feature, index) => (
                 <FeatureItem key={`dedicated-visible-${index}`}>{feature}</FeatureItem>
               ))}
 
@@ -78,7 +72,7 @@ export default function Exhibitions() {
             <Button
               variant="outline"
               className="w-full border-[#CE1126] text-[#CE1126] hover:bg-[#CE1126]/10"
-              onClick={() => toggleCard("dedicated")}
+             
             >
            Apply Here
             </Button>
@@ -94,7 +88,7 @@ export default function Exhibitions() {
           </CardHeader>
           <CardContent className="flex-1 pt-6">
             <ul className="space-y-2 mb-4">
-              {premiumBoothFeatures.visible.map((feature, index) => (
+              {premiumBoothFeatures.map((feature, index) => (
                 <FeatureItem key={`premium-visible-${index}`}>{feature}</FeatureItem>
               ))}
 
@@ -104,7 +98,7 @@ export default function Exhibitions() {
             <Button
               variant="outline"
               className="w-full border-[#008751] text-[#008751] hover:bg-[#008751]/10"
-              onClick={() => toggleCard("premium")}
+           
             >
              Apply Here
             </Button>
