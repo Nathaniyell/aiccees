@@ -6,16 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 export default function Exhibitions() {
- 
-
-  // Define visible and hidden features for each card
   const basicBoothFeatures = ["Networking opportunities", "Advertisement", "Dedicated Space"]
-  
-
   const dedicatedBoothFeatures = ["All Basic Booth Benefits", "Extra Furniture"]
-    
-  
-
   const premiumBoothFeatures = ["All Standard Booth benefits", "Branding Services"]
 
   return (
@@ -27,7 +19,6 @@ export default function Exhibitions() {
       </div>
 
       <div className="grid gap-8 md:grid-cols-3">
-        {/* Open Booth Package */}
         <Card className="flex flex-col border-[#008751]">
           <CardHeader className="border-b border-[#008751]/20">
             <CardTitle className="text-2xl text-[#008751]">Basic Booth</CardTitle>
@@ -45,14 +36,11 @@ export default function Exhibitions() {
             <Button
               variant="outline"
               className="w-full border-[#008751] text-[#008751] hover:bg-[#008751]/10"
-              
             >
             Apply Here
             </Button>
           </CardContent>
         </Card>
-
-        {/* Dedicated Booth Package */}
         <Card className="flex flex-col relative overflow-hidden border-[#008751]">
           <div className="absolute top-0 right-0 bg-[#CE1126] text-white px-4 py-1 text-sm font-medium">Popular</div>
           <CardHeader className="border-b border-[#008751]/20">
@@ -78,9 +66,7 @@ export default function Exhibitions() {
             </Button>
           </CardContent>
         </Card>
-
-        {/* Premium Booth Package */}
-        <Card className="flex flex-col border-[#008751]">
+       <Card className="flex flex-col border-[#008751]">
           <CardHeader className="border-b border-[#008751]/20">
             <CardTitle className="text-2xl text-[#008751]">Premium Booth</CardTitle>
             {/* <CardDescription>Premium exhibition experience with branding</CardDescription> */}
