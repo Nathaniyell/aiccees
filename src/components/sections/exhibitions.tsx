@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 export default function Exhibitions() {
-  const basicBoothFeatures = ["Networking opportunities", "Advertisement", "Dedicated Space"]
+  const basicBoothFeatures = ["5x7ft Dedicated Space","Networking opportunities", "Advertisement"]
   const dedicatedBoothFeatures = ["All Basic Booth Benefits", "Extra Furniture"]
   const premiumBoothFeatures = ["All Standard Booth benefits", "Branding Services"]
 
