@@ -93,8 +93,8 @@ export default function Exhibitions() {
         </Card>
       </div>
       <section className="space-y-2 mt-2">
-        <p>Please note that every Dedicated Space contains: a 5x7ft fram, furniture(1 table & chair), Electricity supply and 2 meal tickets</p>
-        <p>Branding Includes: 2 Medium sized roll-up banners and a designed/branded booth frams and tables</p>
+        <p>Please note that every Dedicated Space contains: a 5x7ft frame, furniture (1 table & chair), Electricity supply and 2 meal tickets</p>
+        <p>Branding Includes: 2 Medium sized roll-up banners and a designed/branded booth frames and tables</p>
       </section>
       <div className="mt-8 text-center">
         <h2 className="text-2xl font-bold mb-2 text-[#008751]">Need More Information?</h2>
