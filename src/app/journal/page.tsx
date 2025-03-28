@@ -56,8 +56,9 @@ export default function PublicationsPage() {
               Explore the latest research and advancements in clean energy, circular economy, and digitalization from leading experts and scholars.
             </p>
             <a
-              href="https://your-journal-issue-link.com"
+              href="/AICCEES 2024 BOA.pdf"
               target="_blank"
+              download="AICCEES 2024 BOA.pdf"
               rel="noopener noreferrer"
               className="inline-block bg-[#008751] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300"
             >
