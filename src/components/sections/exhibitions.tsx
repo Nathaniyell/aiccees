@@ -92,7 +92,7 @@ export default function Exhibitions() {
           </CardContent>
         </Card>
       </div>
-      <section className="space-y-2">
+      <section className="space-y-2 mt-2">
         <p>Please note that every Dedicated Space contains: a 5x7ft fram, furniture(1 table & chair), Electricity supply and 2 meal tickets</p>
         <p>Branding Includes: 2 Medium sized roll-up banners and a designed/branded booth frams and tables</p>
       </section>
