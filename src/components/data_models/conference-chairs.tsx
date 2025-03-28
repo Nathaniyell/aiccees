@@ -29,7 +29,7 @@ export const conferenceChairInfo = [
     },
     {
         id: 4,
-        name: "Dr. Ogheneruona Diemuodeke",
+        name: "Professor Ogheneruona Diemuodeke",
         role: "Conference Co-Chair",
         school: "University of Port Harcourt",
         image: oghneruona
