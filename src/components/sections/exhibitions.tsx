@@ -16,7 +16,7 @@ export default function Exhibitions() {
         <h1 className="text-3xl font-bold tracking-tight text-[#008751] sm:text-4xl md:text-5xl">
           Exhibition Packages
         </h1>
-
+        <p className="text-lg italic">Showcase your products and services at the biggest Conference on Clean Energy in Africa</p>
       </div>
 
       <div className="grid gap-8 md:grid-cols-3">
