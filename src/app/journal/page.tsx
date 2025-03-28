@@ -34,7 +34,7 @@ export default function PublicationsPage() {
           <p className="text-gray-700 mt-3">
             Papers from the Africa International Conference on Clean Energy and Energy Storage (AICCEES) are published in this journal, contributing to the global discourse on clean energy and sustainable development.
           </p>
-          <div className="mt-3 flex items-center justify-center gap-6 flex-wrap">
+          <div className="mt-3 flex items-center justify-center md:justify-start gap-6 flex-wrap">
           <Button asChild className="bg-green-800 text-white hover:bg-green-700">
             <Link target="_blank" href="https://docs.google.com/forms/d/1FxgRduMD96dFgxJW6RtaZgCOUD2rfnfPp_D6U4_kAoA/edit">Register for conference</Link>
           </Button>
