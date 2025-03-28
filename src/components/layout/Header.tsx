@@ -34,7 +34,7 @@ export function Header() {
   const navLinks = [
     { href: '/#about', label: 'About' },
     { href: '/#speakers', label: 'Speakers' },
-    { href: '/#themes', label: 'Conference Themes' },
+    { href: '/publications', label: 'Publications' },
     { href: '/#submissions', label: 'Submit Paper' },
     { href: '/#participation', label: 'Conference Fees' },
     { href: '/#exhibitions', label: 'Exhibitions' },
