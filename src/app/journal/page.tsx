@@ -65,7 +65,6 @@ export default function PublicationsPage() {
           </div>
         </div>
 
-        {/* Volume 1, Issue 1 Card */}
         <div className="flex flex-col">
           <div className="bg-white shadow border border-stone-200 rounded-lg p-6 w-full">
             <h3 className="text-2xl font-bold text-gray-800 mb-2">Volume 1, Issue 1</h3>
@@ -87,7 +86,6 @@ export default function PublicationsPage() {
 
 
 
-     {/* Editorial Board Section */}
 <section className="mt-12 mx-auto max-w-4xl">
   <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center border-b-2 border-green-800 pb-4">
     Editorial Board
@@ -116,7 +114,7 @@ export default function PublicationsPage() {
     </div>
   </div>
 
-  {/* Editorial Advisory Board Members */}
+
   <div className="mt-10">
     <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
       Editorial Advisory Board Members
