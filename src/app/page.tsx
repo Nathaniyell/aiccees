@@ -1,6 +1,4 @@
 "use client"
-// import { Header } from '@/components/layout/Header'
-// import { Footer } from '@/components/layout/Footer'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { SpeakersSection } from '@/components/sections/SpeakersSection'
 import AboutUs from '@/components/sections/AboutUs'
