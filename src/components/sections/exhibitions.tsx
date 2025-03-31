@@ -110,7 +110,7 @@ export default function Exhibitions() {
             </Card>
           ))}
         </div>
-
+{/* 
         <div className="mt-12 bg-white p-6 rounded-lg shadow-sm max-w-4xl mx-auto">
           <h3 className="text-xl font-semibold text-[#008751] mb-4">
             Package Details
@@ -133,7 +133,7 @@ export default function Exhibitions() {
               </ul>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="mt-12 text-center">
           <h3 className="text-2xl font-bold text-[#008751] mb-4">
