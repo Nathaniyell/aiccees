@@ -26,7 +26,7 @@ export default function Exhibitions() {
         "Extra furniture (additional tables & chairs)",
         "Additional meal tickets"
       ],
-      popular: true
+      popular: false
     },
     {
       name: "Standard Deluxe Booth",
@@ -36,7 +36,7 @@ export default function Exhibitions() {
         "2 medium-sized roll-up banners",
         "Custom branded booth design & tables"
       ],
-      popular: false
+      popular: true
     },
     {
       name: "Premium Booth",
