@@ -135,20 +135,27 @@ export default function Exhibitions() {
           </div>
         </div> */}
 
-        <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold text-[#008751] mb-4">
-            Need Custom Solutions?
-          </h3>
-          <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-            We offer tailored exhibition packages for larger displays or special requirements.
-            Contact our team to discuss your specific needs.
-          </p>
-          <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
-            <a href="mailto:aiccees@uniport.edu.ng">
-              Contact Exhibition Team
-            </a>
-          </Button>
-        </div>
+<div className="mt-12 text-center">
+  <h3 className="text-2xl font-bold text-[#008751] mb-4">
+    Need Custom Solutions?
+  </h3>
+  <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+    We offer tailored exhibition packages for larger displays or special requirements.
+    Contact our exhibition team on phone or email for more information.
+  </p>
+  <div className="flex flex-col sm:flex-row justify-center gap-4">
+    <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
+      <a href="tel:+2341234567890">
+        Call: +234 123 456 7890
+      </a>
+    </Button>
+    <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
+      <a href="mailto:aiccees@uniport.edu.ng">
+        Email: aiccees@uniport.edu.ng
+      </a>
+    </Button>
+  </div>
+</div>
       </div>
     </section>
   )
