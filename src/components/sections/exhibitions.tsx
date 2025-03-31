@@ -64,7 +64,7 @@ export default function Exhibitions() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2">
           {packages.map((pkg) => (
             <Card
               key={pkg.name}
