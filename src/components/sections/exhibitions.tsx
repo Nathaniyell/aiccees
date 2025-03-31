@@ -4,6 +4,7 @@ import React from "react"
 import { Check } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { officeNumber } from "@/lib/utils"
 
 export default function Exhibitions() {
   const packages = [
@@ -146,7 +147,7 @@ export default function Exhibitions() {
   <div className="flex flex-col sm:flex-row justify-center gap-4">
     <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
       <a href="tel:+2341234567890">
-        Call: +234 123 456 7890
+        Call: {officeNumber}
       </a>
     </Button>
     <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
