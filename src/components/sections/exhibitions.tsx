@@ -9,29 +9,43 @@ export default function Exhibitions() {
   const packages = [
     {
       name: "Basic Booth",
-      price: "₦60,000",
+      price: "₦100,000 or $70",
       features: [
         "7ft by 7ft dedicated exhibition space",
-        "Standard furniture (1 table & 1 chair)",
-        "Networking opportunities"
+        "1 table & 2 chairs",
+        "24-hour electricity supply",
+        "2 meal tickets per day"
       ],
       popular: false
     },
     {
       name: "Standard Booth",
-      price: "₦120,000",
+      price: "₦200,000 or $135",
       features: [
         "All Basic Booth benefits",
-        "Extra furniture",
+        "Extra furniture (additional tables & chairs)",
+        "Additional meal tickets"
       ],
       popular: true
     },
     {
-      name: "Premium Booth",
-      price: "₦260,000",
+      name: "Standard Deluxe Booth",
+      price: "₦300,000 or $200",
       features: [
         "All Standard Booth benefits",
-        "Custom branded booth design",
+        "2 medium-sized roll-up banners",
+        "Custom branded booth design & tables"
+      ],
+      popular: false
+    },
+    {
+      name: "Premium Booth",
+      price: "₦400,000 or $300",
+      features: [
+        "12ft by 12ft deluxe exhibition space",
+        "All Standard Deluxe Booth benefits",
+        "Priority booth placement",
+        "Enhanced promotional opportunities"
       ],
       popular: false
     }
@@ -44,17 +58,19 @@ export default function Exhibitions() {
           <h2 className="text-3xl font-bold text-[#008751] sm:text-4xl md:text-5xl mb-4">
             Exhibition Packages
           </h2>
-                <p className="text-gray-700">
-            Showcase your products and services in the biggest conference on clean energy in Africa. Join our exhibition session and have audience to a widespread of individuals from across Africa.
+          <p className="text-gray-700">
+            Showcase your products and services in the biggest conference on clean energy in Africa. 
+            Join our exhibition session and gain exposure to a wide audience from across the continent.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-4">
           {packages.map((pkg) => (
             <Card
               key={pkg.name}
-              className={`flex flex-col border-[#008751] h-full relative transition-all hover:shadow-lg ${pkg.popular ? "border-2 border-[#CE1126]" : ""
-                }`}
+              className={`flex flex-col border-[#008751] h-full relative transition-all hover:shadow-lg ${
+                pkg.popular ? "border-2 border-[#CE1126]" : ""
+              }`}
             >
               {pkg.popular && (
                 <div className="absolute top-0 right-0 bg-[#CE1126] text-white px-4 py-1 text-sm font-medium rounded-bl-lg">
@@ -66,7 +82,7 @@ export default function Exhibitions() {
                 <CardTitle className="text-2xl text-[#008751]">
                   {pkg.name}
                 </CardTitle>
-                <div className="mt-4 text-4xl font-bold">
+                <div className="mt-4 text-3xl font-bold">
                   {pkg.price}
                 </div>
               </CardHeader>
@@ -82,10 +98,11 @@ export default function Exhibitions() {
 
                 <Button
                   variant={pkg.popular ? "default" : "outline"}
-                  className={`w-full ${pkg.popular
+                  className={`w-full ${
+                    pkg.popular
                       ? "bg-[#CE1126] hover:bg-[#CE1126]/90"
                       : "border-[#008751] text-[#008751] hover:bg-[#008751]/10"
-                    }`}
+                  }`}
                 >
                   Apply Now
                 </Button>
@@ -96,25 +113,23 @@ export default function Exhibitions() {
 
         <div className="mt-12 bg-white p-6 rounded-lg shadow-sm max-w-4xl mx-auto">
           <h3 className="text-xl font-semibold text-[#008751] mb-4">
-            Package Inclusions
+            Package Details
           </h3>
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <h4 className="font-medium mb-2">All Packages Include:</h4>
+              <h4 className="font-medium mb-2">Every Dedicated Space Includes:</h4>
               <ul className="space-y-2">
-                <FeatureItem>7x7ft branded booth frame</FeatureItem>
-                <FeatureItem>Furniture (tables & chairs)</FeatureItem>
-                <FeatureItem>24-hour power supply</FeatureItem>
+                <FeatureItem>7ftx7ft exhibition frame</FeatureItem>
+                <FeatureItem>1 table & 2 chairs</FeatureItem>
+                <FeatureItem>24-hour electricity supply</FeatureItem>
                 <FeatureItem>2 meal tickets per day</FeatureItem>
               </ul>
             </div>
             <div>
-              <h4 className="font-medium mb-2">Premium Add-ons:</h4>
+              <h4 className="font-medium mb-2">Branding Packages Include:</h4>
               <ul className="space-y-2">
-                <FeatureItem>Custom booth design</FeatureItem>
-                <FeatureItem>Roll-up banners</FeatureItem>
-                <FeatureItem>Priority placement</FeatureItem>
-                <FeatureItem>Enhanced promotion</FeatureItem>
+                <FeatureItem>2 medium-sized roll-up banners</FeatureItem>
+                <FeatureItem>Custom branded booth & tables</FeatureItem>
               </ul>
             </div>
           </div>
