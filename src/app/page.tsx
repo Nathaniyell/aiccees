@@ -22,6 +22,9 @@ export default function ConferencePage() {
     <main className="flex-1">
       <HeroSection />
       <AboutUs />
+      <div className="ml-4 lg:ml-0 lg:px-16 flex justify-center items-center">
+        <ConferenceCallToAction />
+      </div>
       <Submissions />
       <ConferenceThemes />
       <SpeakersSection />
@@ -33,8 +36,7 @@ export default function ConferencePage() {
       <CookingDemonstration />
       <Sponsors />
       <TestimonialCarousel />
-      <div className="lg:px-16 flex justify-center">
-
+      <div className="lg:px-16 flex justify-center items-center">
         <ConferenceCallToAction />
       </div>
     </main>
