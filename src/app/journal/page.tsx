@@ -1,4 +1,4 @@
-import { deets } from "@/components/data_models/conferences";
+import { deets, registrationLink } from "@/components/data_models/conferences";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -51,7 +51,7 @@ export default function PublicationsPage() {
           </p>
           <div className="mt-3 flex flex-wrap gap-4">
             <Button asChild className="bg-green-800 text-white hover:bg-green-700">
-              <Link target="_blank" href="https://docs.google.com/forms/d/1FxgRduMD96dFgxJW6RtaZgCOUD2rfnfPp_D6U4_kAoA/edit">
+              <Link target="_blank" href={registrationLink}>
                 Register for conference
               </Link>
             </Button>

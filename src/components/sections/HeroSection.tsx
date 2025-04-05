@@ -14,6 +14,7 @@ import herobg5 from '@/public/images/herobg5.jpg'
 import herobg6 from '@/public/images/herobg6.jpg'
 import herobg7 from '@/public/images/herobg7.jpg'
 import Link from 'next/link'
+import { registrationLink } from '../data_models/conferences'
 
 const BACKGROUND_IMAGES = [
   herobg0,
@@ -68,7 +69,7 @@ export function HeroSection() {
           </div>
           <div className="space-x-4">
             <Button asChild className="bg-red-600 text-white hover:bg-red-700">
-              <Link target="_blank" href="https://forms.office.com/r/w3H6dV02J2">Register Now</Link>
+              <Link target="_blank" href={registrationLink}>Register Now</Link>
             </Button>
             <Button
               onClick={() => {

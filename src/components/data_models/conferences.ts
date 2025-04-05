@@ -177,6 +177,7 @@ export const partners = [
   },
 ]
 
+export const registrationLink = "https://tinyurl.com/AICCEES2025"
 export const containerVariants = {
   hidden: { opacity: 0 },
   visible: {

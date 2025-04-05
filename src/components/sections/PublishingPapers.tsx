@@ -3,6 +3,7 @@ import { Button } from '../ui/button'
 import AOS from '../layout/AOS'
 import AnimatedFlowchart from '../animated-flowchart'
 import Link from 'next/link'
+import { registrationLink } from '../data_models/conferences'
 
 const PublishingPapers = () => {
   return (
@@ -19,7 +20,7 @@ const PublishingPapers = () => {
         <AOS>
         <div className="flex flex-col sm:flex-row justify-center gap-4 px-4 md:px-0">
           <Button asChild className="bg-green-800 text-white hover:bg-green-700">
-            <Link target="_blank" href="https://docs.google.com/forms/d/1FxgRduMD96dFgxJW6RtaZgCOUD2rfnfPp_D6U4_kAoA/edit">Register for conference</Link>
+            <Link target="_blank" href={registrationLink}>Register for conference</Link>
           </Button>
           <Link
             href="mailto:aiccees@uniport.edu.ng"

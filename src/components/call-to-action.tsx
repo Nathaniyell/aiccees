@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from 'next/link'
 import AOS from "./layout/AOS"
+import { registrationLink } from "./data_models/conferences"
 
 const ConferenceCallToAction = () => {
   return (
@@ -24,7 +25,7 @@ const ConferenceCallToAction = () => {
               size="lg"
               className="bg-green-600 hover:bg-green-700 text-white"
             >
-              <Link target="_blank" href="https://docs.google.com/forms/d/1FxgRduMD96dFgxJW6RtaZgCOUD2rfnfPp_D6U4_kAoA/edit">Register Now</Link>
+              <Link target="_blank" href={registrationLink}>Register Now</Link>
             </Button>
             <Button 
               asChild
