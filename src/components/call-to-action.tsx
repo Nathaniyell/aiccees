@@ -7,7 +7,7 @@ import { registrationLink } from "./data_models/conferences"
 const ConferenceCallToAction = () => {
   return (
     <AOS>
-    <Card className="w-11/12 md:w-full bg-[#fafafa] my-8 px-4">
+    <Card className="w-11/12 mx-auto lg:w-10/12 md:w-full bg-[#fafafa] my-8 px-4">
       <CardContent className="p-6 md:p-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="space-y-4">

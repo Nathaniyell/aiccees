@@ -22,16 +22,22 @@ export default function ConferencePage() {
     <main className="flex-1">
       <HeroSection />
       <AboutUs />
-      <div className="ml-4 lg:ml-0 lg:px-16 flex justify-center items-center">
+      <div className="flex justify-center items-center">
         <ConferenceCallToAction />
       </div>
       <Submissions />
       <ConferenceThemes />
       <SpeakersSection />
+      <div className="flex justify-center items-center">
+        <ConferenceCallToAction />
+      </div>
       <ConferenceChairs />
       <ScientificCommittee />
       <PublishingPapers />
       <Participation />
+      <div className="flex justify-center items-center">
+        <ConferenceCallToAction />
+      </div>
       <GallerySection />
       <CookingDemonstration />
       <Sponsors />
