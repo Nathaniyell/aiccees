@@ -1,6 +1,7 @@
 import { conferenceImages, cookingImages } from "@/components/data_models/conference-images";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
+import ConferenceCallToAction from "@/components/call-to-action";
 
 export default function GalleryPage() {
     return (
@@ -67,6 +68,9 @@ export default function GalleryPage() {
                         ))}
                     </div>
                 </section>
+            </div>
+            <div className="flex justify-center items-center mt-10">
+                <ConferenceCallToAction />
             </div>
         </main>
     );
