@@ -17,7 +17,8 @@ export default function Exhibitions() {
         "24-hour electricity supply",
         "2 meal tickets per day"
       ],
-      popular: false
+      popular: false,
+      applicationLink: "https://forms.office.com/pages/responsepage.aspx?id=kn2ybltGPkK4rp8nVlmTlYgK_n1-yllAncqjnHrWTZRURFlaM0lVQ0tWRFFPNEFMUjFPRDlLOVlSUy4u&route=shorturl"
     },
     {
       name: "Standard Booth",
@@ -27,7 +28,8 @@ export default function Exhibitions() {
         "Extra furniture (additional tables & chairs)",
         "Additional meal tickets"
       ],
-      popular: false
+      popular: false,
+      applicationLink: "https://forms.office.com/pages/responsepage.aspx?id=kn2ybltGPkK4rp8nVlmTlYgK_n1-yllAncqjnHrWTZRUNTY2UFRBRjYxMEpQUkxaS1VaTlhBM0pRSS4u&route=shorturl"
     },
     {
       name: "Standard Deluxe Booth",
@@ -37,7 +39,8 @@ export default function Exhibitions() {
         "2 medium-sized roll-up banners",
         "Custom branded booth design & tables"
       ],
-      popular: true
+      popular: true,
+      applicationLink:"https://forms.office.com/pages/responsepage.aspx?id=kn2ybltGPkK4rp8nVlmTlYgK_n1-yllAncqjnHrWTZRUNzBVMFNBRjBWUkgwQU5LMkZLWUxaR0JBWi4u&route=shorturl"
     },
     {
       name: "Premium Booth",
@@ -48,7 +51,8 @@ export default function Exhibitions() {
         "Priority booth placement",
         "Enhanced promotional opportunities"
       ],
-      popular: false
+      popular: false,
+      applicationLink: "https://forms.office.com/pages/responsepage.aspx?id=kn2ybltGPkK4rp8nVlmTlYgK_n1-yllAncqjnHrWTZRUQjE1SlBLUTkySEtPMEpLUlY2WU85WEROVS4u&route=shorturl"
     }
   ]
 
@@ -60,7 +64,7 @@ export default function Exhibitions() {
             Exhibition Packages
           </h2>
           <p className="text-gray-700">
-            Showcase your products and services in the biggest conference on clean energy in Africa. 
+            Showcase your products and services in the biggest conference on clean energy in Africa.
             Join our exhibition session and gain exposure to a wide audience from across the continent.
           </p>
         </div>
@@ -69,9 +73,8 @@ export default function Exhibitions() {
           {packages.map((pkg) => (
             <Card
               key={pkg.name}
-              className={`flex flex-col border-[#008751] h-full relative transition-all hover:shadow-lg ${
-                pkg.popular ? "border-2 border-[#CE1126]" : ""
-              }`}
+              className={`flex flex-col border-[#008751] h-full relative transition-all hover:shadow-lg ${pkg.popular ? "border-2 border-[#CE1126]" : ""
+                }`}
             >
               {pkg.popular && (
                 <div className="absolute top-0 right-0 bg-[#CE1126] text-white px-4 py-1 text-sm font-medium rounded-bl-lg">
@@ -99,19 +102,25 @@ export default function Exhibitions() {
 
                 <Button
                   variant={pkg.popular ? "default" : "outline"}
-                  className={`w-full ${
-                    pkg.popular
+                  asChild
+                  className={`w-full ${pkg.popular
                       ? "bg-[#CE1126] hover:bg-[#CE1126]/90"
                       : "border-[#008751] text-[#008751] hover:bg-[#008751]/10"
-                  }`}
+                    }`}
                 >
-                  Apply Now
+                  <a
+                    href={pkg.applicationLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Apply Now
+                  </a>
                 </Button>
               </CardContent>
             </Card>
           ))}
         </div>
-{/* 
+        {/* 
         <div className="mt-12 bg-white p-6 rounded-lg shadow-sm max-w-4xl mx-auto">
           <h3 className="text-xl font-semibold text-[#008751] mb-4">
             Package Details
@@ -136,27 +145,27 @@ export default function Exhibitions() {
           </div>
         </div> */}
 
-<div className="mt-12 text-center">
-  <h3 className="text-2xl font-bold text-[#008751] mb-4">
-    Need Custom Solutions?
-  </h3>
-  <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-    We offer tailored exhibition packages for larger displays or special requirements.
-    Contact our exhibition team on phone or email for more information.
-  </p>
-  <div className="flex flex-col sm:flex-row justify-center gap-4">
-    <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
-      <a href="tel:+2341234567890">
-        Call: {officeNumber}
-      </a>
-    </Button>
-    <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
-      <a href="mailto:aiccees@uniport.edu.ng">
-        Email: aiccees@uniport.edu.ng
-      </a>
-    </Button>
-  </div>
-</div>
+        <div className="mt-12 text-center">
+          <h3 className="text-2xl font-bold text-[#008751] mb-4">
+            Need Custom Solutions?
+          </h3>
+          <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+            We offer tailored exhibition packages for larger displays or special requirements.
+            Contact our exhibition team on phone or email for more information.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
+              <a href="tel:+2341234567890">
+                Call: {officeNumber}
+              </a>
+            </Button>
+            <Button asChild variant="outline" className="border-[#008751] text-[#008751] hover:bg-[#008751]/10">
+              <a href="mailto:aiccees@uniport.edu.ng">
+                Email: aiccees@uniport.edu.ng
+              </a>
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   )
