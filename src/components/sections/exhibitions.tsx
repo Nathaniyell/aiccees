@@ -120,31 +120,7 @@ export default function Exhibitions() {
             </Card>
           ))}
         </div>
-        {/* 
-        <div className="mt-12 bg-white p-6 rounded-lg shadow-sm max-w-4xl mx-auto">
-          <h3 className="text-xl font-semibold text-[#008751] mb-4">
-            Package Details
-          </h3>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div>
-              <h4 className="font-medium mb-2">Every Dedicated Space Includes:</h4>
-              <ul className="space-y-2">
-                <FeatureItem>7ftx7ft exhibition frame</FeatureItem>
-                <FeatureItem>1 table & 2 chairs</FeatureItem>
-                <FeatureItem>24-hour electricity supply</FeatureItem>
-                <FeatureItem>2 meal tickets per day</FeatureItem>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-medium mb-2">Branding Packages Include:</h4>
-              <ul className="space-y-2">
-                <FeatureItem>2 medium-sized roll-up banners</FeatureItem>
-                <FeatureItem>Custom branded booth & tables</FeatureItem>
-              </ul>
-            </div>
-          </div>
-        </div> */}
-
+   
         <div className="mt-12 text-center">
           <h3 className="text-2xl font-bold text-[#008751] mb-4">
             Need Custom Solutions?
