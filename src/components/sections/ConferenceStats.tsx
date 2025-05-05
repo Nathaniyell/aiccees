@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Youtube, BookText, FileText } from "lucide-react"
 
 import { ConferenceMaterials } from "./ConferenceMaterials"
-import { containerVariants, itemVariants } from "../data_models/conferences"
+import { containerVariants, itemVariants , conferenceMaterials} from "../data_models/conferences"
 import KeynoteHeader from "../keynote-speakers-header"
 import { keynoteSpeakers2023 } from "../data_models/keynote-speakers"
 import KeynoteSpeaker from "../keynote-speakers"
@@ -51,7 +51,7 @@ export default function ConferenceStats() {
           </motion.div>
           <ConferenceMaterials
             year={2023}
-            materials={materials}
+            materials={conferenceMaterials}
           />
 
           <motion.div
