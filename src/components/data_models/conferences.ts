@@ -104,7 +104,7 @@ export const deets = [
   {
     id: 5,
     image: svg5,
-    text: "Mini - grids & Hydropower Development",
+    text: "Hydropower & Agri-food systems",
     color: "border-red-600",
     textColor: "text-green-700"
   },
