@@ -199,38 +199,3 @@ export const itemVariants = {
   },
 }
 
-export const conferenceMaterials = [
-  {
-    id: 1,
-    header: "YOUTUBE",
-    link: "https://www.youtube.com/@toveroenergy3932/streams",
-    icon: Youtube,
-    description: "Watch conference presentations and highlights",
-    color: "text-red-600",
-    bgColor: "bg-red-50",
-    iconBgColor: "bg-red-600",
-    iconColor: "text-white",
-  },
-  {
-    id: 2,
-    header: "PROCEEDINGS",
-    link: "https://www.scientific.net/book/africa-international-conference-on-clean-energy-and-energy-storage/978-3-0357-3771-4",
-    icon: BookText,
-    description: "Access published conference proceedings",
-    color: "text-blue-600",
-    bgColor: "bg-blue-50",
-    iconBgColor: "bg-blue-600",
-    iconColor: "text-white",
-  },
-  {
-    id: 3,
-    header: "ABSTRACTS",
-    link: "https://drive.google.com/uc?export=download&id=1lE93VeauJnyykfAe1ogiYFDLHE_V4KDD",
-    icon: FileText,
-    description: "Download conference abstracts",
-    color: "text-green-600",
-    bgColor: "bg-green-50",
-    iconBgColor: "bg-green-600",
-    iconColor: "text-white",
-  },
-]
