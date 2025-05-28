@@ -65,16 +65,29 @@ export default function PublicationsPage() {
           </div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-8">
           <div className="bg-white shadow border border-stone-200 rounded-lg p-6 w-full">
             <h3 className="text-2xl font-bold text-gray-800 mb-2">Volume 1, Issue 1</h3>
             <p className="text-gray-600 mb-4">
               Explore the latest research and advancements in clean energy, circular economy, and digitalization.
             </p>
             <a
-              href="/AICCEES 2024 BOA.pdf"
+              href="https://drive.google.com/file/d/1MMfJK1vIlKukOAGoSKtHMvbH7nneunBQ/view"
               target="_blank"
-              download="AICCEES 2024 BOA.pdf"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#008751] text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition"
+            >
+              View Issue
+            </a>
+          </div>
+          <div className="bg-white shadow border border-stone-200 rounded-lg p-6 w-full">
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">Volume 2, Issue 1</h3>
+            <p className="text-gray-600 mb-4">
+              Explore the latest research and advancements in clean energy, circular economy, and digitalization.
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1gs3RtLhcSk-CTpB71bPBa1L7kf-ihGcf/view?usp=drive_link "
+              target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#008751] text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition"
             >
@@ -86,55 +99,55 @@ export default function PublicationsPage() {
 
 
 
-<section className="mt-12 mx-auto max-w-4xl">
-  <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center border-b-2 border-green-800 pb-4">
-    Editorial Board
-  </h2>
-  
-  <div className="grid md:grid-cols-2 gap-8">
+      <section className="mt-12 mx-auto max-w-4xl">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center border-b-2 border-green-800 pb-4">
+          Editorial Board
+        </h2>
 
-    <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-800">
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">
-        Editor-in-Chief
-      </h3>
-      <h4 className="text-lg font-medium text-gray-800 mb-1">
-        Professor Ogheneruona Diemuodeke
-      </h4>
-      <p className="text-gray-600">University of Port Harcourt</p>
-    </div>
+        <div className="grid md:grid-cols-2 gap-8">
 
-    <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-800">
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">
-        Managing/Associate Editor
-      </h3>
-      <h4 className="text-lg font-medium text-gray-800 mb-1">
-        Professor Abam Fidelis
-      </h4>
-      <p className="text-gray-600">University of Calabar</p>
-    </div>
-  </div>
+          <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-800">
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Editor-in-Chief
+            </h3>
+            <h4 className="text-lg font-medium text-gray-800 mb-1">
+              Professor Ogheneruona Diemuodeke
+            </h4>
+            <p className="text-gray-600">University of Port Harcourt</p>
+          </div>
 
-
-  <div className="mt-10">
-    <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-      Editorial Advisory Board Members
-    </h3>
-    
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {editorialBoard.map((member) => (
-        <div 
-          key={member.id}
-          className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow border-t-2 border-green-600"
-        >
-          <h4 className="text-lg font-medium text-gray-800 mb-1">
-            {member.name}
-          </h4>
-          <p className="text-gray-600">{member.school}</p>
+          <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-800">
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Managing/Associate Editor
+            </h3>
+            <h4 className="text-lg font-medium text-gray-800 mb-1">
+              Professor Abam Fidelis
+            </h4>
+            <p className="text-gray-600">University of Calabar</p>
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+
+
+        <div className="mt-10">
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+            Editorial Advisory Board Members
+          </h3>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {editorialBoard.map((member) => (
+              <div
+                key={member.id}
+                className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow border-t-2 border-green-600"
+              >
+                <h4 className="text-lg font-medium text-gray-800 mb-1">
+                  {member.name}
+                </h4>
+                <p className="text-gray-600">{member.school}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
