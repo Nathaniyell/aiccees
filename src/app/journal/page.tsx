@@ -72,7 +72,7 @@ export default function PublicationsPage() {
               Explore the latest research and advancements in clean energy, circular economy, and digitalization.
             </p>
             <a
-              href="https://drive.google.com/file/d/1MMfJK1vIlKukOAGoSKtHMvbH7nneunBQ/view"
+              href="https://drive.google.com/file/d/1v3Q0suPYSBnveEoNYcoyW2uyUDKamZ7C/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#008751] text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition"
@@ -86,7 +86,7 @@ export default function PublicationsPage() {
               Explore the latest research and advancements in clean energy, circular economy, and digitalization.
             </p>
             <a
-              href="https://drive.google.com/file/d/1gs3RtLhcSk-CTpB71bPBa1L7kf-ihGcf/view?usp=drive_link "
+              href="https://drive.google.com/file/d/1ar-jhplcWQMt8iKeM689RguY3RpUN8_Z/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#008751] text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition"
