@@ -34,7 +34,7 @@ export default function PublicationsPage() {
         <div className="p-2 md:p-4">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">About the Journal</h2>
           <p className="text-gray-700 leading-relaxed">
-            The <span className="text-red-600 font-bold">Journal of Clean Energy, Circular Economy, and Digitalisation</span> (JCECED; ISSN: ) is a peer-reviewed publication dedicated to advancing research and innovation in
+            The <span className="text-red-600 font-bold">Journal of Clean Energy, Circular Economy, and Digitalisation</span> (JCECED; ISSN:3092-9199; ISSN-L:3092-9199;) is a peer-reviewed publication dedicated to advancing research and innovation in
             sustainable energy, circular economy strategies, and digital transformation.
           </p>
           <h3 className="text-xl font-semibold text-gray-800 my-3">Scope of the Journal</h3>
