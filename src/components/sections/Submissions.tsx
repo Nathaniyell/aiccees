@@ -134,9 +134,20 @@ function Submissions() {
                       <p className="text-sm">{item.date}</p>
                     </div>
                     {item.description && (
-                      <p className="text-gray-300 text-sm">
-                        {item.description}
-                      </p>
+                      item.id === 4 ? (
+                        <>
+                        <p className="text-gray-200 text-sm">
+                          {item.description}
+                        </p>
+                        <p className="text-gray-200 text-sm">
+                          Virtual Attendance via Zoom
+                        </p>
+                        </>
+                      ) : (
+                        <p className="text-gray-200 text-sm">
+                          {item.description}
+                        </p>
+                      )
                     )}
                   </div>
                 </motion.div>
