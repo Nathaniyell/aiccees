@@ -16,7 +16,7 @@ import herobg6 from '@/public/images/herobg6.jpg'
 import herobg7 from '@/public/images/herobg7.jpg'
 import Link from 'next/link'
 import { registrationLink } from '../data_models/conferences'
-import { Megaphone, Clock } from 'lucide-react'
+import { Clock } from 'lucide-react'
 
 const BACKGROUND_IMAGES = [
   herobg0,
