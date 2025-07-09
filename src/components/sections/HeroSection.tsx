@@ -51,9 +51,9 @@ function CountdownTimer() {
     <div className="flex items-center justify-center gap-2 text-white text-lg md:text-2xl font-semibold bg-black/40 rounded-lg px-4 py-2 shadow-lg">
       <span className="flex items-center gap-1">
         <Clock className="text-yellow-400 mr-1" />
-       <span className="text-white hidden sm:block">Days Left:</span>
+       <span className="text-white hidden sm:block">Days left:</span>
       </span>
-      <span>{days}d</span>:
+      <span>{days}days</span>:
       <span>{hours}h</span>:
       <span>{minutes}m</span>:
       <span>{seconds}s</span>
@@ -123,13 +123,13 @@ function SponsorshipSection() {
 }
 
 export function HeroSection() {
-  const [activeSlide, setActiveSlide] = useState(0)
+  const [activeSlide, setActiveSlide] = useState(1)
 
-  // Auto-slide between hero and sponsorship every 8s
+  // Auto-slide between hero and sponsorship every 20s
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev === 0 ? 1 : 0))
-    }, 8000)
+    }, 20000)
     return () => clearInterval(interval)
   }, [])
 
