@@ -69,7 +69,7 @@ function SponsorshipSection() {
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white drop-shadow-lg">Research Paper Presentation Sponsorship</h2>
         </div>
         <p className="max-w-2xl mx-auto text-base sm:text-xl md:text-2xl text-white mb-4 sm:mb-6 font-semibold drop-shadow">
-          <span className="font-semibold text-green-200">AICCEES 2025</span> is offering sponsorship support for selected high-impact full papers that address <span className="font-semibold">Africa's energy access challenges</span>!
+          <span className="font-semibold text-green-200">AICCEES 2025</span> is offering sponsorship support for selected high-impact full papers that address <span className="font-semibold">Africa&apos;s energy access challenges</span>!
         </p>
         <div className="hidden lg:flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10 w-full justify-center mb-4 sm:mb-6 mt-10">
           <div className="flex-1 mb-4 lg:mb-0">
