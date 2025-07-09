@@ -19,7 +19,7 @@ const info = [
     id: 2,
     status: "amber",
     text: "Full Paper Submission Deadline",
-    date: "July 31st2025",
+    date: "July 31st 2025",
     description: "Final deadline for all research paper submissions",
     icon: Calendar,
   },
