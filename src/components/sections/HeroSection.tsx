@@ -63,15 +63,15 @@ function CountdownTimer() {
 
 function SponsorshipSection() {
   return (
-    <div className="flex flex-col items-center justify-center h-full w-full px-2 sm:px-4 py-6 sm:py-8 text-center">
-      <div className="mx-auto w-full max-w-5xl bg-black/70 rounded-2xl p-4 sm:p-8 shadow-2xl backdrop-blur-md flex flex-col items-center">
+    <div className="flex flex-col items-center justify-center h-full w-full py-6 sm:py-8 text-center">
+      <div className="mx-auto w-full bg-black/70  p-4 sm:p-8 shadow-2xl backdrop-blur-md flex flex-col items-center">
         <div className="flex flex-col sm:flex-row items-center justify-center mb-6 gap-2 sm:gap-4">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white drop-shadow-lg">Research Paper Presentation Sponsorship</h2>
         </div>
         <p className="max-w-2xl mx-auto text-base sm:text-xl md:text-2xl text-white mb-4 sm:mb-6 font-semibold drop-shadow">
           <span className="font-semibold text-green-200">AICCEES 2025</span> is offering sponsorship support for selected high-impact full papers that address <span className="font-semibold">Africa&apos;s energy access challenges</span>!
         </p>
-        <div className="hidden lg:flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10 w-full justify-center mb-4 sm:mb-6 mt-10">
+        <div className="hidden lg:flex flex-row items-center gap-20 max-w-4xl w-full mx-auto justify-between mb-4 sm:mb-6 mt-10">
           <div className="flex-1 mb-4 lg:mb-0">
             <h3 className="text-base text-left sm:text-lg md:text-2xl font-bold text-green-400 mb-2 drop-shadow">Who Can Apply?</h3>
             <ul className="text-left text-white list-disc list-inside space-y-1 text-sm sm:text-base md:text-lg">
