@@ -14,6 +14,7 @@ import svg7 from "@/public/images/aicess/svg7.png";
 import svg8 from "@/public/images/aicess/svg8.png";
 import svg9 from "@/public/images/aicess/svg9.png";
 import mecs from "@/public/images/home/mecs.svg";
+import acefuels from "@/public/images/home/acefuels-logo.jpeg";
 import asteven from "@/public/images/home/asteven.svg";
 import enerpro from "@/public/images/home/enerpro.svg";
 import trans from "@/public/images/home/trans.svg";
@@ -168,13 +169,18 @@ export const partners = [
     logo: asteven,
   },
   {
-    name: "EnergyPro",
+    name: "EnerPro",
     logo: enerpro,
   },
   {
     name: "University of Port Harcourt",
     logo: uniport,
   },
+  {
+    name: "ACEFUELS",
+    logo: acefuels,
+  },
+  
 ]
 
 export const registrationLink = "https://tinyurl.com/AICCEES2025"
