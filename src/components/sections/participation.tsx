@@ -75,7 +75,7 @@ export default function ParticipationSection() {
   const formatPrice = (price: number, isOpenAccess = false) => {
     if (showNGN) {
       if (isOpenAccess) {
-        return `$400.00`
+        return `₦400,000.00`
       }
       return `₦${(price * 1000).toLocaleString()}`
     }
