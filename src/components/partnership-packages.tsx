@@ -20,8 +20,8 @@ const tiers: Tier[] = [
     {
         name: "Platinum",
         description: "The highest level of sponsorship with maximum visibility",
-        priceUSD: 10000,
-        priceNGN: 7000000,
+        priceUSD: 7000,
+        priceNGN: 10500000,
         featured: true,
         benefits: [
             "Keynote speaking opportunity",
@@ -37,8 +37,8 @@ const tiers: Tier[] = [
     {
         name: "Gold",
         description: "Premium sponsorship with extensive benefits",
-        priceUSD: 5000,
-        priceNGN: 4500000,
+        priceUSD: 6000,
+        priceNGN: 9000000,
         benefits: [
             "Research paper presentation and publication",
             "Prominent branding on conference materials",
@@ -51,7 +51,7 @@ const tiers: Tier[] = [
         name: "Silver",
         description: "Mid-tier sponsorship package",
         priceUSD: 3000,
-        priceNGN: 1050000,
+        priceNGN: 4500000,
         benefits: [
             "Research paper presentation and publication",
             "Advertising opportunities during event",
@@ -61,8 +61,8 @@ const tiers: Tier[] = [
     {
         name: "Bronze",
         description: "Entry-level sponsorship opportunity",
-        priceUSD: 1500,
-        priceNGN: 525000,
+        priceUSD: 1000,
+        priceNGN: 1500000,
         benefits: [
             "Research paper presentation and publication",
             "Recognition in conference materials"
@@ -71,8 +71,8 @@ const tiers: Tier[] = [
     {
         name: "Session",
         description: "Sponsor specific conference sessions",
-        priceUSD: 500,
-        priceNGN: 175000,
+        priceUSD: 1000,
+        priceNGN: 1500000,
         benefits: [
             "Session-specific recognition",
             "Recognition in conference materials"
