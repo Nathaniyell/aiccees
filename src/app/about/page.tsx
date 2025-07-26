@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { aboutAiccees } from "@/components/data_models/about-aiccees";
 
 export default function AboutPage() {
   return (
@@ -18,9 +19,9 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
             About AICCEES
           </h1>
-          <p className="text-lg md:text-2xl max-w-2xl mx-auto drop-shadow">
+          {/* <p className="text-lg md:text-2xl max-w-2xl mx-auto drop-shadow">
             Uniting Innovators in Computer, Electrical, and Electronics Sciences
-          </p>
+          </p> */}
         </div>
       </div>
       <div className="max-w-7xl mx-auto">
@@ -31,19 +32,12 @@ export default function AboutPage() {
               About the Conference
             </CardTitle>
           </CardHeader>
-          <CardContent>
-            <p className="mb-4">
-              The Annual International Conference on Computer, Electrical, and
-              Electronics Sciences (AICCEES) brings together researchers,
-              academics, and industry professionals to share knowledge and
-              innovations in the fields of computer science, electrical
-              engineering, and electronics.
-            </p>
-            <p>
-              The conference features keynote speeches, technical sessions,
-              workshops, and networking opportunities to foster collaboration
-              and advancement in these critical technological areas.
-            </p>
+          <CardContent className="space-y-4">
+            {aboutAiccees.map((paragraph, index) => (
+                                   <p key={index} className="text-gray-600 md:text-base/relaxed text-justify mb-4">
+                                       {paragraph}
+                                   </p>
+                               ))}
           </CardContent>
         </Card>
 
