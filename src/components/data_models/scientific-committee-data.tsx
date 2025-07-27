@@ -9,7 +9,7 @@ interface CommitteeMember {
   image: string;
 }
 
-export const committeeMembers: CommitteeMember[] = [
+export const previousCommitteeMembers: CommitteeMember[] = [
  
   {
       id: 7,
@@ -180,4 +180,37 @@ export const committeeMembers: CommitteeMember[] = [
       expertise: ["Energy Systems"],
       image: "/placeholder.svg?height=150&width=150",
   },
+];
+export const currentCommitteeMembers: CommitteeMember[] = [
+ 
+  {
+      id: 7,
+      name: "Dr. Celestine Ebieto",
+          institution: "University of Port Harcourt",
+      country: "Nigeria",
+      role: "",
+      expertise: [],
+      image: "/placeholder.svg?height=150&width=150",
+  },
+  {
+      id: 8,
+      name: "Prof. Tunde Bello-Ochende",
+    
+      institution: "University of Cape Town",
+      country: "South Africa",
+      role: "",
+      expertise: ["Thermofluids", "Heat Transfer"],
+      image: "/placeholder.svg?height=150&width=150",
+  },
+  {
+      id: 9,
+      name: "Dr. Haruna Abdullahi",
+      
+      institution: "",
+      country: "Nigeria",
+      role: "",
+      expertise: ["Energy Transition Economics"],
+      image: "/placeholder.svg?height=150&width=150",
+  },
+ 
 ];
