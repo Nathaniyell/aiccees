@@ -6,11 +6,11 @@ import { Award, Users, Network, Lightbulb } from "lucide-react";
 export default function ConferenceHighlights() {
   return (
     <div className="mb-20">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-green-700 mb-4">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl tracking-tighter sm:text-5xl font-bold mb-4 text-green-800">
           Conference Highlights
         </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-red-600 mx-auto rounded-full"></div>
+        <div className="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
       </div>
 
       <div className="container mx-auto flex flex-col lg:flex-row gap-8 items-stretch">
