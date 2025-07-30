@@ -43,17 +43,17 @@ export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
     role: "Secretary",
     affiliation: "Secretariat, Tovero Energy"
   },
+  {
+    id: "9",
+    name: "Nathaniel Essien",
+    role: "Conference Manager",
+    affiliation: "Conference Management"
+  },
 
   {
     id: "8",
     name: "Legacy TV",
     role: "Media",
     affiliation: "Media Partner"
-  },
-  {
-    id: "9",
-    name: "Nathaniel Essien",
-    role: "Conference Manager",
-    affiliation: "Conference Management"
   }
 ]; 
