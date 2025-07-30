@@ -14,9 +14,15 @@ import { testimonials } from "../data_models/testimonials"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import AOS from "../layout/AOS"
 
+interface TestimonialProps {
+    title: string;
+    bgColor?: string;
+    titleStyle?: string;
+}
 
 
-export default function TestimonialCarousel() {
+
+export default function TestimonialCarousel({ title = "Testimonials", bgColor = "bg-gradient-to-b from-green-900 to-green-800", titleStyle = "text-3xl font-bold tracking-tighter sm:text-4xl text-center mb-12" }: TestimonialProps) {
     const plugin = useRef(
         Autoplay({ delay: 2000, stopOnInteraction: true })
     )
@@ -24,10 +30,10 @@ export default function TestimonialCarousel() {
 
     return (
         <AOS>
-            <section className="py-12 bg-gradient-to-b from-green-900 to-green-800 text-white px-4">
+            <section className={`py-12 ${bgColor} text-white px-4`}>
                 <div className="container mx-auto">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">
-                        Testimonials
+                    <h2 className={`${titleStyle}`}>
+                        {title}
                     </h2>
                     <Carousel
                         plugins={[plugin.current]}
@@ -37,7 +43,7 @@ export default function TestimonialCarousel() {
                             align: "start",
                             loop: true,
                         }}
-                        className="w-full max-w-5xl mx-auto"
+                        className="w-full max-w-6xl mx-auto"
                     >
                         <CarouselContent className="-ml-2 md:-ml-4">
                             {testimonials.map((testimonial) => (
@@ -46,7 +52,7 @@ export default function TestimonialCarousel() {
                                     className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
                                 >
                                     <div className="p-1">
-                                        <Card className="bg-green-50">
+                                        <Card className="relative bg-green-50 h-80 pb-4">
                                             <CardContent className="p-6">
                                                 <div className="flex items-center gap-4 mb-4">
                                                     <div className="relative h-12 w-12 rounded-full overflow-hidden">
@@ -68,11 +74,11 @@ export default function TestimonialCarousel() {
                                                         />
                                                     ))}
                                                 </div>
-                                                <blockquote className="text-emerald-800">
-                                                    &quot;{testimonial.content.slice(0, 150)}...&quot;
+                                                <blockquote className="text-emerald-800 ">
+                                                    &quot;{testimonial.content.slice(0, 120)}...&quot;
                                                     <button
                                                         onClick={() => setSelectedTestimonial(testimonial)}
-                                                        className="block border border-green-600 rounded-md px-2 py-1 mt-2 text-sm font-medium text-rose-600 hover:text-rose-700"
+                                                        className="w-fit absolute bottom-3 block border border-white rounded-md px-2 py-1 mt-2 text-sm font-medium text-rose-600 hover:text-rose-700 text-nowrap"
                                                     >
                                                         Read More
                                                     </button>
