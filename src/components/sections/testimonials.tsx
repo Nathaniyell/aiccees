@@ -15,7 +15,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import AOS from "../layout/AOS"
 
 interface TestimonialProps {
-    title: string;
+    title?: string;
     bgColor?: string;
     titleStyle?: string;
 }
