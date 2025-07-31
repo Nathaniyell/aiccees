@@ -11,7 +11,9 @@ export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
     id: "1",
     name: "Dr. Veronica Akpasoh",
     role: "Chairman",
-    affiliation: "CEO, Tovero Energy Ltd"
+    affiliation: "CEO, Tovero Energy Ltd",
+    image: "/images/conference-chairs/verro.jpg"
+
   },
   {
     id: "2",
@@ -35,7 +37,8 @@ export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
     id: "5",
     name: "Nathaniel Essien",
     role: "Conference Manager",
-    affiliation: "Conference Management"
+    affiliation: "Conference Management",
+    image: "/images/organizing-cttee/NATHANDIEL.jpg"
   },
   {
     id: "6",
