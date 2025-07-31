@@ -1,10 +1,16 @@
+"use client";
+
 import { partners } from "@/components/data_models/conferences";
 import { PartnersHero } from "@/components/sections/PartnersHero";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
+import GoogleFormExample from "@/components/GoogleFormExample";
 
 export default function PartnersPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div>
       <PartnersHero />
@@ -76,12 +82,39 @@ export default function PartnersPage() {
             <Button
               variant="outline"
               className="w-fit text-green-700 border-green-700 rounded-lg font-semibold transition-colors duration-200 mt-4"
+              onClick={() => setIsModalOpen(true)}
             >
-              <Link href="#">Become a Partner</Link>
+              Become a Partner
             </Button>
           </div>
         </section>
       </section>
+
+      {/* Modal for Google Form */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg shadow-2xl w-full max-w-6xl max-h-[90vh] h-full overflow-hidden pb-32">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <h3 className="text-2xl font-bold text-green-800">
+                Become a Partner
+              </h3>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsModalOpen(false)}
+                className="hover:bg-gray-100"
+              >
+                <X className="h-5 w-5" />
+              </Button>
+            </div>
+            
+            {/* Modal Content */}
+            
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScVIYFm-SzrXsJCaO2Lt6gYAjoYgUgVte_VFZNTHt8ZCSfhBA/viewform?embedded=true" width="100%" height="100%" className="h-full w-full" >Loading…</iframe>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
