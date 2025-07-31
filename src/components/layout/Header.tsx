@@ -36,6 +36,7 @@ export function Header() {
   const navLinks = [
     { href: '/registration', label: 'Registration' },
     { href: '/about', label: 'About AICCEES' },
+    { href: '/keynote-speakers', label: 'Keynote Speakers' },
   ]
 
   const dropdownMenus = {
