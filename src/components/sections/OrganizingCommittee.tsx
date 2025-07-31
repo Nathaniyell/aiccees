@@ -90,7 +90,7 @@ export default function OrganizingCommittee() {
                   className="flex flex-col items-center text-center w-80 border border-gray-200 p-6 bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
                 >
                   {/* Profile Image */}
-                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 bg-gray-200 flex items-center justify-center border-2 border-gray-100">
+                  <div className="w-64 h-64 rounded-full overflow-hidden mb-4 bg-gray-200 flex items-center justify-center border-2 border-gray-100">
                     {member.image ? (
                       <img
                         src={member.image}
