@@ -29,16 +29,16 @@ export default function KeynoteSpeakersPage() {
   // Mock data for 2024 speakers (you can replace with actual data)
   const keynoteSpeakers2025 = [
     {
-      name: "Prof. Mulgetta",
+      name: "Professor Yacob Mulugetta",
       picture: "/images/keynote_speakers/amina.jpeg", // Using existing image as placeholder
-      description: "Prof. Mulgetta is a leading expert in renewable energy policy and sustainable development. With over 15 years of experience in the energy sector, she has advised governments and organizations across Africa on clean energy transitions.",
+      description: "Professor Yacob Mulugetta is a leading expert in renewable energy policy and sustainable development. With over 15 years of experience in the energy sector, she has advised governments and organizations across Africa on clean energy transitions.",
       linkedin: "https://linkedin.com/in/sarah-johnson",
       topics: ["Renewable Energy Policy", "Sustainable Development", "Energy Transitions"]
     },
     {
-      name: "Prof. Eletta",
+      name: "Professor Eletta",
       picture: "/images/keynote_speakers/emeka.jpg", // Using existing image as placeholder
-      description: "Professor Michael Chen is a distinguished researcher in energy storage technologies and grid integration. His work focuses on developing innovative solutions for energy storage and smart grid systems.",
+      description: "Professor Eletta is a distinguished researcher in energy storage technologies and grid integration. His work focuses on developing innovative solutions for energy storage and smart grid systems.",
       linkedin: "https://linkedin.com/in/michael-chen",
       topics: ["Energy Storage", "Smart Grids", "Grid Integration"]
     }
@@ -115,7 +115,7 @@ export default function KeynoteSpeakersPage() {
   const SpeakerCard = ({ speaker, year, index }: { speaker: any, year: string, index: number }) => {
     const speakerId = `${year}-${index}`;
     const isExpanded = expandedSpeakers[speakerId];
-    const colorScheme = year === '2025' ? 'green' : year === '2024' ? 'blue' : 'purple';
+    const colorScheme = year === '2025' ? 'green' : year === '2024' ? 'red' : 'emerald';
     
     return (
       <Card className="hover:shadow-lg transition-all duration-300 border border-gray-200 mb-8">
