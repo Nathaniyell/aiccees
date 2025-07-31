@@ -1,18 +1,39 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { organizingCommitteeMembers } from "@/components/data_models/organizing-committee";
 
 export default function OrganizingCommittee() {
-  const leadershipMembers = organizingCommitteeMembers.filter(member => 
-    member.role.includes("Chair")
-  );
-  
-  const committeeMembers = organizingCommitteeMembers.filter(member => 
-    !member.role.includes("Chair")
-  );
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerPage = 3;
+  const totalPages = Math.ceil(organizingCommitteeMembers.length / itemsPerPage);
+
+  // Auto-play functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % totalPages);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [totalPages]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const getCurrentItems = () => {
+    const startIndex = currentIndex * itemsPerPage;
+    return organizingCommitteeMembers.slice(startIndex, startIndex + itemsPerPage);
+  };
 
   return (
     <div className="mb-20">
@@ -26,55 +47,77 @@ export default function OrganizingCommittee() {
         </p>
       </div>
 
-      <div className="container mx-auto">
-        {/* Leadership Section */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-green-800 mb-6 text-center">Leadership</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {leadershipMembers.map((member) => (
-              <Card key={member.id} className="shadow-sm hover:shadow-md transition-shadow duration-200">
-                <CardContent className="p-8 text-center">
-                  <Avatar className="w-20 h-20 mx-auto mb-4">
-                    <AvatarImage src={member.image} alt={member.name} />
-                    <AvatarFallback className="text-lg font-semibold bg-gray-100 text-green-700">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </AvatarFallback>
-                  </Avatar>
-                  <h4 className="text-xl font-semibold text-green-800 mb-2">{member.name}</h4>
-                  <Badge variant="secondary" className="mb-3 text-sm">
-                    {member.role}
-                  </Badge>
-                  <p className="text-sm">{member.affiliation}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+      <div className="container mx-auto px-4">
+        <div className="relative max-w-6xl mx-auto">
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-200 rounded-full p-2 shadow-md hover:shadow-lg transition-shadow duration-200"
+          >
+            <ChevronLeft className="h-6 w-6 text-gray-600" />
+          </button>
 
-        {/* Committee Members Section */}
-        <div>
-          <h3 className="text-2xl font-semibold text-green-800 mb-6 text-center">Committee Members</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {committeeMembers.map((member) => (
-              <Card key={member.id} className="shadow-sm hover:shadow-md transition-shadow duration-200">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <Avatar className="w-12 h-12 flex-shrink-0">
-                      <AvatarImage src={member.image} alt={member.name} />
-                      <AvatarFallback className="text-sm font-medium bg-gray-100 text-green-700">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-green-800 mb-1 truncate">{member.name}</h4>
-                      <Badge variant="outline" className="text-xs mb-2">
-                        {member.role}
-                      </Badge>
-                      <p className="text-sm leading-relaxed">{member.affiliation}</p>
-                    </div>
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-200 rounded-full p-2 shadow-md hover:shadow-lg transition-shadow duration-200"
+          >
+            <ChevronRight className="h-6 w-6 text-gray-600" />
+          </button>
+
+          {/* Carousel Container */}
+          <div className="flex justify-center items-center min-h-[400px]">
+            <div className="flex gap-8 justify-center items-start">
+              {getCurrentItems().map((member) => (
+                <div
+                  key={member.id}
+                  className="flex flex-col items-center text-center max-w-xs border border-gray-200 p-6 bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
+                >
+                  {/* Profile Image */}
+                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 bg-gray-200 flex items-center justify-center border-2 border-gray-100">
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gray-300 flex items-center justify-center">
+                        <span className="text-4xl font-semibold text-gray-500">
+                          {member.name.split(' ').map(n => n[0]).join('')}
+                        </span>
+                      </div>
+                    )}
                   </div>
-                </CardContent>
-              </Card>
+
+                  {/* Member Info */}
+                  <h4 className="text-xl font-bold text-green-800 mb-2">
+                    {member.name}
+                  </h4>
+                  
+                  <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mb-2">
+                    {member.role}
+                  </div>
+                  
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {member.affiliation}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Pagination Dots */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                  index === currentIndex
+                    ? "bg-blue-600"
+                    : "bg-gray-300 hover:bg-gray-400"
+                }`}
+              />
             ))}
           </div>
         </div>
