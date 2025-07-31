@@ -39,7 +39,7 @@ export function Header() {
     { href: '/#participation', label: 'Conference Fees' },
     { href: '/#exhibitions', label: 'Exhibitions' },
     { href: '/gallery', label: 'Gallery' },
-    { href: '/partners', label: 'Partnership' },
+    { href: '/sponsors', label: 'Sponsorship' },
   ]
 
   return (

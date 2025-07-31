@@ -1,50 +1,87 @@
-import { Partners } from "@/components/partners"
-import PartnershipPackages from "@/components/partnership-packages"
-
+import { partners } from "@/components/data_models/conferences";
+import { PartnersHero } from "@/components/sections/PartnersHero";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function PartnersPage() {
-    return (
-        <div className="container mx-auto py-12 px-4 bg-slate-50">
-            <div className="max-w-5xl mx-auto space-y-8">
-                <section className="text-center space-y-4">
-                    <h1 className="text-4xl font-bold text-green-700 tracking-tighter sm:text-5xl">
-                        Partnership Opportunities
-                    </h1>
-                    <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Organisations, companies, groups, and individuals are invited to partner with the conference organisers for this conference by selecting any of the sponsorship packages listed below. 
-                    </p>
-                </section>
-                <section>
-                                     <PartnershipPackages />
-                </section>
-                
+  return (
+    <div>
+      <PartnersHero />
 
-                <section className="space-y-8 rounded-2xl border bg-white p-8 text-center">
-                    <div className="space-y-4">
-                        <h2 className="text-2xl font-bold tracking-tight">
-                            Ready to Become a Partner?
-                        </h2>
-                        <p className="text-slate-500 max-w-2xl mx-auto">
-                            Take the first step towards a meaningful partnership. Fill out our partnership form and join our community of industry leaders and innovators.
-                        </p>
-                        <div className="pt-4">
-                            <a
-                                href="https://docs.google.com/forms/d/1UmXabWk7VkBlHPvO4zLtU4Ww87m1ci4VDrM1311FiFI"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-green-700 hover:bg-green-600 rounded-md transition-colors"
-                            >
-                                Apply for Partnership
-                            </a>
-                        </div>
-                    </div>
-                </section>
-                <section className="space-y-4">
-                    <h2 className="text-2xl font-bold tracking-tight text-center">Our Partners</h2>
-                    <Partners />
-                </section>
+      {/* Partners Display */}
+      <section className="container mx-auto py-16 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+          {partners.map((partner, index) => (
+            <div
+              key={`${partner.name}-${index}`}
+              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white border border-gray-200"
+            >
+              {/* Background Image with Overlay */}
+              <div
+                className="relative h-60 bg-contain bg-center bg-no-repeat"
+                style={{
+                  backgroundImage: `url(${partner.logo.src})`,
+                }}
+                role="img"
+                aria-label={`${partner.name} logo`}
+              >
+                {/* Gradient Overlay for Better Text Readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+                {/* Partner Name */}
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className="text-white text-lg font-bold mb-2 drop-shadow-lg">
+                    {partner.name}
+                  </h3>
+                </div>
+              </div>
+
+              {/* Action Button */}
+              <div className="p-4">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-fit text-green-700 border-green-700 rounded-lg font-semibold transition-colors duration-200"
+                >
+                  <Link
+                    href={partner.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <span>Visit Website</span>
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
+              </div>
+
+              {/* Hover Effect Overlay */}
+              <div className="absolute inset-0 bg-green-600/0 group-hover:bg-green-600/10 transition-colors duration-300 pointer-events-none"></div>
             </div>
+          ))}
         </div>
-    )
-}
 
+        {/* Call to action */}
+        <section className="container mx-auto pt-16 px-4">
+          <div className="flex flex-col items-center justify-center">
+            <h2 className="text-2xl md:text-4xl text-green-800 font-bold text-center">
+              Ready to Become a Partner?
+            </h2>
+            <p className="text-center text-gray-600 md:text-lg mt-2">
+              Join us in creating positive change and driving innovation.
+              Together, we can achieve more.
+            </p>
+
+            <Button
+              variant="outline"
+              className="w-fit text-green-700 border-green-700 rounded-lg font-semibold transition-colors duration-200 mt-4"
+            >
+              <Link href="/contact">Become a Partner</Link>
+            </Button>
+          </div>
+        </section>
+      </section>
+    </div>
+  );
+}

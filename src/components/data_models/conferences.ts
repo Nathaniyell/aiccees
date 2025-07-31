@@ -159,26 +159,32 @@ export const partners = [
   {
     name: "Modern Energy Cooking Services",
     logo: mecs,
+    url: "https://mecs.org.uk/",
   },
   {
     name: "Transforming Energy Learning Partners",
     logo: trans,
+    url: "https://tea-lp.org/",
   },
   {
     name: "Asteven Group",
     logo: asteven,
+    url: "https://astevengroup.com",
   },
   {
     name: "EnerPro",
     logo: enerpro,
+    url: "https://enerproafrica.com/",
   },
   {
     name: "University of Port Harcourt",
     logo: uniport,
+    url: "https://uniport.edu.ng",
   },
   {
     name: "ACEFUELS",
     logo: acefuels,
+    url: "https://acefuels-futo.org",
   },
   
 ]

@@ -92,10 +92,10 @@ export default function Partnerships() {
     }
 
     return (
-        <div className="pb-12 bg-gray-50">
+        <div className="py-12 bg-gray-50">
             <div className="px-4 md:px-6">
                 <div className="text-center space-y-4 mb-8">
-                    <h1 className="text-2xl font-bold text-gray-900 mb-4">Sponsorship Packages</h1>
+                    <h1 className="text-green-800 text-4xl font-bold text-gray-900 mb-4">Sponsorship Packages</h1>
                     <div className="flex items-center justify-center space-x-2">
                         <Label htmlFor="currency" className="text-gray-700">Show prices in NGN</Label>
                         <Switch

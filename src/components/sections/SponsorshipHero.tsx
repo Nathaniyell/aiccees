@@ -1,9 +1,10 @@
-import { Badge, EyeIcon, GiftIcon } from "lucide-react";
-import { Star } from "lucide-react";
+import { Badge, Group, Star } from "lucide-react";
+import { GiftIcon } from "lucide-react";
 
-export function GrantsHero() {
-  return (
-    <div className="relative overflow-hidden">
+
+export function PartnersHero() {
+    return (
+        <div className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-green-800 via-green-700 to-emerald-800"></div>
       <div className="absolute inset-0 bg-black/20"></div>
 
@@ -20,26 +21,27 @@ export function GrantsHero() {
           </Badge>
 
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-white to-lime-400 bg-clip-text text-transparent">
-            Grants
+          Sponsorship Opportunities
           </h1>
 
           <p className="text-xl md:text-2xl mb-8 text-green-100 leading-relaxed">
-            Access funding opportunities that drive impact, innovation, and
-            sustainable growth. Apply now and bring your ideas to life.
+          Organisations, companies, groups, and individuals are invited to
+            partner with the conference organisers for this conference by
+            selecting any of the sponsorship packages listed below.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <GiftIcon className="w-4 h-4 mr-2" />
-              Grants for the AICCEES Conference 2025
+              Sponsorship Packages
             </div>
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
-              <EyeIcon className="w-4 h-4 mr-2" />
-              Empowering Your Vision.
+              <Group className="w-4 h-4 mr-2" />
+              Ready to Become a Sponsor?
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+    )
 }
