@@ -238,7 +238,7 @@ export default function KeynoteSpeakersPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center gap-2">
                 <Calendar className="h-5 w-5" />
-                <span>September 26-27, 2025</span>
+                <span>September 25-26, 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5" />
