@@ -34,12 +34,16 @@ export function Header() {
   const navLinks = [
     { href: '/#about', label: 'About' },
     { href: '/#speakers', label: 'Speakers' },
-    { href: '/journal', label: 'Journal' },
     { href: '/#submissions', label: 'Submit Paper' },
     { href: '/#participation', label: 'Conference Fees' },
-    { href: '/#exhibitions', label: 'Exhibitions' },
+    { href: '/journal', label: 'Journal' },
+    { href: '/exhibitions', label: 'Exhibitions' },
+    { href: '/grants', label: 'Grants' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/sponsors', label: 'Sponsorship' },
+    { href: '/partners', label: 'Partners' },
+    { href: '/registration', label: 'Registration' },
+    
   ]
 
   return (

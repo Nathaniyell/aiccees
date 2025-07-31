@@ -77,7 +77,7 @@ export default function PartnersPage() {
               variant="outline"
               className="w-fit text-green-700 border-green-700 rounded-lg font-semibold transition-colors duration-200 mt-4"
             >
-              <Link href="/contact">Become a Partner</Link>
+              <Link href="#">Become a Partner</Link>
             </Button>
           </div>
         </section>

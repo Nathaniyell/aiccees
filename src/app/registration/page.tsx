@@ -12,6 +12,7 @@ import {
   MapPin,
   ExternalLink,
 } from "lucide-react";
+import AOS from "@/components/layout/AOS";
 
 export default function RegistrationPage() {
   // Form URLs - replace with actual URLs
@@ -28,7 +29,8 @@ export default function RegistrationPage() {
       <RegistrationHero />
 
       {/* Application Cards Section */}
-      <section className="pt-10 bg-white dark:bg-neutral-900">
+      <AOS>
+        <section className="pt-10 bg-white dark:bg-neutral-900">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">
@@ -163,11 +165,15 @@ export default function RegistrationPage() {
           </div>
         </div>
       </section>
+      </AOS>
+      
 
       {/* Tourists Attraction Section */}
       <TouristAttractions />
 
       {/* Registration Form Section */}
+      <AOS>
+
       <section
         id="registration-form"
         className="py-16 bg-neutral-50 dark:bg-neutral-800"
@@ -203,6 +209,7 @@ export default function RegistrationPage() {
           </Card>
         </div>
       </section>
+      </AOS>
     </div>
   );
 }

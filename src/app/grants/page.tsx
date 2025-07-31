@@ -10,6 +10,7 @@ import {
   Microscope,
 } from "lucide-react";
 import TestimonialCarousel from "@/components/sections/testimonials";
+import AOS from "@/components/layout/AOS";
 
 export default function GrantsPage() {
   return (
@@ -18,7 +19,8 @@ export default function GrantsPage() {
       <GrantsHero />
 
       {/* Mission Statement Section */}
-      <section className="py-16">
+      <AOS>
+<section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-green-800 dark:text-neutral-100 mb-6">
@@ -102,8 +104,12 @@ export default function GrantsPage() {
           </div>
         </div>
       </section>
+      </AOS>
+      
 
       {/* Types of Grants Section */}
+      <AOS>
+
       <section
         className="py-16 relative bg-cover bg-center bg-no-repeat"
         style={{
@@ -180,7 +186,7 @@ export default function GrantsPage() {
           </div>
         </div>
       </section>
-
+      </AOS>
       {/* Testimonials Section */}
       <TestimonialCarousel
         title="Testimonials From Past Beneficiaries"

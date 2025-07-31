@@ -1,12 +1,17 @@
 "use client"
 
-import React from "react"
-import { Check } from "lucide-react"
+import React, { useState } from "react"
+import { Check, X } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { officeNumber } from "@/lib/utils"
+import GoogleFormExample from "@/components/GoogleFormExample"
 
 export default function Exhibitions() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedFormUrl, setSelectedFormUrl] = useState("")
+  const [selectedPackageName, setSelectedPackageName] = useState("")
+
   const packages = [
     {
       name: "Basic Booth",
@@ -102,19 +107,17 @@ export default function Exhibitions() {
 
                 <Button
                   variant={pkg.popular ? "default" : "outline"}
-                  asChild
                   className={`w-full ${pkg.popular
                       ? "bg-[#CE1126] hover:bg-[#CE1126]/90"
                       : "border-[#008751] text-[#008751] hover:bg-[#008751]/10"
                     }`}
+                  onClick={() => {
+                    setSelectedFormUrl(pkg.applicationLink)
+                    setSelectedPackageName(pkg.name)
+                    setIsModalOpen(true)
+                  }}
                 >
-                  <a
-                    href={pkg.applicationLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Apply Now
-                  </a>
+                  Apply Now
                 </Button>
               </CardContent>
             </Card>
@@ -122,7 +125,7 @@ export default function Exhibitions() {
         </div>
    
         <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold text-[#008751] mb-4">
+          <h3 className="text-xl md:text-4xl font-bold text-[#008751] mb-4">
             Need Custom Solutions?
           </h3>
           <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
@@ -143,6 +146,38 @@ export default function Exhibitions() {
           </div>
         </div>
       </div>
+
+      {/* Modal for Google Form */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <h3 className="text-2xl font-bold text-[#008751]">
+                Apply for {selectedPackageName}
+              </h3>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsModalOpen(false)}
+                className="hover:bg-gray-100"
+              >
+                <X className="h-5 w-5" />
+              </Button>
+            </div>
+            
+            {/* Modal Content */}
+            <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+              <GoogleFormExample
+                formUrl={selectedFormUrl}
+                title={`${selectedPackageName} Application Form`}
+                description="Please fill out the form below to apply for this exhibition package."
+                height="600"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
