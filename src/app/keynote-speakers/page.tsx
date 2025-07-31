@@ -118,12 +118,12 @@ export default function KeynoteSpeakersPage() {
     const colorScheme = year === '2025' ? 'green' : year === '2024' ? 'red' : 'emerald';
     
     return (
-      <Card className="hover:shadow-lg transition-all duration-300 border border-gray-200 mb-8">
+      <Card className="hover:shadow-md transition-all duration-300 border border-gray-200 mb-8">
         <CardContent className="p-8">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Speaker Image */}
-            <div className="flex-shrink-0">
-              <div className="w-48 h-48 rounded-lg overflow-hidden bg-gray-100">
+            <div className="flex-shrink-0 self-center lg:self-start">
+              <div className="w-48 h-48 rounded overflow-hidden bg-gray-100">
                 <img
                   src={speaker.picture}
                   alt={speaker.name}
@@ -136,7 +136,7 @@ export default function KeynoteSpeakersPage() {
             <div className="flex-1 space-y-4">
               {/* Header */}
               <div className="space-y-2">
-                <h3 className="text-2xl font-bold text-gray-900">{speaker.name}</h3>
+                <h3 className="text-2xl text-center lg:text-left font-bold text-gray-900">{speaker.name}</h3>
                 <Badge 
                   variant="secondary" 
                   className={`bg-${colorScheme}-100 text-${colorScheme}-700`}
@@ -295,26 +295,28 @@ export default function KeynoteSpeakersPage() {
             </div>
 
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-              <TabsList className="grid w-full grid-cols-3 mb-12 !p-0">
-                <TabsTrigger 
-                  value="2025" 
-                  className="text-lg font-semibold data-[state=active]:text-green-600 data-[state=active]:bg-green-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:text-gray-900 rounded-t-lg"
-                >
-                  2025 Speakers
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="2024" 
-                  className="text-lg font-semibold data-[state=active]:text-green-600 data-[state=active]:bg-green-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:text-gray-900 rounded-t-lg"
-                >
-                  2024 Speakers
-                </TabsTrigger>
-                <TabsTrigger 
-                  value="2023" 
-                  className="text-lg font-semibold data-[state=active]:text-green-600 data-[state=active]:bg-green-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:text-gray-900 rounded-t-lg"
-                >
-                  2023 Speakers
-                </TabsTrigger>
-              </TabsList>
+              <div className="overflow-x-auto mb-12">
+                <TabsList className="flex w-max !p-0 gap-4 md:gap-8 lg:gap-20">
+                  <TabsTrigger 
+                    value="2025" 
+                    className="text-lg font-semibold data-[state=active]:text-green-600 data-[state=active]:bg-green-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:text-gray-900 rounded-t-lg whitespace-nowrap"
+                  >
+                    2025 Speakers
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="2024" 
+                    className="text-lg font-semibold data-[state=active]:text-green-600 data-[state=active]:bg-green-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:text-gray-900 rounded-t-lg whitespace-nowrap"
+                  >
+                    2024 Speakers
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="2023" 
+                    className="text-lg font-semibold data-[state=active]:text-green-600 data-[state=active]:bg-green-50 data-[state=inactive]:text-gray-600 data-[state=inactive]:hover:text-gray-900 rounded-t-lg whitespace-nowrap"
+                  >
+                    2023 Speakers
+                  </TabsTrigger>
+                </TabsList>
+              </div>
 
               {/* 2025 Speakers */}
               <TabsContent value="2025" className="space-y-8">
