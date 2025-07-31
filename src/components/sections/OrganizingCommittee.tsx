@@ -6,8 +6,25 @@ import { organizingCommitteeMembers } from "@/components/data_models/organizing-
 
 export default function OrganizingCommittee() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 3;
+  const [itemsPerPage, setItemsPerPage] = useState(3);
   const totalPages = Math.ceil(organizingCommitteeMembers.length / itemsPerPage);
+
+  // Responsive items per page
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (window.innerWidth < 768) {
+        setItemsPerPage(1); // 1 card on mobile
+      } else if (window.innerWidth < 1024) {
+        setItemsPerPage(2); // 2 cards on tablet
+      } else {
+        setItemsPerPage(3); // 3 cards on desktop
+      }
+    };
+
+    updateItemsPerPage();
+    window.addEventListener('resize', updateItemsPerPage);
+    return () => window.removeEventListener('resize', updateItemsPerPage);
+  }, []);
 
   // Auto-play functionality
   useEffect(() => {
@@ -52,14 +69,14 @@ export default function OrganizingCommittee() {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-200 rounded-full p-2 shadow-md hover:shadow-lg transition-shadow duration-200"
+            className="hidden sm:block absolute left-10 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-200 rounded-full p-2 transition-shadow duration-200"
           >
             <ChevronLeft className="h-6 w-6 text-gray-600" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-200 rounded-full p-2 shadow-md hover:shadow-lg transition-shadow duration-200"
+            className="hidden sm:block absolute right-10 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-gray-200 rounded-full p-2 transition-shadow duration-200"
           >
             <ChevronRight className="h-6 w-6 text-gray-600" />
           </button>
@@ -70,7 +87,7 @@ export default function OrganizingCommittee() {
               {getCurrentItems().map((member) => (
                 <div
                   key={member.id}
-                  className="flex flex-col items-center text-center max-w-xs border border-gray-200 p-6 bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
+                  className="flex flex-col items-center text-center w-80 border border-gray-200 p-6 bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
                 >
                   {/* Profile Image */}
                   <div className="w-32 h-32 rounded-full overflow-hidden mb-4 bg-gray-200 flex items-center justify-center border-2 border-gray-100">
@@ -107,14 +124,14 @@ export default function OrganizingCommittee() {
           </div>
 
           {/* Pagination Dots */}
-          <div className="flex justify-center mt-8 space-x-2">
+          <div className="flex justify-center mt-4 space-x-2">
             {Array.from({ length: totalPages }, (_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                   index === currentIndex
-                    ? "bg-blue-600"
+                    ? "bg-green-600"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
               />
