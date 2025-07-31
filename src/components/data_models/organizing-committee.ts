@@ -33,9 +33,9 @@ export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
   },
   {
     id: "5",
-    name: "Emmanuel Brendan",
-    role: "Branding and Design",
-    affiliation: "Brand Designer, Tovero Energy"
+    name: "Nathaniel Essien",
+    role: "Conference Manager",
+    affiliation: "Conference Management"
   },
   {
     id: "6",
@@ -44,12 +44,11 @@ export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
     affiliation: "Secretariat, Tovero Energy"
   },
   {
-    id: "9",
-    name: "Nathaniel Essien",
-    role: "Conference Manager",
-    affiliation: "Conference Management"
+    id: "7",
+    name: "Emmanuel Brendan",
+    role: "Branding and Design",
+    affiliation: "Brand Designer, Tovero Energy"
   },
-
   {
     id: "8",
     name: "Legacy TV",
