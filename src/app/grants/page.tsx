@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 import TestimonialCarousel from "@/components/sections/testimonials";
 import AOS from "@/components/layout/AOS";
+import trans from "@/public/images/home/trans.svg";
+import Image from "next/image";
 
 export default function GrantsPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -74,9 +76,27 @@ export default function GrantsPage() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-12 items-start">
               <div className="flex-1">
-                <h2 className="text-3xl md:text-4xl font-bold text-green-800 dark:text-neutral-100 mb-8">
-                  TEA-LP Grant
-                </h2>
+                {/* TEA-LP Logo and Title */}
+                <div className="flex flex-col lg:flex-row items-center gap-6 mb-8">
+                  <div className="flex-shrink-0">
+                    <Image
+                      src={trans}
+                      alt="TEA-LP Logo"
+                      width={200}
+                      height={200}
+                      className="object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-green-800 dark:text-neutral-100">
+                      TEA-LP Grant
+                    </h2>
+                    <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
+                      Transforming Energy Access – Learning Partnership
+                    </p>
+                  </div>
+                </div>
+                
                 <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                   The TEA-LP (Transforming Energy Access – Learning Partnership)
                   grant is a UK Aid-funded initiative aimed at closing the skills
