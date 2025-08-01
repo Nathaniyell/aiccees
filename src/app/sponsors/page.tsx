@@ -1,6 +1,7 @@
 import { Partners } from "@/components/partners";
 import PartnershipPackages from "@/components/partnership-packages";
 import { PartnersHero } from "@/components/sections/SponsorshipHero";
+import Link from "next/link";
 
 export default function PartnersPage() {
   return (
@@ -24,14 +25,14 @@ export default function PartnersPage() {
               innovators.
             </p>
             <div className="pt-6">
-              <a
+              <Link
                 href="https://docs.google.com/forms/d/1UmXabWk7VkBlHPvO4zLtU4Ww87m1ci4VDrM1311FiFI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-green-700 hover:bg-green-600 rounded-lg transition-colors shadow-md hover:shadow-lg"
               >
                 Apply for Partnership
-              </a>
+              </Link>
             </div>
           </div>
         </section>
