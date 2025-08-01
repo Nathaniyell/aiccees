@@ -92,12 +92,15 @@ export default function Partnerships() {
     }
 
     return (
-        <div className="py-12 bg-gray-50">
+        <div className="py-20">
             <div className="px-4 md:px-6">
-                <div className="text-center space-y-4 mb-8">
-                    <h1 className="text-green-800 text-4xl font-bold text-gray-900 mb-4">Sponsorship Packages</h1>
-                    <div className="flex items-center justify-center space-x-2">
-                        <Label htmlFor="currency" className="text-gray-700">Show prices in NGN</Label>
+                <div className="text-center space-y-6 mb-16">
+                    <h1 className="text-4xl font-bold text-gray-900 mb-6">Sponsorship Packages</h1>
+                    <p className="text-slate-600 max-w-3xl mx-auto text-lg leading-relaxed">
+                        Choose from our range of sponsorship packages designed to provide maximum value and visibility for your organization.
+                    </p>
+                    <div className="flex items-center justify-center space-x-4 pt-4">
+                        <Label htmlFor="currency" className="text-gray-700 font-medium">Show prices in NGN</Label>
                         <Switch
                             id="currency"
                             checked={showNGN}
@@ -106,22 +109,22 @@ export default function Partnerships() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {tiers.map((tier) => (
                         <Card
                             key={tier.name}
-                            className={`flex flex-col h-full ${tier.featured
+                            className={`flex flex-col h-full transition-all duration-300 hover:shadow-lg ${tier.featured
                                     ? 'border-green-600 shadow-lg scale-105'
-                                    : ''
+                                    : 'border-gray-200 hover:border-green-300'
                                 }`}
                         >
-                            <CardHeader>
-                                <CardTitle className="text-green-600">{tier.name} Sponsorship</CardTitle>
-                                <CardDescription className="text-gray-600">{tier.description}</CardDescription>
+                            <CardHeader className="pb-6">
+                                <CardTitle className="text-green-600 text-xl">{tier.name} Sponsorship</CardTitle>
+                                <CardDescription className="text-gray-600 text-base leading-relaxed">{tier.description}</CardDescription>
                             </CardHeader>
-                            <CardContent className="flex-1 flex flex-col">
-                                <div className="mb-4">
-                                    <span className="text-4xl font-bold">
+                            <CardContent className="flex-1 flex flex-col space-y-6">
+                                <div className="mb-6">
+                                    <span className="text-4xl font-bold text-gray-900">
                                         {showNGN
                                             ? `₦${tier.priceNGN.toLocaleString()}`
                                             : `$${tier.priceUSD.toLocaleString()}`
@@ -129,18 +132,18 @@ export default function Partnerships() {
                                     </span>
                                 </div>
                                 <div className="flex-1 flex flex-col">
-                                    <ul className={`space-y-2 ${expandedCards[tier.name] ? '' : 'max-h-[100px] overflow-hidden'}`}>
+                                    <ul className={`space-y-3 ${expandedCards[tier.name] ? '' : 'max-h-[120px] overflow-hidden'}`}>
                                         {tier.benefits.map((benefit, i) => (
-                                            <li key={i} className="flex items-start gap-2">
-                                                <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                                                <span>{benefit}</span>
+                                            <li key={i} className="flex items-start gap-3">
+                                                <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                                                <span className="text-gray-700 leading-relaxed">{benefit}</span>
                                             </li>
                                         ))}
                                     </ul>
                                     {tier.benefits.length >= 3 && (
-                                        <div className="mt-4 grid place-items-center pt-2 border-t">
+                                        <div className="mt-6 grid place-items-center pt-4 border-t border-gray-200">
                                             <Button
-                                                className="p-0 h-auto bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full"
+                                                className="p-0 h-auto bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition-colors"
                                                 onClick={() => toggleCard(tier.name)}
                                             >
                                                 {expandedCards[tier.name] ? 'Show Less' : 'Read More'}
