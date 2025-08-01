@@ -6,84 +6,14 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import Exhibitions from './exhibitions'
+import { participationTypes } from '../data_models/about-aiccees'
+import { formatPrice } from '@/lib/utils'
 
-interface ParticipationType {
-  category: string
-  physical: {
-    regular: number
-    student?: number
-  }
-  virtual: {
-    regular: number
-    student?: number
-  }
-}
 
-const participationTypes: ParticipationType[] = [
-  {
-    category: "Audience Member Only",
-    physical: {
-      regular: 30,
-      student: 20000
-    },
-    virtual: {
-      regular: 20,
-      student: 20000
-    }
-  },
-  {
-    category: "Only Paper Presentation",
-    physical: {
-      regular: 50
-    },
-    virtual: {
-      regular: 40
-    }
-  },
-  {
-    category: "Paper Presentation + Abstract Publication",
-    physical: {
-      regular: 100
-    },
-    virtual: {
-      regular: 100
-    }
-  },
-  {
-    category: "Paper Presentation + Paper Publication + Abstract Publication",
-    physical: {
-      regular: 150
-    },
-    virtual: {
-      regular: 150
-    }
-  },
-  {
-    category: "Paper Presentation + Open Access Paper Publication + Abstract Publication",
-    physical: {
-      regular: 500  // Base fee + Open Access fee
-    },
-    virtual: {
-      regular: 500  // Base fee + Open Access fee
-    }
-  }
-]
 
 export default function ParticipationSection() {
   const [showNGN, setShowNGN] = useState(false)
 
-  const formatPrice = (price: number, isOpenAccess = false) => {
-    if (showNGN) {
-      if (isOpenAccess) {
-        return `₦400,000.00`
-      }
-      return `₦${(price * 1000).toLocaleString()}`
-    }
-    if (isOpenAccess) {
-      return `$400.00`
-    }
-    return `$${price.toLocaleString()}`
-  }
 
   return (
     <div className="py-12 bg-teal-50" id='participation'>
@@ -122,7 +52,7 @@ export default function ParticipationSection() {
                   <TableRow key={type.category}>
                     <TableCell className="font-medium text-lg">{type.category}</TableCell>
                     <TableCell>
-                      {formatPrice(type.physical.regular, type.category.includes('Open Access'))}
+                      {formatPrice(type.physical.regular, type.category.includes('Open Access'), showNGN)}
                       {type.physical.student && (
                         <div className="text-sm text-gray-500">
                           Students: ₦{type.physical.student.toLocaleString()}
@@ -130,7 +60,7 @@ export default function ParticipationSection() {
                       )}
                     </TableCell>
                     <TableCell>
-                      {formatPrice(type.virtual.regular, type.category.includes('Open Access'))}
+                      {formatPrice(type.virtual.regular, type.category.includes('Open Access'), showNGN)}
                       {type.virtual.student && (
                         <div className="text-sm text-gray-500">
                           Students: ₦{type.virtual.student.toLocaleString()}
