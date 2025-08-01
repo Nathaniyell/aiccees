@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/toaster"
 import WhatsappLive from "@/components/WhatsappLive";
+import CookieConsent from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aiccees.com'),
@@ -135,6 +136,7 @@ export default function RootLayout({
           <Footer />
           <WhatsappLive />
           <ScrollToTop />
+          <CookieConsent />
         </div>
       </body>
     </html>
