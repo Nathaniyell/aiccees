@@ -144,28 +144,16 @@ export function Header() {
         {/* Mobile Navigation */}
         <div className={`fixed inset-0 top-20 z-[50] w-screen h-[calc(100vh-5rem)] bg-green-800 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
           } md:hidden`}>
-          <div className="flex flex-col items-center justify-center h-full space-y-8">
-            {/* Standalone Registration link */}
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                className="block text-xl font-medium text-white hover:text-green-200"
-                href={link.href}
-                onClick={(e) => handleScroll(e, link.href)}
-              >
-                {link.label}
-              </Link>
-            ))}
-
-            {/* Mobile Dropdown Menus */}
-            {Object.entries(dropdownMenus).map(([key, menu]) => (
-              <div key={key} className="text-center">
-                <div className="text-xl font-medium text-white mb-4">{menu.label}</div>
-                <div className="space-y-4">
-                  {menu.links.map((link) => (
+          <div className="flex flex-col h-full">
+            {/* Mobile Menu Content */}
+            <div className="flex-1 overflow-y-auto px-6 py-8">
+              <div className="space-y-8">
+                {/* Main Navigation Links */}
+                <div className="space-y-6">
+                  {navLinks.map((link) => (
                     <Link
                       key={link.href}
-                      className="block text-lg text-green-200 hover:text-white"
+                      className="block text-white hover:text-green-200 transition-colors duration-200 py-2"
                       href={link.href}
                       onClick={(e) => handleScroll(e, link.href)}
                     >
@@ -173,8 +161,34 @@ export function Header() {
                     </Link>
                   ))}
                 </div>
+
+                {/* Dropdown Menus */}
+                {Object.entries(dropdownMenus).map(([key, menu]) => (
+                  <div key={key} className="space-y-4">
+                    <div className="text-white text-lg font-semibold">{menu.label}</div>
+                    <div className="space-y-2 pl-4">
+                      {menu.links.map((link) => (
+                        <Link
+                          key={link.href}
+                          className="block text-green-200 hover:text-white transition-colors duration-200 py-2 text-sm"
+                          href={link.href}
+                          onClick={(e) => handleScroll(e, link.href)}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Mobile Menu Footer */}
+            <div className="border-t border-green-700 px-6 py-4">
+              <div className="text-green-200 text-sm">
+                © 2025 AICCEES. All rights reserved.
+              </div>
+            </div>
           </div>
         </div>
       </div>
