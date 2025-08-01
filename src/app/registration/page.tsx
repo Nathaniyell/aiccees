@@ -58,7 +58,7 @@ export default function RegistrationPage() {
               </CardHeader>
               <CardContent className="text-center">
                 <div className="space-y-4 mb-6">
-                  <div className="flex justify-between text-sm text-neutral-600 dark:text-neutral-400">
+                  <div className="flex flex-col lg:flex-row gap-4 justify-between text-sm text-neutral-600 dark:text-neutral-400">
                     <div className="flex gap-2 text-sm text-neutral-600 dark:text-neutral-400">
                       <Calendar className="w-4 h-4" />
                       <p>September 26-27, 2025</p>
