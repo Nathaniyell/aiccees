@@ -10,9 +10,7 @@ import {
   MapPin, 
   Users, 
   Download, 
-  ExternalLink,
   Lightbulb,
-  Presentation,
   Handshake,
   BookOpen,
   Award,
@@ -167,61 +165,71 @@ export default function ConferenceProgramPage() {
               </p>
             </div>
 
-            <div className="space-y-8">
+            <div className="grid lg:grid-cols-3 gap-8">
               {conferencePrograms.map((program, index) => (
-                <Card key={program.id} className={`hover:shadow-lg transition-all duration-300 border-l-4 ${program.borderColor}`}>
-                  <CardContent className="p-8">
-                    <div className="flex flex-col lg:flex-row gap-8">
-                      {/* Program Icon and Header */}
-                      <div className="flex-shrink-0">
-                        <div className={`w-20 h-20 ${program.color} rounded-full flex items-center justify-center mb-4`}>
-                          <program.icon className="w-10 h-10" />
-                        </div>
-                        <Badge className={`${program.color} border-0`}>
-                          {program.type}
-                        </Badge>
+                <Card key={program.id} className={`group hover:shadow-md transition-all duration-500 transform hover:-translate-y-2 border-0 shadow overflow-hidden ${program.borderColor.replace('border-', '')}`}>
+                  {/* Header with Icon */}
+                 
+
+                  {/* Content */}
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">
+                        {program.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed text-sm mb-4">
+                        {program.description}
+                      </p>
+                    </div>
+
+                    {/* Program Details */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <Calendar className="w-4 h-4 text-green-600" />
+                        <span>{program.date}</span>
                       </div>
-
-                      {/* Program Content */}
-                      <div className="flex-1">
-                        <div className="mb-4">
-                          <h3 className="text-2xl font-bold text-gray-900 mb-2">{program.title}</h3>
-                          <p className="text-gray-600 leading-relaxed mb-4">{program.description}</p>
-                        </div>
-
-                        {/* Program Details */}
-                        <div className="grid md:grid-cols-2 gap-4 mb-6">
-                          <div className="flex items-center gap-2 text-sm text-gray-600">
-                            <Calendar className="w-4 h-4" />
-                            <span>{program.date}</span>
-                          </div>
-                          <div className="flex items-center gap-2 text-sm text-gray-600">
-                            <Clock className="w-4 h-4" />
-                            <span>{program.time}</span>
-                          </div>
-                          <div className="flex items-center gap-2 text-sm text-gray-600">
-                            <MapPin className="w-4 h-4" />
-                            <span>{program.location}</span>
-                          </div>
-                          <div className="flex items-center gap-2 text-sm text-gray-600">
-                            <Users className="w-4 h-4" />
-                            <span>{program.participants}</span>
-                          </div>
-                        </div>
-
-                        {/* Session Highlights */}
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-gray-900 mb-2">Session Highlights:</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {program.highlights.map((highlight, highlightIndex) => (
-                              <Badge key={highlightIndex} variant="outline" className="text-xs">
-                                {highlight}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
+                     
+                      
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <Users className="w-4 h-4 text-green-600" />
+                        <span>{program.participants}</span>
                       </div>
                     </div>
+
+                    {/* Session Highlights */}
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-gray-900 mb-3 text-sm">Session Highlights:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {program.highlights.map((highlight, highlightIndex) => (
+                          <Badge key={highlightIndex} variant="outline" className="text-xs border-green-200 text-green-700">
+                            {highlight}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Action Button */}
+                    <Button 
+                      className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white"
+                      size="sm"
+                    >
+                      Learn More
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Additional Info Cards */}
+            <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {additionalSessions.map((session, index) => (
+                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 border-0 shadow-md group">
+                  <CardContent className="p-6">
+                    <div className={`w-12 h-12 ${session.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
+                      <session.icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-700 transition-colors">{session.title}</h3>
+                    <p className="text-sm text-gray-600">{session.description}</p>
                   </CardContent>
                 </Card>
               ))}
