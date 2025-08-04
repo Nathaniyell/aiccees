@@ -84,7 +84,7 @@ export default function ConferenceHighlights() {
           </div>
 
           {/* Center - Image Carousel */}
-          <div className="flex-1 relative min-h-[500px] rounded-xl overflow-hidden shadow-2xl">
+          <div className="flex-1 relative min-h-[500px] overflow-hidden">
             <div 
               className="w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
               style={{ backgroundImage: `url(${backgroundImages[currentImageIndex]})` }}
