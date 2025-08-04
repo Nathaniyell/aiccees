@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
-import { Award, Users, Network, Lightbulb, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function ConferenceHighlights() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -60,98 +60,88 @@ export default function ConferenceHighlights() {
         <div className="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
       </div>
 
-      <div className="container mx-auto flex flex-col lg:flex-row gap-8 items-stretch">
-        {/* Left side - Content */}
-        <div className="flex-1">
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="p-6 text-center bg-gradient-to-br from-green-50 to-green-100 border-green-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Left side - Two text sections */}
+          <div className="flex-1 space-y-8">
+            <div className="text-center lg:text-left">
+              <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 Keynote Sessions
               </h3>
-              <p className="text-gray-600 text-sm">
-                Industry-leading experts share cutting-edge insights
+              <p className="text-gray-600 leading-relaxed">
+                Industry-leading experts share cutting-edge insights and innovative perspectives on the latest developments in energy and sustainability.
               </p>
-            </Card>
+            </div>
 
-            <Card className="p-6 text-center bg-gradient-to-br from-red-50 to-red-100 border-red-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <div className="text-center lg:text-left">
+              <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 Breakout Sessions
               </h3>
-              <p className="text-gray-600 text-sm">
-                Paper presentations and panel discussions
+              <p className="text-gray-600 leading-relaxed">
+                Engage in focused paper presentations and dynamic panel discussions that explore specific themes and emerging trends in the field.
               </p>
-            </Card>
+            </div>
+          </div>
 
-            <Card className="p-6 text-center bg-gradient-to-br from-green-50 to-green-100 border-green-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Network className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
+          {/* Center - Image Carousel */}
+          <div className="flex-1 relative min-h-[500px] rounded-xl overflow-hidden shadow-2xl">
+            <div 
+              className="w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
+              style={{ backgroundImage: `url(${backgroundImages[currentImageIndex]})` }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white border border-gray-200 rounded-full p-2 transition-all duration-200 shadow-lg"
+            >
+              <ChevronLeft className="h-5 w-5 text-gray-600" />
+            </button>
+
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white border border-gray-200 rounded-full p-2 transition-all duration-200 shadow-lg"
+            >
+              <ChevronRight className="h-5 w-5 text-gray-600" />
+            </button>
+
+            {/* Pagination Dots */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {backgroundImages.slice(0, 8).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToImage(index)}
+                  className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                    index === currentImageIndex
+                      ? "bg-white"
+                      : "bg-white/50 hover:bg-white/75"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Right side - Two text sections */}
+          <div className="flex-1 space-y-8">
+            <div className="text-center lg:text-right">
+              <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 Global Networking
               </h3>
-              <p className="text-gray-600 text-sm">
-                Connect with innovators from around the world
+              <p className="text-gray-600 leading-relaxed">
+                Connect with innovators, researchers, and industry leaders from around the world to build lasting professional relationships and collaborations.
               </p>
-            </Card>
+            </div>
 
-            <Card className="p-6 text-center bg-gradient-to-br from-red-50 to-red-100 border-red-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lightbulb className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
-                Business Mentorship Session
+            <div className="text-center lg:text-right">
+              <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                Business Mentorship
               </h3>
-              <p className="text-gray-600 text-sm">
-                Get personalized guidance from industry experts
+              <p className="text-gray-600 leading-relaxed">
+                Get personalized guidance from industry experts and successful entrepreneurs to accelerate your career growth and business development.
               </p>
-            </Card>
-          </div>
-        </div>
-
-        {/* Right side - Image Carousel */}
-        <div className="flex-1 relative min-h-[400px] rounded-lg overflow-hidden">
-          {/* Background Image with Carousel */}
-          <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
-            style={{ backgroundImage: `url(${backgroundImages[currentImageIndex]})` }}
-          >
-            {/* <div className="absolute inset-0 bg-gradient-to-r from-green-800/60 to-red-800/60"></div> */}
-          </div>
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevImage}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/80 hover:bg-white border border-gray-200 rounded-full p-2 transition-all duration-200"
-          >
-            <ChevronLeft className="h-5 w-5 text-gray-600" />
-          </button>
-
-          <button
-            onClick={nextImage}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/80 hover:bg-white border border-gray-200 rounded-full p-2 transition-all duration-200"
-          >
-            <ChevronRight className="h-5 w-5 text-gray-600" />
-          </button>
-
-          {/* Pagination Dots */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {backgroundImages.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToImage(index)}
-                className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                  index === currentImageIndex
-                    ? "bg-white"
-                    : "bg-white/50 hover:bg-white/75"
-                }`}
-              />
-            ))}
+            </div>
           </div>
         </div>
       </div>
