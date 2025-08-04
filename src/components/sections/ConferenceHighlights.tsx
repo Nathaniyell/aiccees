@@ -65,6 +65,7 @@ export default function ConferenceHighlights() {
           {/* Left side - Two text sections */}
           <div className="flex-1 space-y-8">
             <div className="text-center lg:text-left">
+              <div className="text-xl font-semibold text-green-600 mb-2">01</div>
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 Keynote Sessions
               </h3>
@@ -74,6 +75,7 @@ export default function ConferenceHighlights() {
             </div>
 
             <div className="text-center lg:text-left">
+              <div className="text-xl font-semibold text-green-600 mb-2">02</div>
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 Breakout Sessions
               </h3>
@@ -84,9 +86,9 @@ export default function ConferenceHighlights() {
           </div>
 
           {/* Center - Image Carousel */}
-          <div className="flex-1 relative min-h-[500px] overflow-hidden">
+          <div className="flex-1 relative min-h-[500px] w-full rounded overflow-hidden">
             <div 
-              className="w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
+              className="w-full h-full min-h-[500px] bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
               style={{ backgroundImage: `url(${backgroundImages[currentImageIndex]})` }}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -126,6 +128,7 @@ export default function ConferenceHighlights() {
           {/* Right side - Two text sections */}
           <div className="flex-1 space-y-8">
             <div className="text-center lg:text-right">
+              <div className="text-xl font-semibold text-green-600 mb-2">03</div>
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 Global Networking
               </h3>
@@ -135,6 +138,7 @@ export default function ConferenceHighlights() {
             </div>
 
             <div className="text-center lg:text-right">
+              <div className="text-xl font-semibold text-green-600 mb-2">04</div>
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 Business Mentorship
               </h3>
