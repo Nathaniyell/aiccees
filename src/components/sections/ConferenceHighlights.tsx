@@ -65,7 +65,7 @@ export default function ConferenceHighlights() {
           {/* Left side - Two text sections */}
           <div className="flex-1 space-y-8">
             <div className="text-center lg:text-left">
-              <div className="text-xl font-semibold text-green-600 mb-2">01</div>
+              <h2 className="text-xl font-semibold text-green-600 mb-2">01</h2>
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 Keynote Sessions
               </h3>
@@ -75,7 +75,7 @@ export default function ConferenceHighlights() {
             </div>
 
             <div className="text-center lg:text-left">
-              <div className="text-xl font-semibold text-green-600 mb-2">02</div>
+              <h2 className="text-xl font-semibold text-green-600 mb-2">02</h2>
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 Breakout Sessions
               </h3>
@@ -128,7 +128,7 @@ export default function ConferenceHighlights() {
           {/* Right side - Two text sections */}
           <div className="flex-1 space-y-8">
             <div className="text-center lg:text-right">
-              <div className="text-xl font-semibold text-green-600 mb-2">03</div>
+              <h2 className="text-xl font-semibold text-green-600 mb-2">03</h2>
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 Global Networking
               </h3>
@@ -138,7 +138,7 @@ export default function ConferenceHighlights() {
             </div>
 
             <div className="text-center lg:text-right">
-              <div className="text-xl font-semibold text-green-600 mb-2">04</div>
+              <h2 className="text-xl font-semibold text-green-600 mb-2">04</h2>
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 Business Mentorship
               </h3>
