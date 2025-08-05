@@ -254,7 +254,7 @@ export default function ConferenceProgramPage() {
               </div>
 
               <div className="bg-white rounded-lg p-8 shadow-lg mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">What's Included:</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">What&apos;s Included:</h3>
                 <div className="grid md:grid-cols-2 gap-4 text-left">
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
@@ -323,7 +323,7 @@ export default function ConferenceProgramPage() {
                 Ready to Join AICCEES 2025?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Don't miss this opportunity to connect with industry leaders, learn from experts, 
+                Don&apos;t miss this opportunity to connect with industry leaders, learn from experts, 
                 and contribute to the future of clean energy and energy storage.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
