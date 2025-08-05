@@ -5,7 +5,7 @@ import { aboutAiccees } from "@/components/data_models/about-aiccees";
 
 export default function AboutOverview() {
   return (
-    <div className="container mx-auto mb-20">
+    <div className="container mx-auto mb-20 px-6">
       <Card className="border-none shadow-none rounded-none p-0">
         <CardContent className="p-0">
           <div className="space-y-6">

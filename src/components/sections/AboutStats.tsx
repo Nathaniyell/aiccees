@@ -47,7 +47,7 @@ function StatsCard({
 
 export default function AboutStats() {
   return (
-    <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 place-items-center gap-6 mb-14 mt-10 relative z-10">
+    <div className="container mx-auto grid grid-cols-2 px-6 md:grid-cols-3 place-items-center gap-6 mb-14 mt-10 relative z-10">
       <StatsCard
         value={1173}
         label="Global Attendees"
