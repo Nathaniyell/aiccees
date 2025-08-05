@@ -100,7 +100,7 @@ export default function GrantsPage() {
                 <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                   The TEA-LP (Transforming Energy Access – Learning Partnership)
                   grant is a UK Aid-funded initiative aimed at closing the skills
-                  gap in Africa's energy access sector by supporting the
+                  gap in Africa&apos;s energy access sector by supporting the
                   development of postgraduate curricula in clean energy and
                   sustainable development.
                 </p>
@@ -199,7 +199,7 @@ export default function GrantsPage() {
                         </h3>
                         <p className="text-neutral-600 leading-relaxed">
                           Enable researchers to pursue transformative and innovative
-                          concepts that push the boundaries of what's possible.
+                          concepts that push the boundaries of what&apos;s possible.
                         </p>
                       </div>
                     </div>
