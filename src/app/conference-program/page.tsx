@@ -1,12 +1,11 @@
 "use client";
 
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
   Calendar, 
-  Clock, 
   MapPin, 
   Users, 
   Download, 
@@ -166,7 +165,7 @@ export default function ConferenceProgramPage() {
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8">
-              {conferencePrograms.map((program, index) => (
+              {conferencePrograms.map((program) => (
                 <Card key={program.id} className={`group hover:shadow-md transition-all duration-500 transform hover:-translate-y-2 border-0 shadow overflow-hidden ${program.borderColor.replace('border-', '')}`}>
                   {/* Header with Icon */}
                  
