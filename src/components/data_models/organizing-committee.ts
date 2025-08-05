@@ -19,7 +19,8 @@ export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
     id: "2",
     name: "Engr. Anthony Akpasoh",
     role: "Co-Chairman",
-    affiliation: "COO, Tovero Energy Ltd"
+    affiliation: "COO, Tovero Energy Ltd",
+    image: "/images/organizing-cttee/anthony.jpg"
   },
   {
     id: "3",
