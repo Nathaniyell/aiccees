@@ -16,8 +16,8 @@ import {
   ChevronDown,
   ChevronUp
 } from "lucide-react";
-import { keynoteSpeakerData, keynoteSpeakers2023 } from "@/components/data_models/keynote-speakers";
 import AOS from "@/components/layout/AOS";
+import Image from "next/image";
 
 export default function KeynoteSpeakersPage() {
   const [activeTab, setActiveTab] = useState("2025");
@@ -112,6 +112,7 @@ export default function KeynoteSpeakersPage() {
     return text.substring(0, maxLength) + '...';
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const SpeakerCard = ({ speaker, year, index }: { speaker: any, year: string, index: number }) => {
     const speakerId = `${year}-${index}`;
     const isExpanded = expandedSpeakers[speakerId];
@@ -124,10 +125,10 @@ export default function KeynoteSpeakersPage() {
             {/* Speaker Image */}
             <div className="flex-shrink-0 self-center lg:self-start">
               <div className="w-48 h-48 rounded overflow-hidden bg-gray-100">
-                <img
+                <Image
                   src={speaker.picture}
                   alt={speaker.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
@@ -259,7 +260,7 @@ export default function KeynoteSpeakersPage() {
               </h2>
               <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
                 Are you an expert in clean energy, energy storage, or sustainable development? 
-                We're always looking for distinguished speakers to share their insights.
+                We&apos;re always looking for distinguished speakers to share their insights.
               </p>
               <Button
                 asChild
@@ -352,7 +353,7 @@ export default function KeynoteSpeakersPage() {
                 Join Us at AICCEES 2025
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Don't miss the opportunity to hear from these distinguished speakers and 
+                Don&apos;t miss the opportunity to hear from these distinguished speakers and 
                 network with industry leaders in clean energy and energy storage.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
