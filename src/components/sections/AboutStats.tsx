@@ -36,7 +36,7 @@ function StatsCard({
 
   return (
     <div>
-      <div className="text-7xl text-center font-bold text-gray-800 mb-2">
+      <div className="text-5xl lg:text-7xl text-center font-bold text-gray-800 mb-2">
         {animatedValue}
         {suffix}
       </div>
