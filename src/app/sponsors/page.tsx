@@ -43,7 +43,7 @@ export default function PartnersPage() {
               Our Partners
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-              We're proud to work with leading organizations in the clean energy sector.
+              We&apos;re proud to work with leading organizations in the clean energy sector.
             </p>
           </div>
           <div className="py-8">
