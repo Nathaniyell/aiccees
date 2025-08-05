@@ -105,7 +105,7 @@ export default function CookieConsent() {
           </div>
 
           <div className="text-xs text-gray-400 text-center">
-            By clicking "Accept All Cookies", you agree to our use of cookies and 
+            By clicking &quot;Accept All Cookies&quot;, you agree to our use of cookies and 
             data processing as described in our Privacy Policy.
           </div>
         </CardContent>
