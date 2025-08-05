@@ -218,21 +218,6 @@ export default function ConferenceProgramPage() {
                 </Card>
               ))}
             </div>
-
-            {/* Additional Info Cards */}
-            <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {additionalSessions.map((session, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 border-0 shadow-md group">
-                  <CardContent className="p-6">
-                    <div className={`w-12 h-12 ${session.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
-                      <session.icon className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-700 transition-colors">{session.title}</h3>
-                    <p className="text-sm text-gray-600">{session.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
         </section>
       </AOS>
