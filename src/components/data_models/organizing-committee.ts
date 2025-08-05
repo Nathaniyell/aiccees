@@ -36,7 +36,7 @@ export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
   {
     id: "5",
     name: "Nathaniel Essien",
-    role: "Conference Manager",
+    role: "AICCEES Conference Manager",
     affiliation: "Conference Management",
     image: "/images/organizing-cttee/NATHANDIEL.jpg"
   },
