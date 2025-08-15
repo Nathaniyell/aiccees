@@ -34,7 +34,7 @@ export function Header() {
   }
 
   const navLinks = [
-    { href: '/registration', label: 'Registration' },
+    { href: '/registrations', label: 'Registrations' },
     { href: '/about', label: 'About AICCEES' },
     { href: '/keynote-speakers', label: 'Keynote Speakers' },
     { href: '/conference-program', label: 'Program' },

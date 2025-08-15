@@ -40,10 +40,7 @@ export function RegistrationHero() {
               <MapPin className="w-4 h-4 mr-2" />
               University of Port Harcourt, Nigeria
             </div>
-            <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
-              <Clock className="w-4 h-4 mr-2" />
-              Registration Deadline: July 31st, 2025
-            </div>
+            
           </div>
 
           {/* Registration Benefits */}
@@ -53,7 +50,7 @@ export function RegistrationHero() {
                 <CheckCircle className="w-8 h-8 text-green-400" />
               </div>
               <h3 className="font-semibold text-white mb-2">
-                Registration Application
+                Conference Attendance Registration
               </h3>
               <p className="text-sm text-green-100">
                 Fill out the registration form to secure your spot
@@ -65,7 +62,7 @@ export function RegistrationHero() {
                 <Users className="w-8 h-8 text-green-400" />
               </div>
               <h3 className="font-semibold text-white mb-2">
-                Visa Application
+                Visa Support Application
               </h3>
               <p className="text-sm text-green-100">
                 Fill out the visa application form to secure your visa
@@ -77,7 +74,7 @@ export function RegistrationHero() {
                 <FileText className="w-8 h-8 text-green-400" />
               </div>
               <h3 className="font-semibold text-white mb-2">
-                Committee Application
+                Scientific Committee Membership Application
               </h3>
               <p className="text-sm text-green-100">
                 Fill out the committee application form to secure your spot

@@ -7,7 +7,7 @@ export const participationTypes = [
     {
       category: "Audience Member Only",
       physical: {
-        regular: 30,
+        regular: 20,
         student: 20000
       },
       virtual: {

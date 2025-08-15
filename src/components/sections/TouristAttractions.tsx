@@ -75,8 +75,8 @@ export function TouristAttractions() {
             Explore Port Harcourt
           </h2>
           <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-            Discover the beautiful tourist attractions in Port Harcourt while attending the conference. 
-            From pristine beaches to cultural landmarks, there&apos;s something for everyone to enjoy.
+            Discover the beautiful tourist attraction sites in Port Harcourt while attending the conference. 
+            From pristine beaches to cultural landmarks, there are exciting places to explore and a memorable experience for everyone.
           </p>
         </div>
 

@@ -19,7 +19,7 @@ export default function AboutHero() {
         <div className="max-w-4xl mx-auto">
           <Badge className="mb-6 px-4 py-2 bg-green-500/20 text-green-100 border-green-400/30">
             <Star className="w-4 h-4 mr-2" />
-            Premier Technology Conference
+            Clean Energy Conference
           </Badge>
 
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-white to-lime-400 bg-clip-text text-transparent">
@@ -27,14 +27,13 @@ export default function AboutHero() {
           </h1>
 
           <p className="text-xl md:text-2xl mb-8 text-green-100 leading-relaxed">
-            Uniting Innovators in Computer, Electrical, and Electronics
-            Sciences
+          Uniting Clean Energy Researchers, Innovators and Policy makers across Africa
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <Calendar className="w-4 h-4 mr-2" />
-              September 26-27, 2025
+              September 25-26, 2025
             </div>
             <div className="flex items-center bg-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <MapPin className="w-4 h-4 mr-2" />
