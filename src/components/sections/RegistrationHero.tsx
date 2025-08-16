@@ -6,7 +6,6 @@ import {
   CheckCircle,
   Calendar,
   MapPin,
-  Clock,
 } from "lucide-react";
 
 export function RegistrationHero() {
