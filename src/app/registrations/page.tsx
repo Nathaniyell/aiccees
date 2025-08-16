@@ -27,8 +27,8 @@ export default function RegistrationPage() {
     "https://forms.office.com/pages/responsepage.aspx?id=kn2ybltGPkK4rp8nVlmTlYgK_n1-yllAncqjnHrWTZRUOVcxSTRVUVhNT0NUMTlFOFdWSExPWEVQVy4u&origin=lprLink&route=shorturl";
   const visaFormUrl =
     "https://docs.google.com/forms/d/e/1FAIpQLScmC2LPj6Jtw7w6N9Lm9YpP7ge6DiVlSRlEZ5RSWsYaGt5SUg/viewform";
-  const scientificCommitteeFormUrl =
-    "https://docs.google.com/forms/d/e/1FAIpQLSfu0upSJBsHxmILPS1JGDr1je9pYOHMHy2OCNcCMMkNvewaxw/viewform?embedded=true";
+  // const scientificCommitteeFormUrl =
+  //   "https://docs.google.com/forms/d/e/1FAIpQLSfu0upSJBsHxmILPS1JGDr1je9pYOHMHy2OCNcCMMkNvewaxw/viewform?embedded=true";
 
   const openAiccees2025RegistrationForm = () => {
     setAiccees2025Registration(true);
