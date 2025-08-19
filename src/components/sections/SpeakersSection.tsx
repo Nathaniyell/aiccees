@@ -19,7 +19,7 @@ const SPEAKERS = [
     {
         name: "Professor Youba Sokona",
         role: "Climate Change Expert",
-        status: "current",
+        status: "previous",
         image: profSokona,
         bio: "Prof. Sokona, with over 40 years of experience addressing energy, environment, and sustainable development in Africa, has been at the heart of numerous national and continental initiatives. He was a Vice-Chair of the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report, after serving as Co-Chair of IPCC Working Group III for the Fifth Assessment Report, and has been a Lead Author since 1990. He has a proven track record of organizational leadership and management, including as the Inaugural Coordinator of the African Climate Policy Centre and as Executive Secretary of the Sahara and the Sahel Observatory.",
         bio2: "Prof. Sokona is affiliated with numerous boards and organizations. He is, among others, an Honorary Professor at University College London, a member of The World Academy of Sciences, the African Academy of Sciences, the International Council of Science, an Associate Member of the National Academy of Sciences and Technology of Senegal, and an Honorary Member of the Academy of Sciences of Mali. In short, Prof. Sokona is a global figure with deep technical knowledge, extensive policy experience, and an unwavering personal commitment to African-led development."
@@ -27,7 +27,7 @@ const SPEAKERS = [
     {
         name: "Professor Foluke Ishola",
         role: "Sustainability and Bioenergy Expert",
-        status: "current",
+        status: "previous",
         image: profFoluwake,
         bio: "Mofoluwake Ishola, a distinguished Chemical Engineer, graduated from Ladoke Akintola University of Technology in 2002 and earned her M.Sc. with Distinction from Obafemi Awolowo University in 2008. She completed her PhD at the University of Borås, Sweden, in record time, focusing on biofuel ethanol production from lignocellulosic feedstocks. Her postdoctoral research was conducted at Chalmers University. Her expertise spans bioenergy, waste management, biofuels, and environmental sustainability. Mofoluwake has served as a university lecturer, environmental engineer, and journal reviewer, supervising numerous postgraduate students and authoring around thirty academic publications. She has received multiple scholarships and grants, including the Carnegie Scholarship (UK) and Fredrika Bremer Scholarship (Sweden). Currently, she is the Sustainability Ambassador and Senior R&D Engineer at Scanacon AB, Sweden, and a Visiting Professor at Ajayi Crowther University, Nigeria. She is affiliated with various professional engineering societies in Nigeria and Sweden.",
     },
@@ -60,7 +60,7 @@ const SPEAKERS = [
     {
         name: "Professor Ioannis Tsipouridis",
         image: Ioannis,
-        status: "current",
+        status: "previous",
         role: "Renewable Energy Expert",
         bio: "Professor Ioannis Tsipouridis is a distinguished expert in renewable energy with over 45 years of experience. He holds a B.Sc. in Chemical Engineering, an M.Sc. in Fuel and Energy, and a Ph.D. in Solar Energy from the University of Leeds. Throughout his career, he has been a key advocate for decarbonizing the global energy system and advancing renewable energy deployment. As CEO of Public Power Corporation Renewables in Greece, he expanded the company’s project pipeline from 600 MW to 4,200 MW, leading initiatives in wind, solar, geothermal, and biomass energy during a period of national financial crisis. He also held leadership roles as Vice Chairman of the European Wind Energy Association and Chairman of the Hellenic Wind Energy Association. His advocacy has extended to global platforms, including COP21 in Paris and subsequent climate conferences, where he called for accelerated climate action.",
         bio2: "Currently, Professor Tsipouridis directs the Renewable Energy & Climate Change Research Center at the Technical University of Mombasa and is a Visiting Professor and Technical Advisor at Meru University of Science and Technology in Kenya. He is deeply involved in promoting renewable energy in Sub-Saharan Africa through his consultancy, RED PRO Climate & Energy Consultants Ltd., and his leadership in organizations like the Loss & Damage Collaboration Group and the Fossil Fuel Non-Proliferation Treaty. An active voice in the climate movement, he also runs the e-mc2.gr platform to raise awareness of climate issues. His contributions to the field have earned him multiple awards, including the AIOLOS Prize for his work in wind energy and the Greek Green Award for lifetime achievement. He continues to mentor African students and contribute to the global dialogue on clean energy and sustainability.",
