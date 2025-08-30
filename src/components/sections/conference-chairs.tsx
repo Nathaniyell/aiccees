@@ -47,6 +47,7 @@ export default function ConferenceChairs() {
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent>
+                                        <p className="text-sm text-center mb-4">{chair.portfolio}</p>
                                     <div className="flex items-center justify-center gap-2 text-sm text-slate-600">
                                         <Building2 className="w-4 h-4" />
                                         <span>{chair.school}</span>
