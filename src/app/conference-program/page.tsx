@@ -13,28 +13,16 @@ import {
   Handshake,
   BookOpen,
   Award,
-  Globe
 } from "lucide-react";
 import AOS from "@/components/layout/AOS";
+import Image from "next/image";
+import conferencePics1 from "@/public/images/conference-pics/IMG_2257.jpg";
+import conferencePics2 from "@/public/images/conference-pics/IMG_2095.jpg";
 
 export default function ConferenceProgramPage() {
   const conferencePrograms = [
     {
       id: 1,
-      title: "GECCO Roundtable",
-      description: "Join industry leaders and experts for an engaging roundtable discussion on the latest developments in clean energy and energy storage technologies. This session will feature interactive discussions on policy frameworks, technological innovations, and market opportunities.",
-      time: "09:00 - 11:00",
-      date: "September 25, 2025",
-      location: "Main Conference Hall",
-      type: "Roundtable",
-      icon: Globe,
-      color: "bg-blue-100 text-blue-700",
-      borderColor: "border-blue-200",
-      participants: "Industry Leaders & Experts",
-      highlights: ["Policy Discussions", "Technology Innovation", "Market Opportunities", "Interactive Q&A"]
-    },
-    {
-      id: 2,
       title: "Business Mentorship Session",
       description: "Connect with experienced business leaders and entrepreneurs in the clean energy sector. This session provides valuable insights on business development, funding opportunities, and strategic planning for energy startups and established companies.",
       time: "11:30 - 13:00",
@@ -153,7 +141,7 @@ export default function ConferenceProgramPage() {
 
       {/* Main Program Sessions */}
       <AOS>
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6">
@@ -164,59 +152,149 @@ export default function ConferenceProgramPage() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
-              {conferencePrograms.map((program) => (
-                <Card key={program.id} className={`group hover:shadow-md transition-all duration-500 transform hover:-translate-y-2 border-0 shadow overflow-hidden ${program.borderColor.replace('border-', '')}`}>
-                  {/* Header with Icon */}
-                 
-
-                  {/* Content */}
-                  <CardContent className="p-6">
-                    <div className="mb-4">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">
-                        {program.title}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed text-sm mb-4">
-                        {program.description}
-                      </p>
+            {/* Two separate flexbox containers */}
+            <div className="space-y-28">
+              {/* First flexbox: Image + Business Mentorship Card */}
+              <div className="flex flex-col lg:flex-row gap-28 items-start">
+                {/* Image Container - Left Side */}
+                <div className="lg:w-1/2 w-full">
+                  <div className="relative h-96 lg:h-[400px] overflow-hidden shadow">
+                    <Image
+                      src={conferencePics2}
+                      alt="Conference Session"
+                      fill
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-6 right-6 text-white">
+                      <h3 className="text-xl font-bold mb-2">Join the Conversation</h3>
+                      <p className="text-green-100 text-sm">Experience cutting-edge discussions and networking opportunities</p>
                     </div>
+                  </div>
+                </div>
 
-                    {/* Program Details */}
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Calendar className="w-4 h-4 text-green-600" />
-                        <span>{program.date}</span>
+                {/* First Card - Business Mentorship */}
+                <div className="lg:w-1/2 w-full">
+                  <Card className={`group hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 border-0 shadow-md overflow-hidden rounded-none h-full ${conferencePrograms[0].borderColor.replace('border-', '')}`}>
+                    <CardContent className="p-6 h-full flex flex-col">
+                      <div className="mb-4">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">
+                          {conferencePrograms[0].title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed text-sm mb-4">
+                          {conferencePrograms[0].description}
+                        </p>
                       </div>
-                     
-                      
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Users className="w-4 h-4 text-green-600" />
-                        <span>{program.participants}</span>
+
+                      {/* Program Details */}
+                      <div className="space-y-3 mb-6">
+                        <div className="flex items-center gap-2 text-sm text-gray-600">
+                          <Calendar className="w-4 h-4 text-green-600" />
+                          <span>{conferencePrograms[0].date}</span>
+                        </div>
+                        
+                        <div className="flex items-center gap-2 text-sm text-gray-600">
+                          <Users className="w-4 h-4 text-green-600" />
+                          <span>{conferencePrograms[0].participants}</span>
+                        </div>
                       </div>
+
+                      {/* Session Highlights */}
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-gray-900 mb-3 text-sm">Session Highlights:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {conferencePrograms[0].highlights.map((highlight, highlightIndex) => (
+                            <Badge key={highlightIndex} variant="outline" className="text-xs border-green-200 text-green-700">
+                              {highlight}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Action Button - Pushed to bottom */}
+                      <div className="mt-auto">
+                        <Button 
+                          className="w-full bg-green-600 hover:bg-green-700 text-white"
+                          size="sm"
+                        >
+                          Learn More
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              {/* Second flexbox: Image + Paper Presentations Card */}
+              <div className="flex flex-col lg:flex-row-reverse gap-28 items-start">
+                {/* Image Container - Left Side */}
+                <div className="lg:w-1/2 w-full">
+                  <div className="relative h-96 lg:h-[400px] overflow-hidden shadow">
+                    <Image
+                      src={conferencePics1}
+                      fill
+                      alt="Research Presentations"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-6 right-6 text-white">
+                      <h3 className="text-xl font-bold mb-2">Research & Innovation</h3>
+                      <p className="text-green-100 text-sm">Discover cutting-edge research in clean energy technologies</p>
                     </div>
+                  </div>
+                </div>
 
-                    {/* Session Highlights */}
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-3 text-sm">Session Highlights:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {program.highlights.map((highlight, highlightIndex) => (
-                          <Badge key={highlightIndex} variant="outline" className="text-xs border-green-200 text-green-700">
-                            {highlight}
-                          </Badge>
-                        ))}
+                {/* Second Card - Paper Presentations */}
+                <div className="lg:w-1/2 w-full">
+                  <Card className={`group hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 border-0 shadow-md overflow-hidden h-full rounded-none ${conferencePrograms[1].borderColor.replace('border-', '')}`}>
+                    <CardContent className="p-6 h-full flex flex-col">
+                      <div className="mb-4">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">
+                          {conferencePrograms[1].title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed text-sm mb-4">
+                          {conferencePrograms[1].description}
+                        </p>
                       </div>
-                    </div>
 
-                    {/* Action Button */}
-                    <Button 
-                      className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white"
-                      size="sm"
-                    >
-                      Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
+                      {/* Program Details */}
+                      <div className="space-y-3 mb-6">
+                        <div className="flex items-center gap-2 text-sm text-gray-600">
+                          <Calendar className="w-4 h-4 text-green-600" />
+                          <span>{conferencePrograms[1].date}</span>
+                        </div>
+                        
+                        <div className="flex items-center gap-2 text-sm text-gray-600">
+                          <Users className="w-4 h-4 text-green-600" />
+                          <span>{conferencePrograms[1].participants}</span>
+                        </div>
+                      </div>
+
+                      {/* Session Highlights */}
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-gray-900 mb-3 text-sm">Session Highlights:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {conferencePrograms[1].highlights.map((highlight, highlightIndex) => (
+                            <Badge key={highlightIndex} variant="outline" className="text-xs border-green-200 text-green-700">
+                              {highlight}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Action Button - Pushed to bottom */}
+                      <div className="mt-auto">
+                        <Button 
+                          className="w-full bg-green-600 hover:bg-green-700 text-white"
+                          size="sm"
+                        >
+                          Learn More
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </div>
           </div>
         </section>
