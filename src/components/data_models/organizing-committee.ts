@@ -26,13 +26,8 @@ export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
     id: "3",
     name: "Peace Esuuk Ikpokonte",
     role: "Technicals and Logistics",
+    image: "/images/organizing-cttee/esuuk.jpeg",
     affiliation: "Projects Coordinator, Tovero Energy Ltd"
-  },
-  {
-    id: "4",
-    name: "Uwem Johnson",
-    role: "Lead, Partnerships",
-    affiliation: "Head of Partnerships, Tovero Energy"
   },
   {
     id: "5",
@@ -41,6 +36,13 @@ export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
     affiliation: "Conference Management",
     image: "/images/organizing-cttee/NATHANDIEL.jpg"
   },
+  {
+    id: "4",
+    name: "Uwem Johnson",
+    role: "Lead, Partnerships",
+    affiliation: "Head of Partnerships, Tovero Energy"
+  },
+ 
   {
     id: "6",
     name: "Peace Godwin",
