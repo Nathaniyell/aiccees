@@ -129,7 +129,7 @@ export default function RootLayout({
         {/* <link rel="manifest" href="/manifest.json" /> */}
       </head>
       <body className={`${GeistSans.className} antialiased`}>
-        <div className="flex flex-col min-h-screen bg-white text-gray-900">
+        <div className="flex flex-col min-h-screen bg-white text-gray-900 overflow-x-hidden">
           <Header />
           {children}
           <Toaster />
