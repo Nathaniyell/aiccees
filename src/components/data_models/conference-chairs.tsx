@@ -11,12 +11,14 @@ export const conferenceChairInfo = [
         name: "Professor Roland Uhunmwangho",
         role: "Conference Chair",
         school: "University of Port Harcourt",
+        portfolio: "Former Dean Faculty of Engineering, University of Port Harcourt. \nDirector, Center for Power Systems",
         image: roland
     },
     {
         id: 2,
         name: "Professor Abam Fidelis",
         role: "Conference Co-Chair",
+        portfolio: "Faculty of Engineering & Technology, University of Calabar",
         school: "University of Calabar",
         image: abam
     },
@@ -24,6 +26,7 @@ export const conferenceChairInfo = [
         id: 3,
         name: "Professor Sunday Oyedepo",
         role: "Conference Co-Chair",
+        portfolio: "Faculty of Engineering, Bells University of Technology, Ogun State",
         school: "Bells University",
         image: oyedepo
     },
@@ -32,6 +35,7 @@ export const conferenceChairInfo = [
         name: "Professor Ogheneruona Diemuodeke",
         role: "Conference Co-Chair",
         school: "University of Port Harcourt",
+        portfolio: "Head, Department of Mechanical Engineering, University of Port Harcourt. \nDirector of Energy Technology Institute.",
         image: oghneruona
     },
     {
