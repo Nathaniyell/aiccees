@@ -25,7 +25,6 @@ import cooking1 from '@/public/images/cooking-demonstration/IMG_1753.jpg'
 import cooking2 from '@/public/images/cooking-demonstration/IMG_1765.jpg'
 import cooking3 from '@/public/images/cooking-demonstration/IMG_2213.jpg'
 import cooking4 from '@/public/images/cooking-demonstration/IMG_2216.jpg'
-import cooking5 from '@/public/images/cooking-demonstration/IMG_2217.jpg'
 import cooking6 from '@/public/images/cooking-demonstration/IMG_2330.jpg'
 import cooking7 from '@/public/images/cooking-demonstration/IMG_2385.jpg'
 import cooking8 from '@/public/images/cooking-demonstration/cooking4.jpg'
@@ -65,7 +64,6 @@ export const cookingImages = [
     { src: cooking2, alt: "Cooking Demonstration 3" },
     { src: cooking3, alt: "Cooking Demonstration 4" },
     { src: cooking4, alt: "Cooking Demonstration 5" },
-    { src: cooking5, alt: "Cooking Demonstration 6" },
     { src: cooking6, alt: "Cooking Demonstration 7" },
     { src: cooking7, alt: "Cooking Demonstration 8" },
     { src: cooking8, alt: "Cooking Demonstration 9" },
