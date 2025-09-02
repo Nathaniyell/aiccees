@@ -15,8 +15,7 @@ import {
 } from "lucide-react";
 import TestimonialCarousel from "@/components/sections/testimonials";
 import AOS from "@/components/layout/AOS";
-import trans from "@/public/images/home/trans.svg";
-import Image from "next/image";
+
 
 export default function GrantsPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -76,48 +75,15 @@ export default function GrantsPage() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-12 items-start">
               <div className="flex-1">
-                {/* TEA-LP Logo and Title */}
-                <div className="flex flex-col lg:flex-row items-center gap-6 mb-8">
-                  <div className="flex-shrink-0">
-                    <Image
-                      src={trans}
-                      alt="TEA-LP Logo"
-                      width={200}
-                      height={200}
-                      className="object-contain"
-                    />
-                  </div>
-                  <div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-green-800 dark:text-neutral-100">
-                      TEA-LP Grant
+              <h2 className="text-3xl md:text-4xl font-bold text-green-800 dark:text-neutral-100">
+                    Research Publication Grant
                     </h2>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
-                      Transforming Energy Access – Learning Partnership
-                    </p>
-                  </div>
-                </div>
+              
                 
                 <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                  The TEA-LP (Transforming Energy Access – Learning Partnership)
-                  grant is a UK Aid-funded initiative aimed at closing the skills
-                  gap in Africa&apos;s energy access sector by supporting the
-                  development of postgraduate curricula in clean energy and
-                  sustainable development.
+                With support from research funders such as TEA-LP (Transforming Energy Access - Learning Partnership), funded by the UK AID under the Transforming Energy Access platform, and the Africa Center of Excellence in Future Energies and Electrochemical Systems (ACEFUELS),  AICCEES offers sponsorship opportunities to researchers to present their works centered on the conference themes and publish them in an indexed Scopus journal. Funding covers travel, accommodation, conference fees, and research publication where applicable.
                 </p>
-                <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                  It offers up to £20,000 for universities to design and implement 
-                  new courses focused on energy access, including topics such as 
-                  local energy solutions, mini-grid planning and design, and 
-                  off-grid appliances.
-                </p>
-                <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  The grant also supports continued professional development (CPD)
-                  courses for professionals in the sector. The program is
-                  implemented across African, South Asian, and Indo-Pacific
-                  countries, with successful outcomes including the creation of 20
-                  new university programs and networking opportunities to foster
-                  collaboration in energy access.
-                </p>
+              
               </div>
               
               {/* Conference Images Carousel */}
