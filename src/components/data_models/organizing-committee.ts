@@ -40,20 +40,30 @@ export const organizingCommitteeMembers: OrganizingCommitteeMember[] = [
     id: "4",
     name: "Uwem Johnson",
     role: "Lead, Partnerships",
-    affiliation: "Head of Partnerships, Tovero Energy"
+    affiliation: "Head of Partnerships, Tovero Energy",
+    image: "/images/organizing-cttee/uwem2.jpg"
   },
  
   {
     id: "6",
     name: "Peace Godwin",
     role: "Secretary",
-    affiliation: "Secretariat, Tovero Energy"
+    affiliation: "Secretariat, Tovero Energy",
+    image: "/images/organizing-cttee/peace-monday.png"
   },
   {
     id: "7",
     name: "Emmanuel Brendan",
     role: "Branding and Design",
-    affiliation: "Brand Designer, Tovero Energy"
+    affiliation: "Brand Designer, Tovero Energy",
+    image: "/images/organizing-cttee/emma.jpeg"
+  },
+  {
+    id: "12",
+    name: "Kentimfon  Akpan",
+    role: "Quality Assurance Officer",
+    affiliation: "Tovero Energy",
+    image: "/images/organizing-cttee/kentimfon.jpeg"
   },
   {
     id: "8",
