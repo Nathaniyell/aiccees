@@ -39,6 +39,7 @@ const config: Config = {
       animation: ['hover', 'group-hover'],
     },
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
