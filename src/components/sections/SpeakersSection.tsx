@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 import profFoluwake from "@/public/images/keynote_speakers/Foluke_Ishola.jpg"
 import profSokona from "@/public/images/keynote_speakers/sokono.jpg"
@@ -16,6 +17,64 @@ import { Button } from "@/components/ui/button"
 import AOS from '../layout/AOS'
 
 const SPEAKERS = [
+    // 2025 Keynote Speakers
+    {
+        name: "Prof. Yacob Mulugetta",
+        role: "Professor of Energy and Development Policy, University College London",
+        status: "current",
+        image: "", // Placeholder for 2025 speaker image
+        bio: "Professor of Energy and Development Policy at University College London. Lead Author at the Intergovernmental Panel on Climate Change, Greater London, England United Kingdom. Prof. Mulugetta brings extensive expertise in energy policy and sustainable development.",
+        bio2: "As a leading figure in climate change policy, Prof. Mulugetta has been instrumental in shaping international energy and development policies. His work at the IPCC has contributed significantly to global understanding of climate change mitigation and adaptation strategies."
+    },
+    {
+        name: "Alicia Butterfield",
+        role: "Global Manager, GeCCo",
+        status: "current",
+        image: "", // Placeholder for 2025 speaker image
+        bio: "Global Manager at GeCCo, bringing extensive experience in global energy and climate change initiatives. Alicia has been at the forefront of international cooperation in clean energy and sustainable development.",
+        bio2: "Her work spans across multiple continents, facilitating partnerships between governments, organizations, and communities to advance clean energy solutions and climate action."
+    },
+    {
+        name: "Glory Oguegbu",
+        role: "Founder & CEO, Renewable Energy Technology Training Institute (RETTI)",
+        status: "current",
+        image: "", // Placeholder for 2025 speaker image
+        bio: "Founder and CEO of Renewable Energy Technology Training Institute (RETTI), dedicated to advancing renewable energy education and training across Africa. Glory has been instrumental in building capacity for clean energy adoption.",
+        bio2: "Through RETTI, she has trained thousands of professionals and entrepreneurs in renewable energy technologies, contributing significantly to Africa's energy transition and sustainable development goals."
+    },
+    {
+        name: "Mr. Ejikeme Nwosu",
+        role: "Founder, Lumos Lab",
+        status: "current",
+        image: "", // Placeholder for 2025 speaker image
+        bio: "Founder of Lumos Lab, pioneering innovative solutions in clean energy and sustainable technology development. Ejikeme has been at the forefront of technological innovation in Africa's energy sector.",
+        bio2: "His work focuses on developing cutting-edge solutions that address Africa's unique energy challenges while promoting sustainable development and technological advancement."
+    },
+    {
+        name: "Dr. Ibiere Helen Jumbo",
+        role: "Research Fellow, University of Aberdeen",
+        status: "current",
+        image: "", // Placeholder for 2025 speaker image
+        bio: "A Research Fellow at the University of Aberdeen, specializing in energy and environmental law, with a focus on regional renewable energy governance in West Africa. Dr. Jumbo brings legal expertise to energy policy development.",
+        bio2: "Her research contributes to understanding how legal frameworks can support renewable energy development and environmental protection in West Africa, bridging the gap between law and energy policy."
+    },
+    {
+        name: "Radhakrishnan Mahalingam",
+        role: "Technology Strategist & AI/Blockchain Energy Advisor",
+        status: "current",
+        image: "", // Placeholder for 2025 speaker image
+        bio: "Award-winning technology strategist and advisor, driving AI and Blockchain-enabled energy transformations across the MENA region and beyond. Radhakrishnan specializes in digital transformation in the energy sector.",
+        bio2: "His expertise in AI and blockchain technologies has revolutionized how energy systems are managed and optimized, particularly in emerging markets and developing regions."
+    },
+    {
+        name: "Dr. Tarek Kabel",
+        role: "Lecturer in Economics, University of Sadat City",
+        status: "current",
+        image: "", // Placeholder for 2025 speaker image
+        bio: "A lecturer in Economics at the University of Sadat City, specializing in energy economics and computable general equilibrium (CGE) modeling to assess renewable energy's role in economic development.",
+        bio2: "Dr. Kabel's research provides crucial insights into how renewable energy investments can drive economic growth and development, using sophisticated economic modeling techniques."
+    },
+    // Previous Speakers (keeping for reference)
     {
         name: "Professor Youba Sokona",
         role: "Climate Change Expert",
@@ -36,7 +95,7 @@ const SPEAKERS = [
         role: "Development Expert & Environmentalist",
         status: "previous",
         image: robinah,
-        bio: "Hon. (Prof) Robinah K. Nanyunja is an internationally recognized development expert and environmentalist, honored as an Honorary Professor by the Academic Union of the University of Oxford. She is the Founder and Chairman of Pilot International, a social enterprise based in Uganda that fosters sustainable development in over 100 countries. Prof. Nanyunja’s work spans environmentalism, entrepreneurship, international development, and corporate governance. She has played a pivotal role in building business chambers, forming global partnerships, and facilitating investment in Africa and beyond. Additionally, she is the host of the upcoming Trans Africa Investment Summit, which will bring together entrepreneurs and investors from across the continent and the Diaspora.",
+        bio: "Hon. (Prof) Robinah K. Nanyunja is an internationally recognized development expert and environmentalist, honored as an Honorary Professor by the Academic Union of the University of Oxford. She is the Founder and Chairman of Pilot International, a social enterprise based in Uganda that fosters sustainable development in over 100 countries. Prof. Nanyunja's work spans environmentalism, entrepreneurship, international development, and corporate governance. She has played a pivotal role in building business chambers, forming global partnerships, and facilitating investment in Africa and beyond. Additionally, she is the host of the upcoming Trans Africa Investment Summit, which will bring together entrepreneurs and investors from across the continent and the Diaspora.",
         bio2: "With a profound career spanning environmentalism, entrepreneurship, international development, and corporate governance, Prof. Nanyunja has been instrumental in building business chambers, forming global partnerships, and driving investment throughout Africa and beyond. She also leads the upcoming Trans Africa Investment Summit, connecting entrepreneurs and investors across the continent and the diaspora.",
 
     },
@@ -62,7 +121,7 @@ const SPEAKERS = [
         image: Ioannis,
         status: "previous",
         role: "Renewable Energy Expert",
-        bio: "Professor Ioannis Tsipouridis is a distinguished expert in renewable energy with over 45 years of experience. He holds a B.Sc. in Chemical Engineering, an M.Sc. in Fuel and Energy, and a Ph.D. in Solar Energy from the University of Leeds. Throughout his career, he has been a key advocate for decarbonizing the global energy system and advancing renewable energy deployment. As CEO of Public Power Corporation Renewables in Greece, he expanded the company’s project pipeline from 600 MW to 4,200 MW, leading initiatives in wind, solar, geothermal, and biomass energy during a period of national financial crisis. He also held leadership roles as Vice Chairman of the European Wind Energy Association and Chairman of the Hellenic Wind Energy Association. His advocacy has extended to global platforms, including COP21 in Paris and subsequent climate conferences, where he called for accelerated climate action.",
+        bio: "Professor Ioannis Tsipouridis is a distinguished expert in renewable energy with over 45 years of experience. He holds a B.Sc. in Chemical Engineering, an M.Sc. in Fuel and Energy, and a Ph.D. in Solar Energy from the University of Leeds. Throughout his career, he has been a key advocate for decarbonizing the global energy system and advancing renewable energy deployment. As CEO of Public Power Corporation Renewables in Greece, he expanded the company's project pipeline from 600 MW to 4,200 MW, leading initiatives in wind, solar, geothermal, and biomass energy during a period of national financial crisis. He also held leadership roles as Vice Chairman of the European Wind Energy Association and Chairman of the Hellenic Wind Energy Association. His advocacy has extended to global platforms, including COP21 in Paris and subsequent climate conferences, where he called for accelerated climate action.",
         bio2: "Currently, Professor Tsipouridis directs the Renewable Energy & Climate Change Research Center at the Technical University of Mombasa and is a Visiting Professor and Technical Advisor at Meru University of Science and Technology in Kenya. He is deeply involved in promoting renewable energy in Sub-Saharan Africa through his consultancy, RED PRO Climate & Energy Consultants Ltd., and his leadership in organizations like the Loss & Damage Collaboration Group and the Fossil Fuel Non-Proliferation Treaty. An active voice in the climate movement, he also runs the e-mc2.gr platform to raise awareness of climate issues. His contributions to the field have earned him multiple awards, including the AIOLOS Prize for his work in wind energy and the Greek Green Award for lifetime achievement. He continues to mentor African students and contribute to the global dialogue on clean energy and sustainability.",
 
     },
@@ -70,6 +129,15 @@ const SPEAKERS = [
 
 export function SpeakersSection() {
   const [expandedCards, setExpandedCards] = useState<{ [key: string]: boolean }>({})
+  const [currentPage, setCurrentPage] = useState(1)
+  
+  const speakersPerPage = 3
+  const totalPages = Math.ceil(SPEAKERS.length / speakersPerPage)
+  
+  // Get current speakers for the current page
+  const indexOfLastSpeaker = currentPage * speakersPerPage
+  const indexOfFirstSpeaker = indexOfLastSpeaker - speakersPerPage
+  const currentSpeakers = SPEAKERS.slice(indexOfFirstSpeaker, indexOfLastSpeaker)
 
   const toggleCard = (speakerName: string) => {
     setExpandedCards(prev => ({
@@ -78,13 +146,33 @@ export function SpeakersSection() {
     }))
   }
 
+  const goToPage = (pageNumber: number) => {
+    setCurrentPage(pageNumber)
+    // Reset expanded cards when changing pages
+    setExpandedCards({})
+  }
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) {
+      goToPage(currentPage + 1)
+    }
+  }
+
+  const goToPreviousPage = () => {
+    if (currentPage > 1) {
+      goToPage(currentPage - 1)
+    }
+  }
+
   return (
     <AOS>
       <section id="speakers" className="w-full py-12 md:py-24 bg-gradient-to-b from-green-700 to-green-900">
         <div className="container md:w-11/12 mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-white">Keynote Speakers</h2>
+          
+          {/* Speakers Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SPEAKERS.map((speaker) => (
+            {currentSpeakers.map((speaker) => (
               <Card
                 key={speaker.name}
                 className="bg-white border-green-200 hover:shadow-xl transition-transform duration-300 transform hover:scale-[1.02]"
@@ -124,6 +212,56 @@ export function SpeakersSection() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="mt-12 flex items-center justify-center gap-4">
+              {/* Previous Button */}
+              <Button
+                onClick={goToPreviousPage}
+                disabled={currentPage === 1}
+                variant="outline"
+                className="flex items-center gap-2 text-black border-white hover:bg-white hover:text-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                Previous
+              </Button>
+
+              {/* Page Numbers */}
+              <div className="flex items-center gap-2">
+                {Array.from({ length: totalPages }, (_, index) => (
+                  <Button
+                    key={index + 1}
+                    onClick={() => goToPage(index + 1)}
+                    variant={currentPage === index + 1 ? "default" : "outline"}
+                    className={`w-10 h-10 p-0 ${
+                      currentPage === index + 1
+                        ? "bg-white text-green-700 hover:bg-gray-100"
+                        : "text-black border-white hover:bg-white hover:text-green-700"
+                    }`}
+                  >
+                    {index + 1}
+                  </Button>
+                ))}
+              </div>
+
+              {/* Next Button */}
+              <Button
+                onClick={goToNextPage}
+                disabled={currentPage === totalPages}
+                variant="outline"
+                  className="flex items-center gap-2 text-black border-white hover:bg-white hover:text-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Next
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+            </div>
+          )}
+
+          {/* Page Info */}
+          <div className="mt-4 text-center text-white text-sm opacity-80">
+            Showing {indexOfFirstSpeaker + 1}-{Math.min(indexOfLastSpeaker, SPEAKERS.length)} of {SPEAKERS.length} speakers
           </div>
 
           {/* CTA */}
