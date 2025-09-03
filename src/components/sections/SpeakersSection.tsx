@@ -11,6 +11,13 @@ import emeka from "@/public/images/keynote_speakers/emeka.jpg"
 import robinah from "@/public/images/keynote_speakers/robinah.jpeg"
 import amina from "@/public/images/keynote_speakers/amina.jpeg"
 import Ioannis from "@/public/images/keynote_speakers/Ioannis.jpeg"
+import alicia from "@/public/images/keynote_speakers/Alicia.webp"
+import ejikeme from "@/public/images/keynote_speakers/Ejikeme.webp"
+import yacob from "@/public/images/keynote_speakers/Yacob.webp"
+import radhakrishnan from "@/public/images/keynote_speakers/Radhakrishnan Mahalingam[2].webp"
+import tarek from "@/public/images/keynote_speakers/TarekKabel.webp"
+import glory from "@/public/images/keynote_speakers/GloryOguegbu.webp"
+// import proflawrence from "@/public/images/keynote_speakers/ProfLawrence.webp"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -22,7 +29,7 @@ const SPEAKERS = [
         name: "Prof. Yacob Mulugetta",
         role: "Professor of Energy and Development Policy, University College London",
         status: "current",
-        image: "", // Placeholder for 2025 speaker image
+        image: yacob, // Placeholder for 2025 speaker image
         bio: "Professor of Energy and Development Policy at University College London. Lead Author at the Intergovernmental Panel on Climate Change, Greater London, England United Kingdom. Prof. Mulugetta brings extensive expertise in energy policy and sustainable development.",
         bio2: "As a leading figure in climate change policy, Prof. Mulugetta has been instrumental in shaping international energy and development policies. His work at the IPCC has contributed significantly to global understanding of climate change mitigation and adaptation strategies."
     },
@@ -30,7 +37,7 @@ const SPEAKERS = [
         name: "Alicia Butterfield",
         role: "Global Manager, GeCCo",
         status: "current",
-        image: "", // Placeholder for 2025 speaker image
+        image: alicia, // Placeholder for 2025 speaker image
         bio: "Global Manager at GeCCo, bringing extensive experience in global energy and climate change initiatives. Alicia has been at the forefront of international cooperation in clean energy and sustainable development.",
         bio2: "Her work spans across multiple continents, facilitating partnerships between governments, organizations, and communities to advance clean energy solutions and climate action."
     },
@@ -38,7 +45,7 @@ const SPEAKERS = [
         name: "Glory Oguegbu",
         role: "Founder & CEO, Renewable Energy Technology Training Institute (RETTI)",
         status: "current",
-        image: "", // Placeholder for 2025 speaker image
+        image: glory, // Placeholder for 2025 speaker image
         bio: "Founder and CEO of Renewable Energy Technology Training Institute (RETTI), dedicated to advancing renewable energy education and training across Africa. Glory has been instrumental in building capacity for clean energy adoption.",
         bio2: "Through RETTI, she has trained thousands of professionals and entrepreneurs in renewable energy technologies, contributing significantly to Africa's energy transition and sustainable development goals."
     },
@@ -46,23 +53,23 @@ const SPEAKERS = [
         name: "Mr. Ejikeme Nwosu",
         role: "Founder, Lumos Lab",
         status: "current",
-        image: "", // Placeholder for 2025 speaker image
+        image: ejikeme, // Placeholder for 2025 speaker image
         bio: "Founder of Lumos Lab, pioneering innovative solutions in clean energy and sustainable technology development. Ejikeme has been at the forefront of technological innovation in Africa's energy sector.",
         bio2: "His work focuses on developing cutting-edge solutions that address Africa's unique energy challenges while promoting sustainable development and technological advancement."
     },
-    {
-        name: "Dr. Ibiere Helen Jumbo",
-        role: "Research Fellow, University of Aberdeen",
-        status: "current",
-        image: "", // Placeholder for 2025 speaker image
-        bio: "A Research Fellow at the University of Aberdeen, specializing in energy and environmental law, with a focus on regional renewable energy governance in West Africa. Dr. Jumbo brings legal expertise to energy policy development.",
-        bio2: "Her research contributes to understanding how legal frameworks can support renewable energy development and environmental protection in West Africa, bridging the gap between law and energy policy."
-    },
+    // {
+    //     name: "Dr. Ibiere Helen Jumbo",
+    //     role: "Research Fellow, University of Aberdeen",
+    //     status: "current",
+    //     image: "", // Placeholder for 2025 speaker image
+    //     bio: "A Research Fellow at the University of Aberdeen, specializing in energy and environmental law, with a focus on regional renewable energy governance in West Africa. Dr. Jumbo brings legal expertise to energy policy development.",
+    //     bio2: "Her research contributes to understanding how legal frameworks can support renewable energy development and environmental protection in West Africa, bridging the gap between law and energy policy."
+    // },
     {
         name: "Radhakrishnan Mahalingam",
         role: "Technology Strategist & AI/Blockchain Energy Advisor",
         status: "current",
-        image: "", // Placeholder for 2025 speaker image
+        image: radhakrishnan, // Placeholder for 2025 speaker image
         bio: "Award-winning technology strategist and advisor, driving AI and Blockchain-enabled energy transformations across the MENA region and beyond. Radhakrishnan specializes in digital transformation in the energy sector.",
         bio2: "His expertise in AI and blockchain technologies has revolutionized how energy systems are managed and optimized, particularly in emerging markets and developing regions."
     },
@@ -70,7 +77,7 @@ const SPEAKERS = [
         name: "Dr. Tarek Kabel",
         role: "Lecturer in Economics, University of Sadat City",
         status: "current",
-        image: "", // Placeholder for 2025 speaker image
+        image: tarek, // Placeholder for 2025 speaker image
         bio: "A lecturer in Economics at the University of Sadat City, specializing in energy economics and computable general equilibrium (CGE) modeling to assess renewable energy's role in economic development.",
         bio2: "Dr. Kabel's research provides crucial insights into how renewable energy investments can drive economic growth and development, using sophisticated economic modeling techniques."
     },

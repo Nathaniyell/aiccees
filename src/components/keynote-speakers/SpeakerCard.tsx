@@ -2,12 +2,12 @@ import { Linkedin, ChevronDown, ChevronUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface SpeakerCardProps {
   speaker: {
     name: string;
-    picture: string;
+    picture: StaticImageData | string;
     description1?: string;
     description2?: string;
     description?: string;
@@ -37,12 +37,12 @@ const SpeakerCard = ({ speaker, year, index, isExpanded, onToggleExpanded }: Spe
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Speaker Image */}
           <div className="flex-shrink-0 self-center lg:self-start">
-            <div className="w-48 h-48 rounded overflow-hidden bg-gray-100">
+            <div className="w-48 h-48 rounded overflow-hidden">
               <Image
                 src={speaker.picture}
                 alt={speaker.name}
-                className="w-full h-auto object-cover"
-                fill
+                className="w-full h-48 object-cover object-center"
+                
               />
             </div>
           </div>
